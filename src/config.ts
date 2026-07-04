@@ -32,6 +32,15 @@ export const config = {
     redisUrl: process.env.REDIS_URL || '',
   },
 
+  rtc: {
+    // ICE servers handed to browsers for WebRTC (mesh calls). STUN is enough for
+    // most networks in dev; add TURN (urls/username/credential) for strict NATs in
+    // prod — the frontend fetches this list from GET /rtc/ice, so no client change.
+    iceServers: process.env.RTC_ICE_SERVERS
+      ? (JSON.parse(process.env.RTC_ICE_SERVERS) as { urls: string | string[] }[])
+      : [{ urls: 'stun:stun.l.google.com:19302' }],
+  },
+
   limits: {
     maxMessageBytes: num('MAX_MESSAGE_BYTES', 1024 * 1024),
     awarenessThrottleMs: num('AWARENESS_THROTTLE_MS', 50),
