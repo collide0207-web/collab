@@ -1,6 +1,14 @@
-node_modules
-dist
-.env
+# Node (sync/)
+sync/node_modules
+sync/dist
+sync/.env
 *.log
+
+# Java (control/)
+control/build
+control/.gradle
+control/bin
+
+# misc
 .DS_Store
 coverage

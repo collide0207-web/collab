@@ -1,0 +1,39 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: collide-control
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/collide}
+    username: ${DB_USER:collide}
+    password: ${DB_PASSWORD:collide}
+  jpa:
+    hibernate:
+      ddl-auto: validate      # schema is owned by Flyway, never Hibernate
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    # The sync server shares this database (documents tables), so the public schema
+    # is non-empty. Baseline at 0 so our V1 still applies on top.
+    baseline-on-migrate: true
+    baseline-version: 0
+
+# Shared HS256 secret — MUST be byte-identical to the Node sync server's JWT_SECRET
+# so tokens issued here verify there. Override via env in production.
+collide:
+  jwt:
+    secret: ${JWT_SECRET:collide_shared_dev_secret_change_in_production_0123456789}
+    issuer: collide-control
+    ttl-seconds: 86400
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
