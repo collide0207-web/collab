@@ -1,0 +1,263 @@
+openapi: 3.0.3
+info:
+  title: Collide Control Plane — Auth API
+  version: 1.0.0
+  description: >
+    Authentication & account API for Collide. Email/password + "Continue with Google",
+    short-lived JWT access tokens (verified by the Node sync server too) and rotating,
+    hashed refresh tokens. All responses use a uniform envelope.
+servers:
+  - url: http://localhost:8080
+    description: Local dev
+tags:
+  - name: auth
+    description: Authentication and account management
+
+paths:
+  /api/auth/signup:
+    post:
+      tags: [auth]
+      summary: Create an account (email + password)
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/SignupRequest' }
+      responses:
+        '201': { description: Created, content: { application/json: { schema: { $ref: '#/components/schemas/AuthEnvelope' } } } }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '429': { $ref: '#/components/responses/TooManyRequests' }
+
+  /api/auth/login:
+    post:
+      tags: [auth]
+      summary: Log in (email + password)
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/LoginRequest' }
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/AuthEnvelope' } } } }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '423': { $ref: '#/components/responses/Locked' }
+        '429': { $ref: '#/components/responses/TooManyRequests' }
+
+  /api/auth/google:
+    post:
+      tags: [auth]
+      summary: Continue with Google (verify a Google ID token)
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/GoogleLoginRequest' }
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/AuthEnvelope' } } } }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '503': { $ref: '#/components/responses/ServiceUnavailable' }
+
+  /api/auth/refresh:
+    post:
+      tags: [auth]
+      summary: Rotate the refresh token and mint a new access token
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/RefreshRequest' }
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/AuthEnvelope' } } } }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+
+  /api/auth/logout:
+    post:
+      tags: [auth]
+      summary: Revoke a single refresh token (this device)
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/RefreshRequest' }
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/MessageEnvelope' } } } }
+
+  /api/auth/logout-all:
+    post:
+      tags: [auth]
+      summary: Revoke all refresh tokens for the current user
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/MessageEnvelope' } } } }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+
+  /api/auth/me:
+    get:
+      tags: [auth]
+      summary: Current user
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/UserEnvelope' } } } }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+
+  /api/auth/change-password:
+    patch:
+      tags: [auth]
+      summary: Change password (revokes other sessions)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/ChangePasswordRequest' }
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/MessageEnvelope' } } } }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+
+  /api/auth/update-profile:
+    patch:
+      tags: [auth]
+      summary: Update display name / avatar
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/UpdateProfileRequest' }
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/UserEnvelope' } } } }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+
+  /api/auth/delete-account:
+    delete:
+      tags: [auth]
+      summary: Soft-delete the current account
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/MessageEnvelope' } } } }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  security:
+    - bearerAuth: []
+
+  schemas:
+    SignupRequest:
+      type: object
+      required: [email, username, name, password]
+      properties:
+        email: { type: string, format: email, maxLength: 254 }
+        username: { type: string, pattern: '^[a-zA-Z0-9_.-]{3,30}$' }
+        name: { type: string, maxLength: 100 }
+        password:
+          type: string
+          description: 8-128 chars, incl. uppercase, lowercase, digit, special
+          example: Str0ng!Pass
+    LoginRequest:
+      type: object
+      required: [email, password]
+      properties:
+        email: { type: string, format: email }
+        password: { type: string }
+    GoogleLoginRequest:
+      type: object
+      required: [idToken]
+      properties:
+        idToken: { type: string, description: Google ID token from Google Identity Services }
+    RefreshRequest:
+      type: object
+      required: [refreshToken]
+      properties:
+        refreshToken: { type: string }
+    ChangePasswordRequest:
+      type: object
+      required: [currentPassword, newPassword]
+      properties:
+        currentPassword: { type: string }
+        newPassword: { type: string, example: N3w!Strong }
+    UpdateProfileRequest:
+      type: object
+      properties:
+        name: { type: string, maxLength: 100 }
+        profilePicture: { type: string, maxLength: 2048 }
+
+    User:
+      type: object
+      properties:
+        id: { type: string, format: uuid }
+        email: { type: string }
+        username: { type: string }
+        name: { type: string }
+        role: { type: string, enum: [USER, ADMIN, MODERATOR, OWNER] }
+        emailVerified: { type: boolean }
+        profilePicture: { type: string, nullable: true }
+        authProvider: { type: string, enum: [LOCAL, GOOGLE] }
+        createdAt: { type: string, format: date-time }
+    AuthData:
+      type: object
+      properties:
+        accessToken: { type: string, description: Short-lived JWT (default 15 min) }
+        refreshToken: { type: string, description: Opaque, rotating (default 30 days) }
+        tokenType: { type: string, example: Bearer }
+        expiresIn: { type: integer, description: Access-token lifetime in seconds }
+        user: { $ref: '#/components/schemas/User' }
+
+    AuthEnvelope:
+      type: object
+      properties:
+        success: { type: boolean, example: true }
+        message: { type: string }
+        data: { $ref: '#/components/schemas/AuthData' }
+    UserEnvelope:
+      type: object
+      properties:
+        success: { type: boolean, example: true }
+        data: { $ref: '#/components/schemas/User' }
+    MessageEnvelope:
+      type: object
+      properties:
+        success: { type: boolean, example: true }
+        message: { type: string }
+    Error:
+      type: object
+      properties:
+        success: { type: boolean, example: false }
+        error: { type: string, example: Unauthorized }
+        message: { type: string, example: invalid credentials }
+        status: { type: integer, example: 401 }
+        timestamp: { type: string, format: date-time }
+
+  responses:
+    BadRequest:
+      description: Validation failed
+      content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } }
+    Unauthorized:
+      description: Missing/invalid credentials or token
+      content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } }
+    Forbidden:
+      description: Account disabled or not permitted
+      content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } }
+    Conflict:
+      description: Email/username already exists
+      content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } }
+    Locked:
+      description: Account temporarily locked after failed logins
+      content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } }
+    TooManyRequests:
+      description: Rate limit exceeded
+      content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } }
+    ServiceUnavailable:
+      description: Google verification unavailable / not configured
+      content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } }
+
+security:
+  - bearerAuth: []

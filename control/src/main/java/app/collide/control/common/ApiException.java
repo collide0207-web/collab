@@ -34,4 +34,19 @@ public class ApiException extends RuntimeException {
     public static ApiException conflict(String msg) {
         return new ApiException(HttpStatus.CONFLICT, msg);
     }
+
+    /** 423 — account temporarily locked after too many failed logins. */
+    public static ApiException locked(String msg) {
+        return new ApiException(HttpStatus.LOCKED, msg);
+    }
+
+    /** 429 — client exceeded a rate limit. */
+    public static ApiException tooManyRequests(String msg) {
+        return new ApiException(HttpStatus.TOO_MANY_REQUESTS, msg);
+    }
+
+    /** 503 — a dependency (e.g. Google's token endpoint) is unavailable. */
+    public static ApiException serviceUnavailable(String msg) {
+        return new ApiException(HttpStatus.SERVICE_UNAVAILABLE, msg);
+    }
 }

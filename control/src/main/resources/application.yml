@@ -1,9 +1,13 @@
 server:
   port: 8080
+  # Drain in-flight requests before exit (SIGTERM) — clean rolling deploys / autoscaling.
+  shutdown: graceful
 
 spring:
   application:
     name: collide-control
+  lifecycle:
+    timeout-per-shutdown-phase: 20s
   datasource:
     url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/collide}
     username: ${DB_USER:collide}
@@ -24,13 +28,33 @@ spring:
     baseline-on-migrate: true
     baseline-version: 0
 
-# Shared HS256 secret — MUST be byte-identical to the Node sync server's JWT_SECRET
-# so tokens issued here verify there. Override via env in production.
 collide:
   jwt:
+    # Shared HS256 secret — MUST be byte-identical to the Node sync server's JWT_SECRET
+    # so access tokens issued here verify there. Override via env in production.
     secret: ${JWT_SECRET:collide_shared_dev_secret_change_in_production_0123456789}
     issuer: collide-control
-    ttl-seconds: 86400
+    # Short-lived access token (spec: 15 min). The sync server authorises each
+    # WebSocket at connect with this token; the SPA refreshes then reconnects.
+    access-ttl-seconds: ${ACCESS_TTL_SECONDS:900}
+    # Long-lived refresh token (spec: 30 days). Stored hashed, rotated on every use.
+    refresh-ttl-seconds: ${REFRESH_TTL_SECONDS:2592000}
+  google:
+    # OAuth2 client id used to verify Google ID tokens. Empty = Google login disabled.
+    client-id: ${GOOGLE_CLIENT_ID:}
+  security:
+    # Comma-separated CORS origins allowed to call the API (the Vite dev server, prod SPA).
+    cors-allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:5173}
+    rate-limit:
+      # Sliding-window caps keyed by client IP. In-memory by default; Redis-ready.
+      login-max-attempts: ${RL_LOGIN_MAX:10}
+      login-window-seconds: ${RL_LOGIN_WINDOW:60}
+      signup-max-attempts: ${RL_SIGNUP_MAX:5}
+      signup-window-seconds: ${RL_SIGNUP_WINDOW:3600}
+    lockout:
+      # Per-account failed-login lockout (credential-stuffing / brute-force defence).
+      max-failures: ${LOCKOUT_MAX_FAILURES:5}
+      duration-seconds: ${LOCKOUT_DURATION_SECONDS:900}
 
 management:
   endpoints:

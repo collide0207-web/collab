@@ -29,5 +29,33 @@ services:
       timeout: 3s
       retries: 5
 
+  # Java/Spring Boot control plane (auth, rooms, roles, invites).
+  control:
+    build:
+      context: ./control
+    container_name: collide-control
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: jdbc:postgresql://postgres:5432/collide
+      DB_USER: collide
+      DB_PASSWORD: collide
+      # MUST be byte-identical to the sync server's JWT_SECRET so access tokens
+      # issued here verify there. Change in production.
+      JWT_SECRET: collide_shared_dev_secret_change_in_production_0123456789
+      CORS_ALLOWED_ORIGINS: http://localhost:5173
+      # Set to your Google OAuth2 client id to enable "Continue with Google".
+      GOOGLE_CLIENT_ID: ""
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8080/actuator/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 40s
+
 volumes:
   collide-pgdata:
