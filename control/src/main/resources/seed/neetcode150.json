@@ -1,0 +1,363 @@
+[
+  {
+    "slug": "two-sum",
+    "title": "Two Sum",
+    "difficulty": "easy",
+    "category": "Arrays",
+    "tags": ["array", "hash-map"],
+    "sourceUrl": "https://leetcode.com/problems/two-sum/",
+    "description": "You are given an array of integers and a target value. Return the indices of the two numbers that add up to the target. Each input has exactly one solution, and you may not use the same element twice. The answer may be returned in any order.",
+    "examples": [
+      { "input": "nums = [2, 7, 11, 15], target = 9", "output": "[0, 1]", "explanation": "nums[0] + nums[1] == 9." },
+      { "input": "nums = [3, 2, 4], target = 6", "output": "[1, 2]" }
+    ],
+    "constraints": "2 <= nums.length <= 10^4; -10^9 <= nums[i] <= 10^9; exactly one valid answer exists.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function twoSum(nums, target) {\n  // your code here\n}\n",
+      "python": "def two_sum(nums, target):\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    public int[] twoSum(int[] nums, int target) {\n        // your code here\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    vector<int> twoSum(vector<int>& nums, int target) {\n        // your code here\n    }\n};\n"
+    }
+  },
+  {
+    "slug": "valid-anagram",
+    "title": "Valid Anagram",
+    "difficulty": "easy",
+    "category": "Arrays",
+    "tags": ["string", "hash-map", "sorting"],
+    "sourceUrl": "https://leetcode.com/problems/valid-anagram/",
+    "description": "Given two strings, determine whether the second is an anagram of the first — that is, whether it uses exactly the same characters with the same frequencies, just reordered.",
+    "examples": [
+      { "input": "s = \"anagram\", t = \"nagaram\"", "output": "true" },
+      { "input": "s = \"rat\", t = \"car\"", "output": "false" }
+    ],
+    "constraints": "1 <= s.length, t.length <= 5 * 10^4; strings contain lowercase English letters.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function isAnagram(s, t) {\n  // your code here\n}\n",
+      "python": "def is_anagram(s, t):\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    public boolean isAnagram(String s, String t) {\n        // your code here\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    bool isAnagram(string s, string t) {\n        // your code here\n    }\n};\n"
+    }
+  },
+  {
+    "slug": "contains-duplicate",
+    "title": "Contains Duplicate",
+    "difficulty": "easy",
+    "category": "Arrays",
+    "tags": ["array", "hash-set"],
+    "sourceUrl": "https://leetcode.com/problems/contains-duplicate/",
+    "description": "Given an integer array, return true if any value appears at least twice, and false if every element is distinct.",
+    "examples": [
+      { "input": "nums = [1, 2, 3, 1]", "output": "true" },
+      { "input": "nums = [1, 2, 3, 4]", "output": "false" }
+    ],
+    "constraints": "1 <= nums.length <= 10^5; -10^9 <= nums[i] <= 10^9.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function containsDuplicate(nums) {\n  // your code here\n}\n",
+      "python": "def contains_duplicate(nums):\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    public boolean containsDuplicate(int[] nums) {\n        // your code here\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    bool containsDuplicate(vector<int>& nums) {\n        // your code here\n    }\n};\n"
+    }
+  },
+  {
+    "slug": "group-anagrams",
+    "title": "Group Anagrams",
+    "difficulty": "medium",
+    "category": "Arrays",
+    "tags": ["string", "hash-map", "sorting"],
+    "sourceUrl": "https://leetcode.com/problems/group-anagrams/",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function groupAnagrams(strs) {\n  // your code here\n}\n",
+      "python": "def group_anagrams(strs):\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    public List<List<String>> groupAnagrams(String[] strs) {\n        // your code here\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    vector<vector<string>> groupAnagrams(vector<string>& strs) {\n        // your code here\n    }\n};\n"
+    }
+  },
+  {
+    "slug": "top-k-frequent-elements",
+    "title": "Top K Frequent Elements",
+    "difficulty": "medium",
+    "category": "Arrays",
+    "tags": ["array", "hash-map", "heap", "bucket-sort"],
+    "sourceUrl": "https://leetcode.com/problems/top-k-frequent-elements/",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function topKFrequent(nums, k) {\n  // your code here\n}\n",
+      "python": "def top_k_frequent(nums, k):\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    public int[] topKFrequent(int[] nums, int k) {\n        // your code here\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    vector<int> topKFrequent(vector<int>& nums, int k) {\n        // your code here\n    }\n};\n"
+    }
+  },
+  {
+    "slug": "product-of-array-except-self",
+    "title": "Product of Array Except Self",
+    "difficulty": "medium",
+    "category": "Arrays",
+    "tags": ["array", "prefix-sum"],
+    "sourceUrl": "https://leetcode.com/problems/product-of-array-except-self/",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function productExceptSelf(nums) {\n  // your code here\n}\n",
+      "python": "def product_except_self(nums):\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    public int[] productExceptSelf(int[] nums) {\n        // your code here\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    vector<int> productExceptSelf(vector<int>& nums) {\n        // your code here\n    }\n};\n"
+    }
+  },
+  {
+    "slug": "valid-palindrome",
+    "title": "Valid Palindrome",
+    "difficulty": "easy",
+    "category": "Two Pointers",
+    "tags": ["string", "two-pointers"],
+    "sourceUrl": "https://leetcode.com/problems/valid-palindrome/",
+    "description": "A phrase is a palindrome if, after lowercasing and removing every non-alphanumeric character, it reads the same forwards and backwards. Given a string, return whether it is a palindrome under these rules.",
+    "examples": [
+      { "input": "s = \"A man, a plan, a canal: Panama\"", "output": "true", "explanation": "Normalises to \"amanaplanacanalpanama\"." },
+      { "input": "s = \"race a car\"", "output": "false" }
+    ],
+    "constraints": "1 <= s.length <= 2 * 10^5; s contains printable ASCII characters.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function isPalindrome(s) {\n  // your code here\n}\n",
+      "python": "def is_palindrome(s):\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    public boolean isPalindrome(String s) {\n        // your code here\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    bool isPalindrome(string s) {\n        // your code here\n    }\n};\n"
+    }
+  },
+  {
+    "slug": "two-sum-ii",
+    "title": "Two Sum II - Input Array Is Sorted",
+    "difficulty": "medium",
+    "category": "Two Pointers",
+    "tags": ["array", "two-pointers", "binary-search"],
+    "sourceUrl": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function twoSum(numbers, target) {\n  // your code here\n}\n",
+      "python": "def two_sum(numbers, target):\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    public int[] twoSum(int[] numbers, int target) {\n        // your code here\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    vector<int> twoSum(vector<int>& numbers, int target) {\n        // your code here\n    }\n};\n"
+    }
+  },
+  {
+    "slug": "3sum",
+    "title": "3Sum",
+    "difficulty": "medium",
+    "category": "Two Pointers",
+    "tags": ["array", "two-pointers", "sorting"],
+    "sourceUrl": "https://leetcode.com/problems/3sum/",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function threeSum(nums) {\n  // your code here\n}\n",
+      "python": "def three_sum(nums):\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    public List<List<Integer>> threeSum(int[] nums) {\n        // your code here\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    vector<vector<int>> threeSum(vector<int>& nums) {\n        // your code here\n    }\n};\n"
+    }
+  },
+  {
+    "slug": "best-time-to-buy-and-sell-stock",
+    "title": "Best Time to Buy and Sell Stock",
+    "difficulty": "easy",
+    "category": "Sliding Window",
+    "tags": ["array", "sliding-window", "dynamic-programming"],
+    "sourceUrl": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+    "description": "You are given an array where the i-th element is the price of a stock on day i. Choose one day to buy and a later day to sell. Return the maximum profit you can achieve, or 0 if no profit is possible.",
+    "examples": [
+      { "input": "prices = [7, 1, 5, 3, 6, 4]", "output": "5", "explanation": "Buy on day 2 (price 1), sell on day 5 (price 6)." },
+      { "input": "prices = [7, 6, 4, 3, 1]", "output": "0", "explanation": "Prices only fall, so no profitable trade exists." }
+    ],
+    "constraints": "1 <= prices.length <= 10^5; 0 <= prices[i] <= 10^4.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function maxProfit(prices) {\n  // your code here\n}\n",
+      "python": "def max_profit(prices):\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    public int maxProfit(int[] prices) {\n        // your code here\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    int maxProfit(vector<int>& prices) {\n        // your code here\n    }\n};\n"
+    }
+  },
+  {
+    "slug": "longest-substring-without-repeating-characters",
+    "title": "Longest Substring Without Repeating Characters",
+    "difficulty": "medium",
+    "category": "Sliding Window",
+    "tags": ["string", "sliding-window", "hash-set"],
+    "sourceUrl": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function lengthOfLongestSubstring(s) {\n  // your code here\n}\n",
+      "python": "def length_of_longest_substring(s):\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    public int lengthOfLongestSubstring(String s) {\n        // your code here\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    int lengthOfLongestSubstring(string s) {\n        // your code here\n    }\n};\n"
+    }
+  },
+  {
+    "slug": "valid-parentheses",
+    "title": "Valid Parentheses",
+    "difficulty": "easy",
+    "category": "Stack",
+    "tags": ["string", "stack"],
+    "sourceUrl": "https://leetcode.com/problems/valid-parentheses/",
+    "description": "Given a string containing only the characters ()[]{}, decide whether every opening bracket is closed by the matching type in the correct order. An empty string is valid.",
+    "examples": [
+      { "input": "s = \"()[]{}\"", "output": "true" },
+      { "input": "s = \"(]\"", "output": "false" },
+      { "input": "s = \"([)]\"", "output": "false" }
+    ],
+    "constraints": "1 <= s.length <= 10^4; s consists only of the six bracket characters.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function isValid(s) {\n  // your code here\n}\n",
+      "python": "def is_valid(s):\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    public boolean isValid(String s) {\n        // your code here\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    bool isValid(string s) {\n        // your code here\n    }\n};\n"
+    }
+  },
+  {
+    "slug": "binary-search",
+    "title": "Binary Search",
+    "difficulty": "easy",
+    "category": "Binary Search",
+    "tags": ["array", "binary-search"],
+    "sourceUrl": "https://leetcode.com/problems/binary-search/",
+    "description": "Given a sorted array of distinct integers and a target, return the index of the target if present, otherwise -1. Your algorithm must run in O(log n) time.",
+    "examples": [
+      { "input": "nums = [-1, 0, 3, 5, 9, 12], target = 9", "output": "4" },
+      { "input": "nums = [-1, 0, 3, 5, 9, 12], target = 2", "output": "-1" }
+    ],
+    "constraints": "1 <= nums.length <= 10^4; nums is sorted ascending with distinct values.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function search(nums, target) {\n  // your code here\n}\n",
+      "python": "def search(nums, target):\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    public int search(int[] nums, int target) {\n        // your code here\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    int search(vector<int>& nums, int target) {\n        // your code here\n    }\n};\n"
+    }
+  },
+  {
+    "slug": "search-a-2d-matrix",
+    "title": "Search a 2D Matrix",
+    "difficulty": "medium",
+    "category": "Binary Search",
+    "tags": ["array", "binary-search", "matrix"],
+    "sourceUrl": "https://leetcode.com/problems/search-a-2d-matrix/",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function searchMatrix(matrix, target) {\n  // your code here\n}\n",
+      "python": "def search_matrix(matrix, target):\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    public boolean searchMatrix(int[][] matrix, int target) {\n        // your code here\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    bool searchMatrix(vector<vector<int>>& matrix, int target) {\n        // your code here\n    }\n};\n"
+    }
+  },
+  {
+    "slug": "reverse-linked-list",
+    "title": "Reverse Linked List",
+    "difficulty": "easy",
+    "category": "Linked List",
+    "tags": ["linked-list", "recursion"],
+    "sourceUrl": "https://leetcode.com/problems/reverse-linked-list/",
+    "description": "Given the head of a singly linked list, reverse the list and return the new head.",
+    "examples": [
+      { "input": "head = [1, 2, 3, 4, 5]", "output": "[5, 4, 3, 2, 1]" },
+      { "input": "head = []", "output": "[]" }
+    ],
+    "constraints": "0 <= list length <= 5000; -5000 <= Node.val <= 5000.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function reverseList(head) {\n  // your code here\n}\n",
+      "python": "def reverse_list(head):\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    public ListNode reverseList(ListNode head) {\n        // your code here\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    ListNode* reverseList(ListNode* head) {\n        // your code here\n    }\n};\n"
+    }
+  },
+  {
+    "slug": "merge-two-sorted-lists",
+    "title": "Merge Two Sorted Lists",
+    "difficulty": "easy",
+    "category": "Linked List",
+    "tags": ["linked-list", "recursion"],
+    "sourceUrl": "https://leetcode.com/problems/merge-two-sorted-lists/",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function mergeTwoLists(list1, list2) {\n  // your code here\n}\n",
+      "python": "def merge_two_lists(list1, list2):\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {\n        // your code here\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {\n        // your code here\n    }\n};\n"
+    }
+  },
+  {
+    "slug": "invert-binary-tree",
+    "title": "Invert Binary Tree",
+    "difficulty": "easy",
+    "category": "Trees",
+    "tags": ["tree", "dfs", "bfs", "recursion"],
+    "sourceUrl": "https://leetcode.com/problems/invert-binary-tree/",
+    "description": "Given the root of a binary tree, swap every node's left and right children (recursively) and return the root of the resulting mirrored tree.",
+    "examples": [
+      { "input": "root = [4, 2, 7, 1, 3, 6, 9]", "output": "[4, 7, 2, 9, 6, 3, 1]" },
+      { "input": "root = []", "output": "[]" }
+    ],
+    "constraints": "0 <= node count <= 100; -100 <= Node.val <= 100.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function invertTree(root) {\n  // your code here\n}\n",
+      "python": "def invert_tree(root):\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    public TreeNode invertTree(TreeNode root) {\n        // your code here\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    TreeNode* invertTree(TreeNode* root) {\n        // your code here\n    }\n};\n"
+    }
+  },
+  {
+    "slug": "maximum-depth-of-binary-tree",
+    "title": "Maximum Depth of Binary Tree",
+    "difficulty": "easy",
+    "category": "Trees",
+    "tags": ["tree", "dfs", "bfs", "recursion"],
+    "sourceUrl": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function maxDepth(root) {\n  // your code here\n}\n",
+      "python": "def max_depth(root):\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    public int maxDepth(TreeNode root) {\n        // your code here\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    int maxDepth(TreeNode* root) {\n        // your code here\n    }\n};\n"
+    }
+  },
+  {
+    "slug": "climbing-stairs",
+    "title": "Climbing Stairs",
+    "difficulty": "easy",
+    "category": "Dynamic Programming",
+    "tags": ["dynamic-programming", "math"],
+    "sourceUrl": "https://leetcode.com/problems/climbing-stairs/",
+    "description": "You are climbing a staircase with n steps. Each move you may climb either 1 or 2 steps. Return the number of distinct ways to reach the top.",
+    "examples": [
+      { "input": "n = 2", "output": "2", "explanation": "1+1 or 2." },
+      { "input": "n = 3", "output": "3", "explanation": "1+1+1, 1+2, or 2+1." }
+    ],
+    "constraints": "1 <= n <= 45.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function climbStairs(n) {\n  // your code here\n}\n",
+      "python": "def climb_stairs(n):\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    public int climbStairs(int n) {\n        // your code here\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    int climbStairs(int n) {\n        // your code here\n    }\n};\n"
+    }
+  },
+  {
+    "slug": "house-robber",
+    "title": "House Robber",
+    "difficulty": "medium",
+    "category": "Dynamic Programming",
+    "tags": ["array", "dynamic-programming"],
+    "sourceUrl": "https://leetcode.com/problems/house-robber/",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function rob(nums) {\n  // your code here\n}\n",
+      "python": "def rob(nums):\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    public int rob(int[] nums) {\n        // your code here\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    int rob(vector<int>& nums) {\n        // your code here\n    }\n};\n"
+    }
+  }
+]
