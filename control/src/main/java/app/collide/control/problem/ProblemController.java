@@ -1,7 +1,7 @@
 package app.collide.control.problem;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import java.util.List;
+import java.util.Map;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,7 +35,7 @@ public class ProblemController {
     }
 
     public record Summary(String id, String slug, String title, String difficulty,
-                          String category, JsonNode tags, int order, boolean hasStatement) {
+                          String category, List<String> tags, int order, boolean hasStatement) {
         static Summary of(Problem p) {
             return new Summary(p.getId().toString(), p.getSlug(), p.getTitle(), p.getDifficulty(),
                     p.getCategory(), p.getTags(), p.getOrderIndex(),
@@ -44,8 +44,9 @@ public class ProblemController {
     }
 
     public record Detail(String id, String slug, String title, String difficulty, String category,
-                         JsonNode tags, String description, JsonNode examples, String constraints,
-                         String sourceUrl, JsonNode starterCode, JsonNode supportedLanguages) {
+                         List<String> tags, String description, List<Map<String, String>> examples,
+                         String constraints, String sourceUrl, Map<String, String> starterCode,
+                         List<String> supportedLanguages) {
         static Detail of(Problem p) {
             return new Detail(p.getId().toString(), p.getSlug(), p.getTitle(), p.getDifficulty(),
                     p.getCategory(), p.getTags(), p.getDescription(), p.getExamples(), p.getConstraints(),

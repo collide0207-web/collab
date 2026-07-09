@@ -1,13 +1,12 @@
 package app.collide.control.problem;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.node.JsonNodeFactory;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.IdClass;
 import jakarta.persistence.Table;
 import java.time.Instant;
+import java.util.Map;
 import java.util.UUID;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
@@ -37,7 +36,7 @@ public class UserProgress {
 
     @JdbcTypeCode(SqlTypes.JSON)
     @Column(columnDefinition = "jsonb", nullable = false)
-    private JsonNode code = JsonNodeFactory.instance.objectNode();
+    private Map<String, String> code = Map.of();
 
     @Column(nullable = false)
     private boolean favorite = false;
@@ -74,7 +73,7 @@ public class UserProgress {
     public UUID getProblemId() { return problemId; }
     public String getStatus() { return status; }
     public String getLanguage() { return language; }
-    public JsonNode getCode() { return code; }
+    public Map<String, String> getCode() { return code; }
     public boolean isFavorite() { return favorite; }
     public boolean isCompleted() { return completed; }
     public int getTimeSpent() { return timeSpent; }
@@ -85,7 +84,7 @@ public class UserProgress {
 
     public void setStatus(String status) { this.status = status; }
     public void setLanguage(String language) { this.language = language; }
-    public void setCode(JsonNode code) { this.code = code; }
+    public void setCode(Map<String, String> code) { this.code = code; }
     public void setFavorite(boolean favorite) { this.favorite = favorite; }
     public void setCompleted(boolean completed) { this.completed = completed; }
     public void setTimeSpent(int timeSpent) { this.timeSpent = timeSpent; }

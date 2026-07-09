@@ -1,7 +1,10 @@
 package app.collide.control.problem;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -52,17 +55,29 @@ public class ProblemSeeder implements ApplicationRunner {
             p.setTitle(n.get("title").asText());
             p.setDifficulty(n.get("difficulty").asText());
             p.setCategory(n.get("category").asText());
-            p.setTags(n.has("tags") ? n.get("tags") : mapper.createArrayNode());
+            p.setTags(n.has("tags") ? toStringList(n.get("tags")) : List.of());
             p.setDescription(n.hasNonNull("description") ? n.get("description").asText() : null);
-            p.setExamples(n.has("examples") ? n.get("examples") : null);
+            p.setExamples(n.hasNonNull("examples") ? toExamples(n.get("examples")) : null);
             p.setConstraints(n.hasNonNull("constraints") ? n.get("constraints").asText() : null);
             p.setSourceUrl(n.hasNonNull("sourceUrl") ? n.get("sourceUrl").asText() : null);
-            p.setStarterCode(n.has("starterCode") ? n.get("starterCode") : mapper.createObjectNode());
-            p.setSupportedLanguages(n.has("supportedLanguages") ? n.get("supportedLanguages") : mapper.createArrayNode());
+            p.setStarterCode(n.has("starterCode") ? toStringMap(n.get("starterCode")) : Map.of());
+            p.setSupportedLanguages(n.has("supportedLanguages") ? toStringList(n.get("supportedLanguages")) : List.of());
             p.setOrderIndex(n.path("order").asInt(idx));
             problems.save(p);
             idx++;
         }
         log.info("Seeded {} problems from {}", idx, RESOURCE);
+    }
+
+    private List<String> toStringList(JsonNode node) {
+        return mapper.convertValue(node, new TypeReference<List<String>>() {});
+    }
+
+    private Map<String, String> toStringMap(JsonNode node) {
+        return mapper.convertValue(node, new TypeReference<Map<String, String>>() {});
+    }
+
+    private List<Map<String, String>> toExamples(JsonNode node) {
+        return mapper.convertValue(node, new TypeReference<List<Map<String, String>>>() {});
     }
 }
