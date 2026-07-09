@@ -15,12 +15,20 @@ RUN chmod +x gradlew && ./gradlew --no-daemon dependencies > /dev/null 2>&1 || t
 COPY src ./src
 RUN ./gradlew --no-daemon clean bootJar -x test
 
-# --- run stage: slim JRE, non-root, health-checkable ---
-FROM eclipse-temurin:17-jre AS run
+# --- run stage: JDK (needs javac for Java execution) + language toolchains ---
+# NOTE: this image runs USER-SUBMITTED code via ProcessBuilder with no container/
+# cgroup isolation. Acceptable for local/single-user practice; before exposing this
+# to untrusted multi-user traffic, move execution into a locked-down sandbox.
+FROM eclipse-temurin:17-jdk AS run
 WORKDIR /app
 
-# curl for the container HEALTHCHECK; run as an unprivileged user.
-RUN apt-get update && apt-get install -y --no-install-recommends curl \
+# curl for the HEALTHCHECK, plus the compilers/interpreters the execution engine
+# shells out to: g++ (C++), python3 (Python), node (JavaScript). javac/java come
+# from the JDK base image. Node's Debian package installs `nodejs`; symlink it to
+# `node` (the command the NodeExecutor expects) when not already present.
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        curl g++ python3 nodejs \
+    && ([ -x /usr/bin/node ] || ln -sf "$(command -v nodejs)" /usr/local/bin/node) \
     && rm -rf /var/lib/apt/lists/* \
     && groupadd --system app && useradd --system --gid app --home /app app
 
