@@ -1,8 +1,8 @@
 package app.collide.control.problem;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import java.time.Instant;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -66,7 +66,7 @@ public class ProgressService {
     public record UpdateProgressRequest(
             String status,
             String language,
-            JsonNode code,
+            Map<String, String> code,
             Boolean completed,
             Boolean bumpRun,
             Boolean bumpAttempt,

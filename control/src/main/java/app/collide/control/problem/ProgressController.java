@@ -2,9 +2,9 @@ package app.collide.control.problem;
 
 import app.collide.control.auth.AuthPrincipal;
 import app.collide.control.problem.ProgressService.UpdateProgressRequest;
-import com.fasterxml.jackson.databind.JsonNode;
 import java.time.Instant;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -54,7 +54,7 @@ public class ProgressController {
         return View.of(progress.setFavorite(me.id(), problemId, false));
     }
 
-    public record View(String problemId, String status, String language, JsonNode code,
+    public record View(String problemId, String status, String language, Map<String, String> code,
                        boolean favorite, boolean completed, int timeSpent, int attemptCount,
                        int runCount, Instant lastOpened, Instant updatedAt) {
         static View of(UserProgress p) {
