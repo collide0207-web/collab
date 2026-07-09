@@ -20,7 +20,11 @@ public class RoomService {
 
     @Transactional
     public Room create(UUID ownerId, String name, String mode) {
-        String m = "solo".equals(mode) ? "solo" : "group";
+        String m = switch (mode == null ? "group" : mode) {
+            case "solo" -> "solo";
+            case "interview" -> "interview";
+            default -> "group";
+        };
         Room room = new Room(UUID.randomUUID(), name, m, ownerId);
         rooms.save(room);
         members.save(new RoomMember(room.getId(), ownerId, Role.OWNER, ownerId));

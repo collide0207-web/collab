@@ -69,6 +69,9 @@ public class SecurityConfig {
                                 "/api/auth/logout").permitAll()
                         // ops + docs
                         .requestMatchers("/actuator/health", "/actuator/info", "/openapi.yaml").permitAll()
+                        // interview reference images are loaded by <img> tags (no auth header);
+                        // the random UUID in the path is the capability that guards them.
+                        .requestMatchers(HttpMethod.GET, "/rooms/*/interview/images/*").permitAll()
                         // everything else needs a valid token
                         .anyRequest().authenticated())
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
