@@ -55,6 +55,24 @@ collide:
       # Per-account failed-login lockout (credential-stuffing / brute-force defence).
       max-failures: ${LOCKOUT_MAX_FAILURES:5}
       duration-seconds: ${LOCKOUT_DURATION_SECONDS:900}
+  execution:
+    # Process-based (no container yet) code execution engine. Caps bound one execution's
+    # resource usage; the language commands are overridable per-environment (e.g. a full
+    # path to a specific interpreter/compiler version).
+    timeout-seconds: ${EXEC_TIMEOUT_SECONDS:10}
+    max-source-bytes: ${EXEC_MAX_SOURCE_BYTES:65536}
+    max-input-bytes: ${EXEC_MAX_INPUT_BYTES:65536}
+    max-output-bytes: ${EXEC_MAX_OUTPUT_BYTES:1048576}
+    workspace-root: ${EXEC_WORKSPACE_ROOT:${java.io.tmpdir}/collide-exec}
+    python:
+      command: ${EXEC_PYTHON_COMMAND:python3}
+    node:
+      command: ${EXEC_NODE_COMMAND:node}
+    cpp:
+      compiler: ${EXEC_CPP_COMPILER:g++}
+    java:
+      compiler: ${EXEC_JAVA_COMPILER:javac}
+      runtime: ${EXEC_JAVA_RUNTIME:java}
 
 management:
   endpoints:

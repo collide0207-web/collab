@@ -69,6 +69,10 @@ public class SecurityConfig {
                                 "/api/auth/logout").permitAll()
                         // ops + docs
                         .requestMatchers("/actuator/health", "/actuator/info", "/openapi.yaml").permitAll()
+                        // The WebSocket handshake can't carry an Authorization header (browsers
+                        // don't allow it), so it's authenticated by ExecutionHandshakeInterceptor
+                        // reading a `?token=` query param instead of this filter chain.
+                        .requestMatchers("/ws/execution/**").permitAll()
                         // everything else needs a valid token
                         .anyRequest().authenticated())
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
