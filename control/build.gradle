@@ -28,6 +28,9 @@ dependencies {
 	// Jackson databind — used directly for JsonNode (interview question JSONB payloads).
 	// Present at runtime via the web starter, but not on the compile classpath by default.
 	implementation 'com.fasterxml.jackson.core:jackson-databind'
+	// Spring Boot 4 auto-configures only Jackson 3 (tools.jackson); this module restores
+	// the Jackson 2 ObjectMapper bean that our JsonNode-based code injects.
+	implementation 'org.springframework.boot:spring-boot-jackson2'
 	implementation 'org.flywaydb:flyway-database-postgresql'
 	// JWT signing/verification — HS256, same shared secret as the Node sync server.
 	implementation 'io.jsonwebtoken:jjwt-api:0.12.6'
