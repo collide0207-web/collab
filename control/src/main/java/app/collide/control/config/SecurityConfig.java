@@ -73,6 +73,9 @@ public class SecurityConfig {
                         // don't allow it), so it's authenticated by ExecutionHandshakeInterceptor
                         // reading a `?token=` query param instead of this filter chain.
                         .requestMatchers("/ws/execution/**").permitAll()
+                        // interview reference images are loaded by <img> tags (no auth header);
+                        // the random UUID in the path is the capability that guards them.
+                        .requestMatchers(HttpMethod.GET, "/rooms/*/interview/images/*").permitAll()
                         // everything else needs a valid token
                         .anyRequest().authenticated())
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
