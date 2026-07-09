@@ -1,363 +1,3771 @@
 [
   {
-    "slug": "two-sum",
-    "title": "Two Sum",
-    "difficulty": "easy",
-    "category": "Arrays",
-    "tags": ["array", "hash-map"],
-    "sourceUrl": "https://leetcode.com/problems/two-sum/",
-    "description": "You are given an array of integers and a target value. Return the indices of the two numbers that add up to the target. Each input has exactly one solution, and you may not use the same element twice. The answer may be returned in any order.",
-    "examples": [
-      { "input": "nums = [2, 7, 11, 15], target = 9", "output": "[0, 1]", "explanation": "nums[0] + nums[1] == 9." },
-      { "input": "nums = [3, 2, 4], target = 6", "output": "[1, 2]" }
-    ],
-    "constraints": "2 <= nums.length <= 10^4; -10^9 <= nums[i] <= 10^9; exactly one valid answer exists.",
-    "supportedLanguages": ["javascript", "python", "java", "cpp"],
-    "starterCode": {
-      "javascript": "function twoSum(nums, target) {\n  // your code here\n}\n",
-      "python": "def two_sum(nums, target):\n    # your code here\n    pass\n",
-      "java": "class Solution {\n    public int[] twoSum(int[] nums, int target) {\n        // your code here\n    }\n}\n",
-      "cpp": "class Solution {\npublic:\n    vector<int> twoSum(vector<int>& nums, int target) {\n        // your code here\n    }\n};\n"
-    }
-  },
-  {
-    "slug": "valid-anagram",
-    "title": "Valid Anagram",
-    "difficulty": "easy",
-    "category": "Arrays",
-    "tags": ["string", "hash-map", "sorting"],
-    "sourceUrl": "https://leetcode.com/problems/valid-anagram/",
-    "description": "Given two strings, determine whether the second is an anagram of the first — that is, whether it uses exactly the same characters with the same frequencies, just reordered.",
-    "examples": [
-      { "input": "s = \"anagram\", t = \"nagaram\"", "output": "true" },
-      { "input": "s = \"rat\", t = \"car\"", "output": "false" }
-    ],
-    "constraints": "1 <= s.length, t.length <= 5 * 10^4; strings contain lowercase English letters.",
-    "supportedLanguages": ["javascript", "python", "java", "cpp"],
-    "starterCode": {
-      "javascript": "function isAnagram(s, t) {\n  // your code here\n}\n",
-      "python": "def is_anagram(s, t):\n    # your code here\n    pass\n",
-      "java": "class Solution {\n    public boolean isAnagram(String s, String t) {\n        // your code here\n    }\n}\n",
-      "cpp": "class Solution {\npublic:\n    bool isAnagram(string s, string t) {\n        // your code here\n    }\n};\n"
-    }
-  },
-  {
     "slug": "contains-duplicate",
     "title": "Contains Duplicate",
     "difficulty": "easy",
-    "category": "Arrays",
-    "tags": ["array", "hash-set"],
+    "category": "Arrays & Hashing",
+    "tags": [
+      "array",
+      "hash-set"
+    ],
     "sourceUrl": "https://leetcode.com/problems/contains-duplicate/",
     "description": "Given an integer array, return true if any value appears at least twice, and false if every element is distinct.",
     "examples": [
-      { "input": "nums = [1, 2, 3, 1]", "output": "true" },
-      { "input": "nums = [1, 2, 3, 4]", "output": "false" }
+      {
+        "input": "nums = [1, 2, 3, 1]",
+        "output": "true"
+      },
+      {
+        "input": "nums = [1, 2, 3, 4]",
+        "output": "false"
+      }
     ],
     "constraints": "1 <= nums.length <= 10^5; -10^9 <= nums[i] <= 10^9.",
-    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
     "starterCode": {
       "javascript": "function containsDuplicate(nums) {\n  // your code here\n}\n",
       "python": "def contains_duplicate(nums):\n    # your code here\n    pass\n",
       "java": "class Solution {\n    public boolean containsDuplicate(int[] nums) {\n        // your code here\n    }\n}\n",
       "cpp": "class Solution {\npublic:\n    bool containsDuplicate(vector<int>& nums) {\n        // your code here\n    }\n};\n"
-    }
+    },
+    "order": 0
+  },
+  {
+    "slug": "valid-anagram",
+    "title": "Valid Anagram",
+    "difficulty": "easy",
+    "category": "Arrays & Hashing",
+    "tags": [
+      "string",
+      "hash-map",
+      "sorting"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/valid-anagram/",
+    "description": "Given two strings, determine whether the second is an anagram of the first — that is, whether it uses exactly the same characters with the same frequencies, just reordered.",
+    "examples": [
+      {
+        "input": "s = \"anagram\", t = \"nagaram\"",
+        "output": "true"
+      },
+      {
+        "input": "s = \"rat\", t = \"car\"",
+        "output": "false"
+      }
+    ],
+    "constraints": "1 <= s.length, t.length <= 5 * 10^4; strings contain lowercase English letters.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function isAnagram(s, t) {\n  // your code here\n}\n",
+      "python": "def is_anagram(s, t):\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    public boolean isAnagram(String s, String t) {\n        // your code here\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    bool isAnagram(string s, string t) {\n        // your code here\n    }\n};\n"
+    },
+    "order": 1
+  },
+  {
+    "slug": "two-sum",
+    "title": "Two Sum",
+    "difficulty": "easy",
+    "category": "Arrays & Hashing",
+    "tags": [
+      "array",
+      "hash-map"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/two-sum/",
+    "description": "You are given an array of integers and a target value. Return the indices of the two numbers that add up to the target. Each input has exactly one solution, and you may not use the same element twice. The answer may be returned in any order.",
+    "examples": [
+      {
+        "input": "nums = [2, 7, 11, 15], target = 9",
+        "output": "[0, 1]",
+        "explanation": "nums[0] + nums[1] == 9."
+      },
+      {
+        "input": "nums = [3, 2, 4], target = 6",
+        "output": "[1, 2]"
+      }
+    ],
+    "constraints": "2 <= nums.length <= 10^4; -10^9 <= nums[i] <= 10^9; exactly one valid answer exists.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function twoSum(nums, target) {\n  // your code here\n}\n",
+      "python": "def two_sum(nums, target):\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    public int[] twoSum(int[] nums, int target) {\n        // your code here\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    vector<int> twoSum(vector<int>& nums, int target) {\n        // your code here\n    }\n};\n"
+    },
+    "order": 2
   },
   {
     "slug": "group-anagrams",
     "title": "Group Anagrams",
     "difficulty": "medium",
-    "category": "Arrays",
-    "tags": ["string", "hash-map", "sorting"],
+    "category": "Arrays & Hashing",
+    "tags": [
+      "string",
+      "hash-map",
+      "sorting"
+    ],
     "sourceUrl": "https://leetcode.com/problems/group-anagrams/",
-    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
     "starterCode": {
       "javascript": "function groupAnagrams(strs) {\n  // your code here\n}\n",
       "python": "def group_anagrams(strs):\n    # your code here\n    pass\n",
       "java": "class Solution {\n    public List<List<String>> groupAnagrams(String[] strs) {\n        // your code here\n    }\n}\n",
       "cpp": "class Solution {\npublic:\n    vector<vector<string>> groupAnagrams(vector<string>& strs) {\n        // your code here\n    }\n};\n"
-    }
+    },
+    "order": 3
   },
   {
     "slug": "top-k-frequent-elements",
     "title": "Top K Frequent Elements",
     "difficulty": "medium",
-    "category": "Arrays",
-    "tags": ["array", "hash-map", "heap", "bucket-sort"],
+    "category": "Arrays & Hashing",
+    "tags": [
+      "array",
+      "hash-map",
+      "heap",
+      "bucket-sort"
+    ],
     "sourceUrl": "https://leetcode.com/problems/top-k-frequent-elements/",
-    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
     "starterCode": {
       "javascript": "function topKFrequent(nums, k) {\n  // your code here\n}\n",
       "python": "def top_k_frequent(nums, k):\n    # your code here\n    pass\n",
       "java": "class Solution {\n    public int[] topKFrequent(int[] nums, int k) {\n        // your code here\n    }\n}\n",
       "cpp": "class Solution {\npublic:\n    vector<int> topKFrequent(vector<int>& nums, int k) {\n        // your code here\n    }\n};\n"
-    }
+    },
+    "order": 4
   },
   {
     "slug": "product-of-array-except-self",
     "title": "Product of Array Except Self",
     "difficulty": "medium",
-    "category": "Arrays",
-    "tags": ["array", "prefix-sum"],
+    "category": "Arrays & Hashing",
+    "tags": [
+      "array",
+      "prefix-sum"
+    ],
     "sourceUrl": "https://leetcode.com/problems/product-of-array-except-self/",
-    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
     "starterCode": {
       "javascript": "function productExceptSelf(nums) {\n  // your code here\n}\n",
       "python": "def product_except_self(nums):\n    # your code here\n    pass\n",
       "java": "class Solution {\n    public int[] productExceptSelf(int[] nums) {\n        // your code here\n    }\n}\n",
       "cpp": "class Solution {\npublic:\n    vector<int> productExceptSelf(vector<int>& nums) {\n        // your code here\n    }\n};\n"
-    }
+    },
+    "order": 5
+  },
+  {
+    "slug": "valid-sudoku",
+    "title": "Valid Sudoku",
+    "difficulty": "medium",
+    "category": "Arrays & Hashing",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/valid-sudoku/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function validSudoku() {\n  // your code here\n}\n",
+      "python": "def valid_sudoku():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement validSudoku\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement validSudoku\n};\n"
+    },
+    "order": 6
+  },
+  {
+    "slug": "encode-and-decode-strings",
+    "title": "Encode and Decode Strings",
+    "difficulty": "medium",
+    "category": "Arrays & Hashing",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/encode-and-decode-strings/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function encodeAndDecodeStrings() {\n  // your code here\n}\n",
+      "python": "def encode_and_decode_strings():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement encodeAndDecodeStrings\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement encodeAndDecodeStrings\n};\n"
+    },
+    "order": 7
+  },
+  {
+    "slug": "longest-consecutive-sequence",
+    "title": "Longest Consecutive Sequence",
+    "difficulty": "medium",
+    "category": "Arrays & Hashing",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/longest-consecutive-sequence/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function longestConsecutiveSequence() {\n  // your code here\n}\n",
+      "python": "def longest_consecutive_sequence():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement longestConsecutiveSequence\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement longestConsecutiveSequence\n};\n"
+    },
+    "order": 8
   },
   {
     "slug": "valid-palindrome",
     "title": "Valid Palindrome",
     "difficulty": "easy",
     "category": "Two Pointers",
-    "tags": ["string", "two-pointers"],
+    "tags": [
+      "string",
+      "two-pointers"
+    ],
     "sourceUrl": "https://leetcode.com/problems/valid-palindrome/",
     "description": "A phrase is a palindrome if, after lowercasing and removing every non-alphanumeric character, it reads the same forwards and backwards. Given a string, return whether it is a palindrome under these rules.",
     "examples": [
-      { "input": "s = \"A man, a plan, a canal: Panama\"", "output": "true", "explanation": "Normalises to \"amanaplanacanalpanama\"." },
-      { "input": "s = \"race a car\"", "output": "false" }
+      {
+        "input": "s = \"A man, a plan, a canal: Panama\"",
+        "output": "true",
+        "explanation": "Normalises to \"amanaplanacanalpanama\"."
+      },
+      {
+        "input": "s = \"race a car\"",
+        "output": "false"
+      }
     ],
     "constraints": "1 <= s.length <= 2 * 10^5; s contains printable ASCII characters.",
-    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
     "starterCode": {
       "javascript": "function isPalindrome(s) {\n  // your code here\n}\n",
       "python": "def is_palindrome(s):\n    # your code here\n    pass\n",
       "java": "class Solution {\n    public boolean isPalindrome(String s) {\n        // your code here\n    }\n}\n",
       "cpp": "class Solution {\npublic:\n    bool isPalindrome(string s) {\n        // your code here\n    }\n};\n"
-    }
+    },
+    "order": 9
   },
   {
-    "slug": "two-sum-ii",
-    "title": "Two Sum II - Input Array Is Sorted",
+    "slug": "two-sum-ii-input-array-is-sorted",
+    "title": "Two Sum II Input Array Is Sorted",
     "difficulty": "medium",
     "category": "Two Pointers",
-    "tags": ["array", "two-pointers", "binary-search"],
+    "tags": [],
     "sourceUrl": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/",
-    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
     "starterCode": {
-      "javascript": "function twoSum(numbers, target) {\n  // your code here\n}\n",
-      "python": "def two_sum(numbers, target):\n    # your code here\n    pass\n",
-      "java": "class Solution {\n    public int[] twoSum(int[] numbers, int target) {\n        // your code here\n    }\n}\n",
-      "cpp": "class Solution {\npublic:\n    vector<int> twoSum(vector<int>& numbers, int target) {\n        // your code here\n    }\n};\n"
-    }
+      "javascript": "function twoSumIiInputArrayIsSorted() {\n  // your code here\n}\n",
+      "python": "def two_sum_ii_input_array_is_sorted():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement twoSumIiInputArrayIsSorted\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement twoSumIiInputArrayIsSorted\n};\n"
+    },
+    "order": 10
   },
   {
     "slug": "3sum",
     "title": "3Sum",
     "difficulty": "medium",
     "category": "Two Pointers",
-    "tags": ["array", "two-pointers", "sorting"],
+    "tags": [
+      "array",
+      "two-pointers",
+      "sorting"
+    ],
     "sourceUrl": "https://leetcode.com/problems/3sum/",
-    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
     "starterCode": {
       "javascript": "function threeSum(nums) {\n  // your code here\n}\n",
       "python": "def three_sum(nums):\n    # your code here\n    pass\n",
       "java": "class Solution {\n    public List<List<Integer>> threeSum(int[] nums) {\n        // your code here\n    }\n}\n",
       "cpp": "class Solution {\npublic:\n    vector<vector<int>> threeSum(vector<int>& nums) {\n        // your code here\n    }\n};\n"
-    }
+    },
+    "order": 11
+  },
+  {
+    "slug": "container-with-most-water",
+    "title": "Container With Most Water",
+    "difficulty": "medium",
+    "category": "Two Pointers",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/container-with-most-water/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function containerWithMostWater() {\n  // your code here\n}\n",
+      "python": "def container_with_most_water():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement containerWithMostWater\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement containerWithMostWater\n};\n"
+    },
+    "order": 12
+  },
+  {
+    "slug": "trapping-rain-water",
+    "title": "Trapping Rain Water",
+    "difficulty": "hard",
+    "category": "Two Pointers",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/trapping-rain-water/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function trappingRainWater() {\n  // your code here\n}\n",
+      "python": "def trapping_rain_water():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement trappingRainWater\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement trappingRainWater\n};\n"
+    },
+    "order": 13
   },
   {
     "slug": "best-time-to-buy-and-sell-stock",
-    "title": "Best Time to Buy and Sell Stock",
+    "title": "Best Time to Buy And Sell Stock",
     "difficulty": "easy",
     "category": "Sliding Window",
-    "tags": ["array", "sliding-window", "dynamic-programming"],
+    "tags": [
+      "array",
+      "sliding-window",
+      "dynamic-programming"
+    ],
     "sourceUrl": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
     "description": "You are given an array where the i-th element is the price of a stock on day i. Choose one day to buy and a later day to sell. Return the maximum profit you can achieve, or 0 if no profit is possible.",
     "examples": [
-      { "input": "prices = [7, 1, 5, 3, 6, 4]", "output": "5", "explanation": "Buy on day 2 (price 1), sell on day 5 (price 6)." },
-      { "input": "prices = [7, 6, 4, 3, 1]", "output": "0", "explanation": "Prices only fall, so no profitable trade exists." }
+      {
+        "input": "prices = [7, 1, 5, 3, 6, 4]",
+        "output": "5",
+        "explanation": "Buy on day 2 (price 1), sell on day 5 (price 6)."
+      },
+      {
+        "input": "prices = [7, 6, 4, 3, 1]",
+        "output": "0",
+        "explanation": "Prices only fall, so no profitable trade exists."
+      }
     ],
     "constraints": "1 <= prices.length <= 10^5; 0 <= prices[i] <= 10^4.",
-    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
     "starterCode": {
       "javascript": "function maxProfit(prices) {\n  // your code here\n}\n",
       "python": "def max_profit(prices):\n    # your code here\n    pass\n",
       "java": "class Solution {\n    public int maxProfit(int[] prices) {\n        // your code here\n    }\n}\n",
       "cpp": "class Solution {\npublic:\n    int maxProfit(vector<int>& prices) {\n        // your code here\n    }\n};\n"
-    }
+    },
+    "order": 14
   },
   {
     "slug": "longest-substring-without-repeating-characters",
     "title": "Longest Substring Without Repeating Characters",
     "difficulty": "medium",
     "category": "Sliding Window",
-    "tags": ["string", "sliding-window", "hash-set"],
+    "tags": [
+      "string",
+      "sliding-window",
+      "hash-set"
+    ],
     "sourceUrl": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
-    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
     "starterCode": {
       "javascript": "function lengthOfLongestSubstring(s) {\n  // your code here\n}\n",
       "python": "def length_of_longest_substring(s):\n    # your code here\n    pass\n",
       "java": "class Solution {\n    public int lengthOfLongestSubstring(String s) {\n        // your code here\n    }\n}\n",
       "cpp": "class Solution {\npublic:\n    int lengthOfLongestSubstring(string s) {\n        // your code here\n    }\n};\n"
-    }
+    },
+    "order": 15
+  },
+  {
+    "slug": "longest-repeating-character-replacement",
+    "title": "Longest Repeating Character Replacement",
+    "difficulty": "medium",
+    "category": "Sliding Window",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/longest-repeating-character-replacement/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function longestRepeatingCharacterReplacement() {\n  // your code here\n}\n",
+      "python": "def longest_repeating_character_replacement():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement longestRepeatingCharacterReplacement\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement longestRepeatingCharacterReplacement\n};\n"
+    },
+    "order": 16
+  },
+  {
+    "slug": "permutation-in-string",
+    "title": "Permutation In String",
+    "difficulty": "medium",
+    "category": "Sliding Window",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/permutation-in-string/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function permutationInString() {\n  // your code here\n}\n",
+      "python": "def permutation_in_string():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement permutationInString\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement permutationInString\n};\n"
+    },
+    "order": 17
+  },
+  {
+    "slug": "minimum-window-substring",
+    "title": "Minimum Window Substring",
+    "difficulty": "hard",
+    "category": "Sliding Window",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/minimum-window-substring/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function minimumWindowSubstring() {\n  // your code here\n}\n",
+      "python": "def minimum_window_substring():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement minimumWindowSubstring\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement minimumWindowSubstring\n};\n"
+    },
+    "order": 18
+  },
+  {
+    "slug": "sliding-window-maximum",
+    "title": "Sliding Window Maximum",
+    "difficulty": "hard",
+    "category": "Sliding Window",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/sliding-window-maximum/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function slidingWindowMaximum() {\n  // your code here\n}\n",
+      "python": "def sliding_window_maximum():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement slidingWindowMaximum\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement slidingWindowMaximum\n};\n"
+    },
+    "order": 19
   },
   {
     "slug": "valid-parentheses",
     "title": "Valid Parentheses",
     "difficulty": "easy",
     "category": "Stack",
-    "tags": ["string", "stack"],
+    "tags": [
+      "string",
+      "stack"
+    ],
     "sourceUrl": "https://leetcode.com/problems/valid-parentheses/",
     "description": "Given a string containing only the characters ()[]{}, decide whether every opening bracket is closed by the matching type in the correct order. An empty string is valid.",
     "examples": [
-      { "input": "s = \"()[]{}\"", "output": "true" },
-      { "input": "s = \"(]\"", "output": "false" },
-      { "input": "s = \"([)]\"", "output": "false" }
+      {
+        "input": "s = \"()[]{}\"",
+        "output": "true"
+      },
+      {
+        "input": "s = \"(]\"",
+        "output": "false"
+      },
+      {
+        "input": "s = \"([)]\"",
+        "output": "false"
+      }
     ],
     "constraints": "1 <= s.length <= 10^4; s consists only of the six bracket characters.",
-    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
     "starterCode": {
       "javascript": "function isValid(s) {\n  // your code here\n}\n",
       "python": "def is_valid(s):\n    # your code here\n    pass\n",
       "java": "class Solution {\n    public boolean isValid(String s) {\n        // your code here\n    }\n}\n",
       "cpp": "class Solution {\npublic:\n    bool isValid(string s) {\n        // your code here\n    }\n};\n"
-    }
+    },
+    "order": 20
+  },
+  {
+    "slug": "min-stack",
+    "title": "Min Stack",
+    "difficulty": "medium",
+    "category": "Stack",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/min-stack/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function minStack() {\n  // your code here\n}\n",
+      "python": "def min_stack():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement minStack\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement minStack\n};\n"
+    },
+    "order": 21
+  },
+  {
+    "slug": "evaluate-reverse-polish-notation",
+    "title": "Evaluate Reverse Polish Notation",
+    "difficulty": "medium",
+    "category": "Stack",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/evaluate-reverse-polish-notation/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function evaluateReversePolishNotation() {\n  // your code here\n}\n",
+      "python": "def evaluate_reverse_polish_notation():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement evaluateReversePolishNotation\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement evaluateReversePolishNotation\n};\n"
+    },
+    "order": 22
+  },
+  {
+    "slug": "generate-parentheses",
+    "title": "Generate Parentheses",
+    "difficulty": "medium",
+    "category": "Stack",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/generate-parentheses/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function generateParentheses() {\n  // your code here\n}\n",
+      "python": "def generate_parentheses():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement generateParentheses\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement generateParentheses\n};\n"
+    },
+    "order": 23
+  },
+  {
+    "slug": "daily-temperatures",
+    "title": "Daily Temperatures",
+    "difficulty": "medium",
+    "category": "Stack",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/daily-temperatures/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function dailyTemperatures() {\n  // your code here\n}\n",
+      "python": "def daily_temperatures():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement dailyTemperatures\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement dailyTemperatures\n};\n"
+    },
+    "order": 24
+  },
+  {
+    "slug": "car-fleet",
+    "title": "Car Fleet",
+    "difficulty": "medium",
+    "category": "Stack",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/car-fleet/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function carFleet() {\n  // your code here\n}\n",
+      "python": "def car_fleet():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement carFleet\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement carFleet\n};\n"
+    },
+    "order": 25
+  },
+  {
+    "slug": "largest-rectangle-in-histogram",
+    "title": "Largest Rectangle In Histogram",
+    "difficulty": "hard",
+    "category": "Stack",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/largest-rectangle-in-histogram/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function largestRectangleInHistogram() {\n  // your code here\n}\n",
+      "python": "def largest_rectangle_in_histogram():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement largestRectangleInHistogram\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement largestRectangleInHistogram\n};\n"
+    },
+    "order": 26
   },
   {
     "slug": "binary-search",
     "title": "Binary Search",
     "difficulty": "easy",
     "category": "Binary Search",
-    "tags": ["array", "binary-search"],
+    "tags": [
+      "array",
+      "binary-search"
+    ],
     "sourceUrl": "https://leetcode.com/problems/binary-search/",
     "description": "Given a sorted array of distinct integers and a target, return the index of the target if present, otherwise -1. Your algorithm must run in O(log n) time.",
     "examples": [
-      { "input": "nums = [-1, 0, 3, 5, 9, 12], target = 9", "output": "4" },
-      { "input": "nums = [-1, 0, 3, 5, 9, 12], target = 2", "output": "-1" }
+      {
+        "input": "nums = [-1, 0, 3, 5, 9, 12], target = 9",
+        "output": "4"
+      },
+      {
+        "input": "nums = [-1, 0, 3, 5, 9, 12], target = 2",
+        "output": "-1"
+      }
     ],
     "constraints": "1 <= nums.length <= 10^4; nums is sorted ascending with distinct values.",
-    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
     "starterCode": {
       "javascript": "function search(nums, target) {\n  // your code here\n}\n",
       "python": "def search(nums, target):\n    # your code here\n    pass\n",
       "java": "class Solution {\n    public int search(int[] nums, int target) {\n        // your code here\n    }\n}\n",
       "cpp": "class Solution {\npublic:\n    int search(vector<int>& nums, int target) {\n        // your code here\n    }\n};\n"
-    }
+    },
+    "order": 27
   },
   {
     "slug": "search-a-2d-matrix",
     "title": "Search a 2D Matrix",
     "difficulty": "medium",
     "category": "Binary Search",
-    "tags": ["array", "binary-search", "matrix"],
+    "tags": [
+      "array",
+      "binary-search",
+      "matrix"
+    ],
     "sourceUrl": "https://leetcode.com/problems/search-a-2d-matrix/",
-    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
     "starterCode": {
       "javascript": "function searchMatrix(matrix, target) {\n  // your code here\n}\n",
       "python": "def search_matrix(matrix, target):\n    # your code here\n    pass\n",
       "java": "class Solution {\n    public boolean searchMatrix(int[][] matrix, int target) {\n        // your code here\n    }\n}\n",
       "cpp": "class Solution {\npublic:\n    bool searchMatrix(vector<vector<int>>& matrix, int target) {\n        // your code here\n    }\n};\n"
-    }
+    },
+    "order": 28
+  },
+  {
+    "slug": "koko-eating-bananas",
+    "title": "Koko Eating Bananas",
+    "difficulty": "medium",
+    "category": "Binary Search",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/koko-eating-bananas/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function kokoEatingBananas() {\n  // your code here\n}\n",
+      "python": "def koko_eating_bananas():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement kokoEatingBananas\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement kokoEatingBananas\n};\n"
+    },
+    "order": 29
+  },
+  {
+    "slug": "find-minimum-in-rotated-sorted-array",
+    "title": "Find Minimum In Rotated Sorted Array",
+    "difficulty": "medium",
+    "category": "Binary Search",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function findMinimumInRotatedSortedArray() {\n  // your code here\n}\n",
+      "python": "def find_minimum_in_rotated_sorted_array():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement findMinimumInRotatedSortedArray\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement findMinimumInRotatedSortedArray\n};\n"
+    },
+    "order": 30
+  },
+  {
+    "slug": "search-in-rotated-sorted-array",
+    "title": "Search In Rotated Sorted Array",
+    "difficulty": "medium",
+    "category": "Binary Search",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function searchInRotatedSortedArray() {\n  // your code here\n}\n",
+      "python": "def search_in_rotated_sorted_array():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement searchInRotatedSortedArray\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement searchInRotatedSortedArray\n};\n"
+    },
+    "order": 31
+  },
+  {
+    "slug": "time-based-key-value-store",
+    "title": "Time Based Key Value Store",
+    "difficulty": "medium",
+    "category": "Binary Search",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/time-based-key-value-store/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function timeBasedKeyValueStore() {\n  // your code here\n}\n",
+      "python": "def time_based_key_value_store():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement timeBasedKeyValueStore\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement timeBasedKeyValueStore\n};\n"
+    },
+    "order": 32
+  },
+  {
+    "slug": "median-of-two-sorted-arrays",
+    "title": "Median of Two Sorted Arrays",
+    "difficulty": "hard",
+    "category": "Binary Search",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function medianOfTwoSortedArrays() {\n  // your code here\n}\n",
+      "python": "def median_of_two_sorted_arrays():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement medianOfTwoSortedArrays\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement medianOfTwoSortedArrays\n};\n"
+    },
+    "order": 33
   },
   {
     "slug": "reverse-linked-list",
     "title": "Reverse Linked List",
     "difficulty": "easy",
     "category": "Linked List",
-    "tags": ["linked-list", "recursion"],
+    "tags": [
+      "linked-list",
+      "recursion"
+    ],
     "sourceUrl": "https://leetcode.com/problems/reverse-linked-list/",
     "description": "Given the head of a singly linked list, reverse the list and return the new head.",
     "examples": [
-      { "input": "head = [1, 2, 3, 4, 5]", "output": "[5, 4, 3, 2, 1]" },
-      { "input": "head = []", "output": "[]" }
+      {
+        "input": "head = [1, 2, 3, 4, 5]",
+        "output": "[5, 4, 3, 2, 1]"
+      },
+      {
+        "input": "head = []",
+        "output": "[]"
+      }
     ],
     "constraints": "0 <= list length <= 5000; -5000 <= Node.val <= 5000.",
-    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
     "starterCode": {
       "javascript": "function reverseList(head) {\n  // your code here\n}\n",
       "python": "def reverse_list(head):\n    # your code here\n    pass\n",
       "java": "class Solution {\n    public ListNode reverseList(ListNode head) {\n        // your code here\n    }\n}\n",
       "cpp": "class Solution {\npublic:\n    ListNode* reverseList(ListNode* head) {\n        // your code here\n    }\n};\n"
-    }
+    },
+    "order": 34
   },
   {
     "slug": "merge-two-sorted-lists",
     "title": "Merge Two Sorted Lists",
     "difficulty": "easy",
     "category": "Linked List",
-    "tags": ["linked-list", "recursion"],
+    "tags": [
+      "linked-list",
+      "recursion"
+    ],
     "sourceUrl": "https://leetcode.com/problems/merge-two-sorted-lists/",
-    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
     "starterCode": {
       "javascript": "function mergeTwoLists(list1, list2) {\n  // your code here\n}\n",
       "python": "def merge_two_lists(list1, list2):\n    # your code here\n    pass\n",
       "java": "class Solution {\n    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {\n        // your code here\n    }\n}\n",
       "cpp": "class Solution {\npublic:\n    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {\n        // your code here\n    }\n};\n"
-    }
+    },
+    "order": 35
+  },
+  {
+    "slug": "reorder-list",
+    "title": "Reorder List",
+    "difficulty": "medium",
+    "category": "Linked List",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/reorder-list/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function reorderList() {\n  // your code here\n}\n",
+      "python": "def reorder_list():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement reorderList\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement reorderList\n};\n"
+    },
+    "order": 36
+  },
+  {
+    "slug": "remove-nth-node-from-end-of-list",
+    "title": "Remove Nth Node From End of List",
+    "difficulty": "medium",
+    "category": "Linked List",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function removeNthNodeFromEndOfList() {\n  // your code here\n}\n",
+      "python": "def remove_nth_node_from_end_of_list():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement removeNthNodeFromEndOfList\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement removeNthNodeFromEndOfList\n};\n"
+    },
+    "order": 37
+  },
+  {
+    "slug": "copy-list-with-random-pointer",
+    "title": "Copy List With Random Pointer",
+    "difficulty": "medium",
+    "category": "Linked List",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/copy-list-with-random-pointer/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function copyListWithRandomPointer() {\n  // your code here\n}\n",
+      "python": "def copy_list_with_random_pointer():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement copyListWithRandomPointer\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement copyListWithRandomPointer\n};\n"
+    },
+    "order": 38
+  },
+  {
+    "slug": "add-two-numbers",
+    "title": "Add Two Numbers",
+    "difficulty": "medium",
+    "category": "Linked List",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/add-two-numbers/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function addTwoNumbers() {\n  // your code here\n}\n",
+      "python": "def add_two_numbers():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement addTwoNumbers\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement addTwoNumbers\n};\n"
+    },
+    "order": 39
+  },
+  {
+    "slug": "linked-list-cycle",
+    "title": "Linked List Cycle",
+    "difficulty": "easy",
+    "category": "Linked List",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/linked-list-cycle/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function linkedListCycle() {\n  // your code here\n}\n",
+      "python": "def linked_list_cycle():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement linkedListCycle\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement linkedListCycle\n};\n"
+    },
+    "order": 40
+  },
+  {
+    "slug": "find-the-duplicate-number",
+    "title": "Find The Duplicate Number",
+    "difficulty": "medium",
+    "category": "Linked List",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/find-the-duplicate-number/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function findTheDuplicateNumber() {\n  // your code here\n}\n",
+      "python": "def find_the_duplicate_number():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement findTheDuplicateNumber\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement findTheDuplicateNumber\n};\n"
+    },
+    "order": 41
+  },
+  {
+    "slug": "lru-cache",
+    "title": "LRU Cache",
+    "difficulty": "medium",
+    "category": "Linked List",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/lru-cache/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function lruCache() {\n  // your code here\n}\n",
+      "python": "def lru_cache():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement lruCache\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement lruCache\n};\n"
+    },
+    "order": 42
+  },
+  {
+    "slug": "merge-k-sorted-lists",
+    "title": "Merge K Sorted Lists",
+    "difficulty": "hard",
+    "category": "Linked List",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/merge-k-sorted-lists/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function mergeKSortedLists() {\n  // your code here\n}\n",
+      "python": "def merge_k_sorted_lists():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement mergeKSortedLists\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement mergeKSortedLists\n};\n"
+    },
+    "order": 43
+  },
+  {
+    "slug": "reverse-nodes-in-k-group",
+    "title": "Reverse Nodes In K Group",
+    "difficulty": "hard",
+    "category": "Linked List",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/reverse-nodes-in-k-group/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function reverseNodesInKGroup() {\n  // your code here\n}\n",
+      "python": "def reverse_nodes_in_k_group():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement reverseNodesInKGroup\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement reverseNodesInKGroup\n};\n"
+    },
+    "order": 44
   },
   {
     "slug": "invert-binary-tree",
     "title": "Invert Binary Tree",
     "difficulty": "easy",
     "category": "Trees",
-    "tags": ["tree", "dfs", "bfs", "recursion"],
+    "tags": [
+      "tree",
+      "dfs",
+      "bfs",
+      "recursion"
+    ],
     "sourceUrl": "https://leetcode.com/problems/invert-binary-tree/",
     "description": "Given the root of a binary tree, swap every node's left and right children (recursively) and return the root of the resulting mirrored tree.",
     "examples": [
-      { "input": "root = [4, 2, 7, 1, 3, 6, 9]", "output": "[4, 7, 2, 9, 6, 3, 1]" },
-      { "input": "root = []", "output": "[]" }
+      {
+        "input": "root = [4, 2, 7, 1, 3, 6, 9]",
+        "output": "[4, 7, 2, 9, 6, 3, 1]"
+      },
+      {
+        "input": "root = []",
+        "output": "[]"
+      }
     ],
     "constraints": "0 <= node count <= 100; -100 <= Node.val <= 100.",
-    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
     "starterCode": {
       "javascript": "function invertTree(root) {\n  // your code here\n}\n",
       "python": "def invert_tree(root):\n    # your code here\n    pass\n",
       "java": "class Solution {\n    public TreeNode invertTree(TreeNode root) {\n        // your code here\n    }\n}\n",
       "cpp": "class Solution {\npublic:\n    TreeNode* invertTree(TreeNode* root) {\n        // your code here\n    }\n};\n"
-    }
+    },
+    "order": 45
   },
   {
     "slug": "maximum-depth-of-binary-tree",
     "title": "Maximum Depth of Binary Tree",
     "difficulty": "easy",
     "category": "Trees",
-    "tags": ["tree", "dfs", "bfs", "recursion"],
+    "tags": [
+      "tree",
+      "dfs",
+      "bfs",
+      "recursion"
+    ],
     "sourceUrl": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
-    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
     "starterCode": {
       "javascript": "function maxDepth(root) {\n  // your code here\n}\n",
       "python": "def max_depth(root):\n    # your code here\n    pass\n",
       "java": "class Solution {\n    public int maxDepth(TreeNode root) {\n        // your code here\n    }\n}\n",
       "cpp": "class Solution {\npublic:\n    int maxDepth(TreeNode* root) {\n        // your code here\n    }\n};\n"
-    }
+    },
+    "order": 46
+  },
+  {
+    "slug": "diameter-of-binary-tree",
+    "title": "Diameter of Binary Tree",
+    "difficulty": "easy",
+    "category": "Trees",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/diameter-of-binary-tree/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function diameterOfBinaryTree() {\n  // your code here\n}\n",
+      "python": "def diameter_of_binary_tree():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement diameterOfBinaryTree\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement diameterOfBinaryTree\n};\n"
+    },
+    "order": 47
+  },
+  {
+    "slug": "balanced-binary-tree",
+    "title": "Balanced Binary Tree",
+    "difficulty": "easy",
+    "category": "Trees",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/balanced-binary-tree/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function balancedBinaryTree() {\n  // your code here\n}\n",
+      "python": "def balanced_binary_tree():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement balancedBinaryTree\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement balancedBinaryTree\n};\n"
+    },
+    "order": 48
+  },
+  {
+    "slug": "same-tree",
+    "title": "Same Tree",
+    "difficulty": "easy",
+    "category": "Trees",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/same-tree/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function sameTree() {\n  // your code here\n}\n",
+      "python": "def same_tree():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement sameTree\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement sameTree\n};\n"
+    },
+    "order": 49
+  },
+  {
+    "slug": "subtree-of-another-tree",
+    "title": "Subtree of Another Tree",
+    "difficulty": "easy",
+    "category": "Trees",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/subtree-of-another-tree/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function subtreeOfAnotherTree() {\n  // your code here\n}\n",
+      "python": "def subtree_of_another_tree():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement subtreeOfAnotherTree\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement subtreeOfAnotherTree\n};\n"
+    },
+    "order": 50
+  },
+  {
+    "slug": "lowest-common-ancestor-of-a-binary-search-tree",
+    "title": "Lowest Common Ancestor of a Binary Search Tree",
+    "difficulty": "medium",
+    "category": "Trees",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function lowestCommonAncestorOfABinarySearchTree() {\n  // your code here\n}\n",
+      "python": "def lowest_common_ancestor_of_a_binary_search_tree():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement lowestCommonAncestorOfABinarySearchTree\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement lowestCommonAncestorOfABinarySearchTree\n};\n"
+    },
+    "order": 51
+  },
+  {
+    "slug": "binary-tree-level-order-traversal",
+    "title": "Binary Tree Level Order Traversal",
+    "difficulty": "medium",
+    "category": "Trees",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function binaryTreeLevelOrderTraversal() {\n  // your code here\n}\n",
+      "python": "def binary_tree_level_order_traversal():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement binaryTreeLevelOrderTraversal\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement binaryTreeLevelOrderTraversal\n};\n"
+    },
+    "order": 52
+  },
+  {
+    "slug": "binary-tree-right-side-view",
+    "title": "Binary Tree Right Side View",
+    "difficulty": "medium",
+    "category": "Trees",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/binary-tree-right-side-view/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function binaryTreeRightSideView() {\n  // your code here\n}\n",
+      "python": "def binary_tree_right_side_view():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement binaryTreeRightSideView\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement binaryTreeRightSideView\n};\n"
+    },
+    "order": 53
+  },
+  {
+    "slug": "count-good-nodes-in-binary-tree",
+    "title": "Count Good Nodes In Binary Tree",
+    "difficulty": "medium",
+    "category": "Trees",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/count-good-nodes-in-binary-tree/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function countGoodNodesInBinaryTree() {\n  // your code here\n}\n",
+      "python": "def count_good_nodes_in_binary_tree():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement countGoodNodesInBinaryTree\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement countGoodNodesInBinaryTree\n};\n"
+    },
+    "order": 54
+  },
+  {
+    "slug": "validate-binary-search-tree",
+    "title": "Validate Binary Search Tree",
+    "difficulty": "medium",
+    "category": "Trees",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/validate-binary-search-tree/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function validateBinarySearchTree() {\n  // your code here\n}\n",
+      "python": "def validate_binary_search_tree():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement validateBinarySearchTree\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement validateBinarySearchTree\n};\n"
+    },
+    "order": 55
+  },
+  {
+    "slug": "kth-smallest-element-in-a-bst",
+    "title": "Kth Smallest Element In a Bst",
+    "difficulty": "medium",
+    "category": "Trees",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function kthSmallestElementInABst() {\n  // your code here\n}\n",
+      "python": "def kth_smallest_element_in_a_bst():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement kthSmallestElementInABst\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement kthSmallestElementInABst\n};\n"
+    },
+    "order": 56
+  },
+  {
+    "slug": "construct-binary-tree-from-preorder-and-inorder-traversal",
+    "title": "Construct Binary Tree From Preorder And Inorder Traversal",
+    "difficulty": "medium",
+    "category": "Trees",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function constructBinaryTreeFromPreorderAndInorderTraversal() {\n  // your code here\n}\n",
+      "python": "def construct_binary_tree_from_preorder_and_inorder_traversal():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement constructBinaryTreeFromPreorderAndInorderTraversal\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement constructBinaryTreeFromPreorderAndInorderTraversal\n};\n"
+    },
+    "order": 57
+  },
+  {
+    "slug": "binary-tree-maximum-path-sum",
+    "title": "Binary Tree Maximum Path Sum",
+    "difficulty": "hard",
+    "category": "Trees",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function binaryTreeMaximumPathSum() {\n  // your code here\n}\n",
+      "python": "def binary_tree_maximum_path_sum():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement binaryTreeMaximumPathSum\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement binaryTreeMaximumPathSum\n};\n"
+    },
+    "order": 58
+  },
+  {
+    "slug": "serialize-and-deserialize-binary-tree",
+    "title": "Serialize And Deserialize Binary Tree",
+    "difficulty": "hard",
+    "category": "Trees",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function serializeAndDeserializeBinaryTree() {\n  // your code here\n}\n",
+      "python": "def serialize_and_deserialize_binary_tree():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement serializeAndDeserializeBinaryTree\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement serializeAndDeserializeBinaryTree\n};\n"
+    },
+    "order": 59
+  },
+  {
+    "slug": "implement-trie-prefix-tree",
+    "title": "Implement Trie Prefix Tree",
+    "difficulty": "medium",
+    "category": "Tries",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/implement-trie-prefix-tree/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function implementTriePrefixTree() {\n  // your code here\n}\n",
+      "python": "def implement_trie_prefix_tree():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement implementTriePrefixTree\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement implementTriePrefixTree\n};\n"
+    },
+    "order": 60
+  },
+  {
+    "slug": "design-add-and-search-words-data-structure",
+    "title": "Design Add And Search Words Data Structure",
+    "difficulty": "medium",
+    "category": "Tries",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/design-add-and-search-words-data-structure/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function designAddAndSearchWordsDataStructure() {\n  // your code here\n}\n",
+      "python": "def design_add_and_search_words_data_structure():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement designAddAndSearchWordsDataStructure\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement designAddAndSearchWordsDataStructure\n};\n"
+    },
+    "order": 61
+  },
+  {
+    "slug": "word-search-ii",
+    "title": "Word Search II",
+    "difficulty": "hard",
+    "category": "Tries",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/word-search-ii/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function wordSearchIi() {\n  // your code here\n}\n",
+      "python": "def word_search_ii():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement wordSearchIi\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement wordSearchIi\n};\n"
+    },
+    "order": 62
+  },
+  {
+    "slug": "kth-largest-element-in-a-stream",
+    "title": "Kth Largest Element In a Stream",
+    "difficulty": "easy",
+    "category": "Heap / Priority Queue",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/kth-largest-element-in-a-stream/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function kthLargestElementInAStream() {\n  // your code here\n}\n",
+      "python": "def kth_largest_element_in_a_stream():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement kthLargestElementInAStream\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement kthLargestElementInAStream\n};\n"
+    },
+    "order": 63
+  },
+  {
+    "slug": "last-stone-weight",
+    "title": "Last Stone Weight",
+    "difficulty": "easy",
+    "category": "Heap / Priority Queue",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/last-stone-weight/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function lastStoneWeight() {\n  // your code here\n}\n",
+      "python": "def last_stone_weight():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement lastStoneWeight\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement lastStoneWeight\n};\n"
+    },
+    "order": 64
+  },
+  {
+    "slug": "k-closest-points-to-origin",
+    "title": "K Closest Points to Origin",
+    "difficulty": "medium",
+    "category": "Heap / Priority Queue",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/k-closest-points-to-origin/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function kClosestPointsToOrigin() {\n  // your code here\n}\n",
+      "python": "def k_closest_points_to_origin():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement kClosestPointsToOrigin\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement kClosestPointsToOrigin\n};\n"
+    },
+    "order": 65
+  },
+  {
+    "slug": "kth-largest-element-in-an-array",
+    "title": "Kth Largest Element In An Array",
+    "difficulty": "medium",
+    "category": "Heap / Priority Queue",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function kthLargestElementInAnArray() {\n  // your code here\n}\n",
+      "python": "def kth_largest_element_in_an_array():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement kthLargestElementInAnArray\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement kthLargestElementInAnArray\n};\n"
+    },
+    "order": 66
+  },
+  {
+    "slug": "task-scheduler",
+    "title": "Task Scheduler",
+    "difficulty": "medium",
+    "category": "Heap / Priority Queue",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/task-scheduler/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function taskScheduler() {\n  // your code here\n}\n",
+      "python": "def task_scheduler():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement taskScheduler\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement taskScheduler\n};\n"
+    },
+    "order": 67
+  },
+  {
+    "slug": "design-twitter",
+    "title": "Design Twitter",
+    "difficulty": "medium",
+    "category": "Heap / Priority Queue",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/design-twitter/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function designTwitter() {\n  // your code here\n}\n",
+      "python": "def design_twitter():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement designTwitter\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement designTwitter\n};\n"
+    },
+    "order": 68
+  },
+  {
+    "slug": "find-median-from-data-stream",
+    "title": "Find Median From Data Stream",
+    "difficulty": "hard",
+    "category": "Heap / Priority Queue",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/find-median-from-data-stream/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function findMedianFromDataStream() {\n  // your code here\n}\n",
+      "python": "def find_median_from_data_stream():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement findMedianFromDataStream\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement findMedianFromDataStream\n};\n"
+    },
+    "order": 69
+  },
+  {
+    "slug": "subsets",
+    "title": "Subsets",
+    "difficulty": "medium",
+    "category": "Backtracking",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/subsets/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function subsets() {\n  // your code here\n}\n",
+      "python": "def subsets():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement subsets\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement subsets\n};\n"
+    },
+    "order": 70
+  },
+  {
+    "slug": "combination-sum",
+    "title": "Combination Sum",
+    "difficulty": "medium",
+    "category": "Backtracking",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/combination-sum/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function combinationSum() {\n  // your code here\n}\n",
+      "python": "def combination_sum():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement combinationSum\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement combinationSum\n};\n"
+    },
+    "order": 71
+  },
+  {
+    "slug": "permutations",
+    "title": "Permutations",
+    "difficulty": "medium",
+    "category": "Backtracking",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/permutations/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function permutations() {\n  // your code here\n}\n",
+      "python": "def permutations():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement permutations\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement permutations\n};\n"
+    },
+    "order": 72
+  },
+  {
+    "slug": "subsets-ii",
+    "title": "Subsets II",
+    "difficulty": "medium",
+    "category": "Backtracking",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/subsets-ii/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function subsetsIi() {\n  // your code here\n}\n",
+      "python": "def subsets_ii():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement subsetsIi\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement subsetsIi\n};\n"
+    },
+    "order": 73
+  },
+  {
+    "slug": "combination-sum-ii",
+    "title": "Combination Sum II",
+    "difficulty": "medium",
+    "category": "Backtracking",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/combination-sum-ii/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function combinationSumIi() {\n  // your code here\n}\n",
+      "python": "def combination_sum_ii():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement combinationSumIi\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement combinationSumIi\n};\n"
+    },
+    "order": 74
+  },
+  {
+    "slug": "word-search",
+    "title": "Word Search",
+    "difficulty": "medium",
+    "category": "Backtracking",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/word-search/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function wordSearch() {\n  // your code here\n}\n",
+      "python": "def word_search():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement wordSearch\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement wordSearch\n};\n"
+    },
+    "order": 75
+  },
+  {
+    "slug": "palindrome-partitioning",
+    "title": "Palindrome Partitioning",
+    "difficulty": "medium",
+    "category": "Backtracking",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/palindrome-partitioning/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function palindromePartitioning() {\n  // your code here\n}\n",
+      "python": "def palindrome_partitioning():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement palindromePartitioning\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement palindromePartitioning\n};\n"
+    },
+    "order": 76
+  },
+  {
+    "slug": "letter-combinations-of-a-phone-number",
+    "title": "Letter Combinations of a Phone Number",
+    "difficulty": "medium",
+    "category": "Backtracking",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function letterCombinationsOfAPhoneNumber() {\n  // your code here\n}\n",
+      "python": "def letter_combinations_of_a_phone_number():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement letterCombinationsOfAPhoneNumber\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement letterCombinationsOfAPhoneNumber\n};\n"
+    },
+    "order": 77
+  },
+  {
+    "slug": "n-queens",
+    "title": "N Queens",
+    "difficulty": "hard",
+    "category": "Backtracking",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/n-queens/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function nQueens() {\n  // your code here\n}\n",
+      "python": "def n_queens():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement nQueens\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement nQueens\n};\n"
+    },
+    "order": 78
+  },
+  {
+    "slug": "number-of-islands",
+    "title": "Number of Islands",
+    "difficulty": "medium",
+    "category": "Graphs",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/number-of-islands/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function numberOfIslands() {\n  // your code here\n}\n",
+      "python": "def number_of_islands():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement numberOfIslands\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement numberOfIslands\n};\n"
+    },
+    "order": 79
+  },
+  {
+    "slug": "clone-graph",
+    "title": "Clone Graph",
+    "difficulty": "medium",
+    "category": "Graphs",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/clone-graph/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function cloneGraph() {\n  // your code here\n}\n",
+      "python": "def clone_graph():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement cloneGraph\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement cloneGraph\n};\n"
+    },
+    "order": 80
+  },
+  {
+    "slug": "max-area-of-island",
+    "title": "Max Area of Island",
+    "difficulty": "medium",
+    "category": "Graphs",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/max-area-of-island/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function maxAreaOfIsland() {\n  // your code here\n}\n",
+      "python": "def max_area_of_island():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement maxAreaOfIsland\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement maxAreaOfIsland\n};\n"
+    },
+    "order": 81
+  },
+  {
+    "slug": "pacific-atlantic-water-flow",
+    "title": "Pacific Atlantic Water Flow",
+    "difficulty": "medium",
+    "category": "Graphs",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/pacific-atlantic-water-flow/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function pacificAtlanticWaterFlow() {\n  // your code here\n}\n",
+      "python": "def pacific_atlantic_water_flow():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement pacificAtlanticWaterFlow\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement pacificAtlanticWaterFlow\n};\n"
+    },
+    "order": 82
+  },
+  {
+    "slug": "surrounded-regions",
+    "title": "Surrounded Regions",
+    "difficulty": "medium",
+    "category": "Graphs",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/surrounded-regions/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function surroundedRegions() {\n  // your code here\n}\n",
+      "python": "def surrounded_regions():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement surroundedRegions\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement surroundedRegions\n};\n"
+    },
+    "order": 83
+  },
+  {
+    "slug": "rotting-oranges",
+    "title": "Rotting Oranges",
+    "difficulty": "medium",
+    "category": "Graphs",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/rotting-oranges/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function rottingOranges() {\n  // your code here\n}\n",
+      "python": "def rotting_oranges():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement rottingOranges\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement rottingOranges\n};\n"
+    },
+    "order": 84
+  },
+  {
+    "slug": "walls-and-gates",
+    "title": "Walls And Gates",
+    "difficulty": "medium",
+    "category": "Graphs",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/walls-and-gates/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function wallsAndGates() {\n  // your code here\n}\n",
+      "python": "def walls_and_gates():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement wallsAndGates\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement wallsAndGates\n};\n"
+    },
+    "order": 85
+  },
+  {
+    "slug": "course-schedule",
+    "title": "Course Schedule",
+    "difficulty": "medium",
+    "category": "Graphs",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/course-schedule/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function courseSchedule() {\n  // your code here\n}\n",
+      "python": "def course_schedule():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement courseSchedule\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement courseSchedule\n};\n"
+    },
+    "order": 86
+  },
+  {
+    "slug": "course-schedule-ii",
+    "title": "Course Schedule II",
+    "difficulty": "medium",
+    "category": "Graphs",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/course-schedule-ii/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function courseScheduleIi() {\n  // your code here\n}\n",
+      "python": "def course_schedule_ii():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement courseScheduleIi\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement courseScheduleIi\n};\n"
+    },
+    "order": 87
+  },
+  {
+    "slug": "redundant-connection",
+    "title": "Redundant Connection",
+    "difficulty": "medium",
+    "category": "Graphs",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/redundant-connection/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function redundantConnection() {\n  // your code here\n}\n",
+      "python": "def redundant_connection():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement redundantConnection\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement redundantConnection\n};\n"
+    },
+    "order": 88
+  },
+  {
+    "slug": "number-of-connected-components-in-an-undirected-graph",
+    "title": "Number of Connected Components In An Undirected Graph",
+    "difficulty": "medium",
+    "category": "Graphs",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function numberOfConnectedComponentsInAnUndirectedGraph() {\n  // your code here\n}\n",
+      "python": "def number_of_connected_components_in_an_undirected_graph():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement numberOfConnectedComponentsInAnUndirectedGraph\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement numberOfConnectedComponentsInAnUndirectedGraph\n};\n"
+    },
+    "order": 89
+  },
+  {
+    "slug": "graph-valid-tree",
+    "title": "Graph Valid Tree",
+    "difficulty": "medium",
+    "category": "Graphs",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/graph-valid-tree/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function graphValidTree() {\n  // your code here\n}\n",
+      "python": "def graph_valid_tree():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement graphValidTree\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement graphValidTree\n};\n"
+    },
+    "order": 90
+  },
+  {
+    "slug": "word-ladder",
+    "title": "Word Ladder",
+    "difficulty": "hard",
+    "category": "Graphs",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/word-ladder/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function wordLadder() {\n  // your code here\n}\n",
+      "python": "def word_ladder():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement wordLadder\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement wordLadder\n};\n"
+    },
+    "order": 91
+  },
+  {
+    "slug": "reconstruct-itinerary",
+    "title": "Reconstruct Itinerary",
+    "difficulty": "hard",
+    "category": "Advanced Graphs",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/reconstruct-itinerary/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function reconstructItinerary() {\n  // your code here\n}\n",
+      "python": "def reconstruct_itinerary():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement reconstructItinerary\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement reconstructItinerary\n};\n"
+    },
+    "order": 92
+  },
+  {
+    "slug": "min-cost-to-connect-all-points",
+    "title": "Min Cost to Connect All Points",
+    "difficulty": "medium",
+    "category": "Advanced Graphs",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/min-cost-to-connect-all-points/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function minCostToConnectAllPoints() {\n  // your code here\n}\n",
+      "python": "def min_cost_to_connect_all_points():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement minCostToConnectAllPoints\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement minCostToConnectAllPoints\n};\n"
+    },
+    "order": 93
+  },
+  {
+    "slug": "network-delay-time",
+    "title": "Network Delay Time",
+    "difficulty": "medium",
+    "category": "Advanced Graphs",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/network-delay-time/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function networkDelayTime() {\n  // your code here\n}\n",
+      "python": "def network_delay_time():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement networkDelayTime\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement networkDelayTime\n};\n"
+    },
+    "order": 94
+  },
+  {
+    "slug": "swim-in-rising-water",
+    "title": "Swim In Rising Water",
+    "difficulty": "hard",
+    "category": "Advanced Graphs",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/swim-in-rising-water/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function swimInRisingWater() {\n  // your code here\n}\n",
+      "python": "def swim_in_rising_water():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement swimInRisingWater\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement swimInRisingWater\n};\n"
+    },
+    "order": 95
+  },
+  {
+    "slug": "alien-dictionary",
+    "title": "Alien Dictionary",
+    "difficulty": "hard",
+    "category": "Advanced Graphs",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/alien-dictionary/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function alienDictionary() {\n  // your code here\n}\n",
+      "python": "def alien_dictionary():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement alienDictionary\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement alienDictionary\n};\n"
+    },
+    "order": 96
+  },
+  {
+    "slug": "cheapest-flights-within-k-stops",
+    "title": "Cheapest Flights Within K Stops",
+    "difficulty": "medium",
+    "category": "Advanced Graphs",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/cheapest-flights-within-k-stops/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function cheapestFlightsWithinKStops() {\n  // your code here\n}\n",
+      "python": "def cheapest_flights_within_k_stops():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement cheapestFlightsWithinKStops\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement cheapestFlightsWithinKStops\n};\n"
+    },
+    "order": 97
   },
   {
     "slug": "climbing-stairs",
     "title": "Climbing Stairs",
     "difficulty": "easy",
-    "category": "Dynamic Programming",
-    "tags": ["dynamic-programming", "math"],
+    "category": "1-D Dynamic Programming",
+    "tags": [
+      "dynamic-programming",
+      "math"
+    ],
     "sourceUrl": "https://leetcode.com/problems/climbing-stairs/",
     "description": "You are climbing a staircase with n steps. Each move you may climb either 1 or 2 steps. Return the number of distinct ways to reach the top.",
     "examples": [
-      { "input": "n = 2", "output": "2", "explanation": "1+1 or 2." },
-      { "input": "n = 3", "output": "3", "explanation": "1+1+1, 1+2, or 2+1." }
+      {
+        "input": "n = 2",
+        "output": "2",
+        "explanation": "1+1 or 2."
+      },
+      {
+        "input": "n = 3",
+        "output": "3",
+        "explanation": "1+1+1, 1+2, or 2+1."
+      }
     ],
     "constraints": "1 <= n <= 45.",
-    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
     "starterCode": {
       "javascript": "function climbStairs(n) {\n  // your code here\n}\n",
       "python": "def climb_stairs(n):\n    # your code here\n    pass\n",
       "java": "class Solution {\n    public int climbStairs(int n) {\n        // your code here\n    }\n}\n",
       "cpp": "class Solution {\npublic:\n    int climbStairs(int n) {\n        // your code here\n    }\n};\n"
-    }
+    },
+    "order": 98
+  },
+  {
+    "slug": "min-cost-climbing-stairs",
+    "title": "Min Cost Climbing Stairs",
+    "difficulty": "easy",
+    "category": "1-D Dynamic Programming",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/min-cost-climbing-stairs/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function minCostClimbingStairs() {\n  // your code here\n}\n",
+      "python": "def min_cost_climbing_stairs():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement minCostClimbingStairs\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement minCostClimbingStairs\n};\n"
+    },
+    "order": 99
   },
   {
     "slug": "house-robber",
     "title": "House Robber",
     "difficulty": "medium",
-    "category": "Dynamic Programming",
-    "tags": ["array", "dynamic-programming"],
+    "category": "1-D Dynamic Programming",
+    "tags": [
+      "array",
+      "dynamic-programming"
+    ],
     "sourceUrl": "https://leetcode.com/problems/house-robber/",
-    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
     "starterCode": {
       "javascript": "function rob(nums) {\n  // your code here\n}\n",
       "python": "def rob(nums):\n    # your code here\n    pass\n",
       "java": "class Solution {\n    public int rob(int[] nums) {\n        // your code here\n    }\n}\n",
       "cpp": "class Solution {\npublic:\n    int rob(vector<int>& nums) {\n        // your code here\n    }\n};\n"
-    }
+    },
+    "order": 100
+  },
+  {
+    "slug": "house-robber-ii",
+    "title": "House Robber II",
+    "difficulty": "medium",
+    "category": "1-D Dynamic Programming",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/house-robber-ii/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function houseRobberIi() {\n  // your code here\n}\n",
+      "python": "def house_robber_ii():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement houseRobberIi\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement houseRobberIi\n};\n"
+    },
+    "order": 101
+  },
+  {
+    "slug": "longest-palindromic-substring",
+    "title": "Longest Palindromic Substring",
+    "difficulty": "medium",
+    "category": "1-D Dynamic Programming",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/longest-palindromic-substring/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function longestPalindromicSubstring() {\n  // your code here\n}\n",
+      "python": "def longest_palindromic_substring():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement longestPalindromicSubstring\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement longestPalindromicSubstring\n};\n"
+    },
+    "order": 102
+  },
+  {
+    "slug": "palindromic-substrings",
+    "title": "Palindromic Substrings",
+    "difficulty": "medium",
+    "category": "1-D Dynamic Programming",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/palindromic-substrings/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function palindromicSubstrings() {\n  // your code here\n}\n",
+      "python": "def palindromic_substrings():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement palindromicSubstrings\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement palindromicSubstrings\n};\n"
+    },
+    "order": 103
+  },
+  {
+    "slug": "decode-ways",
+    "title": "Decode Ways",
+    "difficulty": "medium",
+    "category": "1-D Dynamic Programming",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/decode-ways/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function decodeWays() {\n  // your code here\n}\n",
+      "python": "def decode_ways():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement decodeWays\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement decodeWays\n};\n"
+    },
+    "order": 104
+  },
+  {
+    "slug": "coin-change",
+    "title": "Coin Change",
+    "difficulty": "medium",
+    "category": "1-D Dynamic Programming",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/coin-change/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function coinChange() {\n  // your code here\n}\n",
+      "python": "def coin_change():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement coinChange\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement coinChange\n};\n"
+    },
+    "order": 105
+  },
+  {
+    "slug": "maximum-product-subarray",
+    "title": "Maximum Product Subarray",
+    "difficulty": "medium",
+    "category": "1-D Dynamic Programming",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/maximum-product-subarray/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function maximumProductSubarray() {\n  // your code here\n}\n",
+      "python": "def maximum_product_subarray():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement maximumProductSubarray\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement maximumProductSubarray\n};\n"
+    },
+    "order": 106
+  },
+  {
+    "slug": "word-break",
+    "title": "Word Break",
+    "difficulty": "medium",
+    "category": "1-D Dynamic Programming",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/word-break/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function wordBreak() {\n  // your code here\n}\n",
+      "python": "def word_break():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement wordBreak\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement wordBreak\n};\n"
+    },
+    "order": 107
+  },
+  {
+    "slug": "longest-increasing-subsequence",
+    "title": "Longest Increasing Subsequence",
+    "difficulty": "medium",
+    "category": "1-D Dynamic Programming",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/longest-increasing-subsequence/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function longestIncreasingSubsequence() {\n  // your code here\n}\n",
+      "python": "def longest_increasing_subsequence():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement longestIncreasingSubsequence\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement longestIncreasingSubsequence\n};\n"
+    },
+    "order": 108
+  },
+  {
+    "slug": "partition-equal-subset-sum",
+    "title": "Partition Equal Subset Sum",
+    "difficulty": "medium",
+    "category": "1-D Dynamic Programming",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/partition-equal-subset-sum/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function partitionEqualSubsetSum() {\n  // your code here\n}\n",
+      "python": "def partition_equal_subset_sum():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement partitionEqualSubsetSum\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement partitionEqualSubsetSum\n};\n"
+    },
+    "order": 109
+  },
+  {
+    "slug": "unique-paths",
+    "title": "Unique Paths",
+    "difficulty": "medium",
+    "category": "2-D Dynamic Programming",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/unique-paths/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function uniquePaths() {\n  // your code here\n}\n",
+      "python": "def unique_paths():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement uniquePaths\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement uniquePaths\n};\n"
+    },
+    "order": 110
+  },
+  {
+    "slug": "longest-common-subsequence",
+    "title": "Longest Common Subsequence",
+    "difficulty": "medium",
+    "category": "2-D Dynamic Programming",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/longest-common-subsequence/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function longestCommonSubsequence() {\n  // your code here\n}\n",
+      "python": "def longest_common_subsequence():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement longestCommonSubsequence\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement longestCommonSubsequence\n};\n"
+    },
+    "order": 111
+  },
+  {
+    "slug": "best-time-to-buy-and-sell-stock-with-cooldown",
+    "title": "Best Time to Buy And Sell Stock With Cooldown",
+    "difficulty": "medium",
+    "category": "2-D Dynamic Programming",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function bestTimeToBuyAndSellStockWithCooldown() {\n  // your code here\n}\n",
+      "python": "def best_time_to_buy_and_sell_stock_with_cooldown():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement bestTimeToBuyAndSellStockWithCooldown\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement bestTimeToBuyAndSellStockWithCooldown\n};\n"
+    },
+    "order": 112
+  },
+  {
+    "slug": "coin-change-ii",
+    "title": "Coin Change II",
+    "difficulty": "medium",
+    "category": "2-D Dynamic Programming",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/coin-change-ii/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function coinChangeIi() {\n  // your code here\n}\n",
+      "python": "def coin_change_ii():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement coinChangeIi\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement coinChangeIi\n};\n"
+    },
+    "order": 113
+  },
+  {
+    "slug": "target-sum",
+    "title": "Target Sum",
+    "difficulty": "medium",
+    "category": "2-D Dynamic Programming",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/target-sum/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function targetSum() {\n  // your code here\n}\n",
+      "python": "def target_sum():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement targetSum\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement targetSum\n};\n"
+    },
+    "order": 114
+  },
+  {
+    "slug": "interleaving-string",
+    "title": "Interleaving String",
+    "difficulty": "medium",
+    "category": "2-D Dynamic Programming",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/interleaving-string/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function interleavingString() {\n  // your code here\n}\n",
+      "python": "def interleaving_string():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement interleavingString\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement interleavingString\n};\n"
+    },
+    "order": 115
+  },
+  {
+    "slug": "longest-increasing-path-in-a-matrix",
+    "title": "Longest Increasing Path In a Matrix",
+    "difficulty": "hard",
+    "category": "2-D Dynamic Programming",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/longest-increasing-path-in-a-matrix/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function longestIncreasingPathInAMatrix() {\n  // your code here\n}\n",
+      "python": "def longest_increasing_path_in_a_matrix():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement longestIncreasingPathInAMatrix\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement longestIncreasingPathInAMatrix\n};\n"
+    },
+    "order": 116
+  },
+  {
+    "slug": "distinct-subsequences",
+    "title": "Distinct Subsequences",
+    "difficulty": "hard",
+    "category": "2-D Dynamic Programming",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/distinct-subsequences/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function distinctSubsequences() {\n  // your code here\n}\n",
+      "python": "def distinct_subsequences():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement distinctSubsequences\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement distinctSubsequences\n};\n"
+    },
+    "order": 117
+  },
+  {
+    "slug": "edit-distance",
+    "title": "Edit Distance",
+    "difficulty": "medium",
+    "category": "2-D Dynamic Programming",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/edit-distance/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function editDistance() {\n  // your code here\n}\n",
+      "python": "def edit_distance():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement editDistance\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement editDistance\n};\n"
+    },
+    "order": 118
+  },
+  {
+    "slug": "burst-balloons",
+    "title": "Burst Balloons",
+    "difficulty": "hard",
+    "category": "2-D Dynamic Programming",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/burst-balloons/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function burstBalloons() {\n  // your code here\n}\n",
+      "python": "def burst_balloons():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement burstBalloons\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement burstBalloons\n};\n"
+    },
+    "order": 119
+  },
+  {
+    "slug": "regular-expression-matching",
+    "title": "Regular Expression Matching",
+    "difficulty": "hard",
+    "category": "2-D Dynamic Programming",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/regular-expression-matching/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function regularExpressionMatching() {\n  // your code here\n}\n",
+      "python": "def regular_expression_matching():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement regularExpressionMatching\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement regularExpressionMatching\n};\n"
+    },
+    "order": 120
+  },
+  {
+    "slug": "maximum-subarray",
+    "title": "Maximum Subarray",
+    "difficulty": "medium",
+    "category": "Greedy",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/maximum-subarray/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function maximumSubarray() {\n  // your code here\n}\n",
+      "python": "def maximum_subarray():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement maximumSubarray\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement maximumSubarray\n};\n"
+    },
+    "order": 121
+  },
+  {
+    "slug": "jump-game",
+    "title": "Jump Game",
+    "difficulty": "medium",
+    "category": "Greedy",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/jump-game/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function jumpGame() {\n  // your code here\n}\n",
+      "python": "def jump_game():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement jumpGame\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement jumpGame\n};\n"
+    },
+    "order": 122
+  },
+  {
+    "slug": "jump-game-ii",
+    "title": "Jump Game II",
+    "difficulty": "medium",
+    "category": "Greedy",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/jump-game-ii/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function jumpGameIi() {\n  // your code here\n}\n",
+      "python": "def jump_game_ii():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement jumpGameIi\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement jumpGameIi\n};\n"
+    },
+    "order": 123
+  },
+  {
+    "slug": "gas-station",
+    "title": "Gas Station",
+    "difficulty": "medium",
+    "category": "Greedy",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/gas-station/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function gasStation() {\n  // your code here\n}\n",
+      "python": "def gas_station():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement gasStation\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement gasStation\n};\n"
+    },
+    "order": 124
+  },
+  {
+    "slug": "hand-of-straights",
+    "title": "Hand of Straights",
+    "difficulty": "medium",
+    "category": "Greedy",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/hand-of-straights/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function handOfStraights() {\n  // your code here\n}\n",
+      "python": "def hand_of_straights():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement handOfStraights\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement handOfStraights\n};\n"
+    },
+    "order": 125
+  },
+  {
+    "slug": "merge-triplets-to-form-target-triplet",
+    "title": "Merge Triplets to Form Target Triplet",
+    "difficulty": "medium",
+    "category": "Greedy",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/merge-triplets-to-form-target-triplet/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function mergeTripletsToFormTargetTriplet() {\n  // your code here\n}\n",
+      "python": "def merge_triplets_to_form_target_triplet():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement mergeTripletsToFormTargetTriplet\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement mergeTripletsToFormTargetTriplet\n};\n"
+    },
+    "order": 126
+  },
+  {
+    "slug": "partition-labels",
+    "title": "Partition Labels",
+    "difficulty": "medium",
+    "category": "Greedy",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/partition-labels/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function partitionLabels() {\n  // your code here\n}\n",
+      "python": "def partition_labels():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement partitionLabels\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement partitionLabels\n};\n"
+    },
+    "order": 127
+  },
+  {
+    "slug": "valid-parenthesis-string",
+    "title": "Valid Parenthesis String",
+    "difficulty": "medium",
+    "category": "Greedy",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/valid-parenthesis-string/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function validParenthesisString() {\n  // your code here\n}\n",
+      "python": "def valid_parenthesis_string():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement validParenthesisString\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement validParenthesisString\n};\n"
+    },
+    "order": 128
+  },
+  {
+    "slug": "insert-interval",
+    "title": "Insert Interval",
+    "difficulty": "medium",
+    "category": "Intervals",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/insert-interval/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function insertInterval() {\n  // your code here\n}\n",
+      "python": "def insert_interval():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement insertInterval\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement insertInterval\n};\n"
+    },
+    "order": 129
+  },
+  {
+    "slug": "merge-intervals",
+    "title": "Merge Intervals",
+    "difficulty": "medium",
+    "category": "Intervals",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/merge-intervals/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function mergeIntervals() {\n  // your code here\n}\n",
+      "python": "def merge_intervals():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement mergeIntervals\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement mergeIntervals\n};\n"
+    },
+    "order": 130
+  },
+  {
+    "slug": "non-overlapping-intervals",
+    "title": "Non Overlapping Intervals",
+    "difficulty": "medium",
+    "category": "Intervals",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/non-overlapping-intervals/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function nonOverlappingIntervals() {\n  // your code here\n}\n",
+      "python": "def non_overlapping_intervals():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement nonOverlappingIntervals\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement nonOverlappingIntervals\n};\n"
+    },
+    "order": 131
+  },
+  {
+    "slug": "meeting-rooms",
+    "title": "Meeting Rooms",
+    "difficulty": "easy",
+    "category": "Intervals",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/meeting-rooms/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function meetingRooms() {\n  // your code here\n}\n",
+      "python": "def meeting_rooms():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement meetingRooms\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement meetingRooms\n};\n"
+    },
+    "order": 132
+  },
+  {
+    "slug": "meeting-rooms-ii",
+    "title": "Meeting Rooms II",
+    "difficulty": "medium",
+    "category": "Intervals",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/meeting-rooms-ii/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function meetingRoomsIi() {\n  // your code here\n}\n",
+      "python": "def meeting_rooms_ii():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement meetingRoomsIi\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement meetingRoomsIi\n};\n"
+    },
+    "order": 133
+  },
+  {
+    "slug": "minimum-interval-to-include-each-query",
+    "title": "Minimum Interval to Include Each Query",
+    "difficulty": "hard",
+    "category": "Intervals",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/minimum-interval-to-include-each-query/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function minimumIntervalToIncludeEachQuery() {\n  // your code here\n}\n",
+      "python": "def minimum_interval_to_include_each_query():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement minimumIntervalToIncludeEachQuery\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement minimumIntervalToIncludeEachQuery\n};\n"
+    },
+    "order": 134
+  },
+  {
+    "slug": "rotate-image",
+    "title": "Rotate Image",
+    "difficulty": "medium",
+    "category": "Math & Geometry",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/rotate-image/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function rotateImage() {\n  // your code here\n}\n",
+      "python": "def rotate_image():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement rotateImage\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement rotateImage\n};\n"
+    },
+    "order": 135
+  },
+  {
+    "slug": "spiral-matrix",
+    "title": "Spiral Matrix",
+    "difficulty": "medium",
+    "category": "Math & Geometry",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/spiral-matrix/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function spiralMatrix() {\n  // your code here\n}\n",
+      "python": "def spiral_matrix():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement spiralMatrix\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement spiralMatrix\n};\n"
+    },
+    "order": 136
+  },
+  {
+    "slug": "set-matrix-zeroes",
+    "title": "Set Matrix Zeroes",
+    "difficulty": "medium",
+    "category": "Math & Geometry",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/set-matrix-zeroes/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function setMatrixZeroes() {\n  // your code here\n}\n",
+      "python": "def set_matrix_zeroes():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement setMatrixZeroes\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement setMatrixZeroes\n};\n"
+    },
+    "order": 137
+  },
+  {
+    "slug": "happy-number",
+    "title": "Happy Number",
+    "difficulty": "easy",
+    "category": "Math & Geometry",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/happy-number/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function happyNumber() {\n  // your code here\n}\n",
+      "python": "def happy_number():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement happyNumber\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement happyNumber\n};\n"
+    },
+    "order": 138
+  },
+  {
+    "slug": "plus-one",
+    "title": "Plus One",
+    "difficulty": "easy",
+    "category": "Math & Geometry",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/plus-one/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function plusOne() {\n  // your code here\n}\n",
+      "python": "def plus_one():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement plusOne\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement plusOne\n};\n"
+    },
+    "order": 139
+  },
+  {
+    "slug": "powx-n",
+    "title": "Pow(x, n)",
+    "difficulty": "medium",
+    "category": "Math & Geometry",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/powx-n/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function powxN() {\n  // your code here\n}\n",
+      "python": "def powx_n():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement powxN\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement powxN\n};\n"
+    },
+    "order": 140
+  },
+  {
+    "slug": "multiply-strings",
+    "title": "Multiply Strings",
+    "difficulty": "medium",
+    "category": "Math & Geometry",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/multiply-strings/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function multiplyStrings() {\n  // your code here\n}\n",
+      "python": "def multiply_strings():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement multiplyStrings\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement multiplyStrings\n};\n"
+    },
+    "order": 141
+  },
+  {
+    "slug": "detect-squares",
+    "title": "Detect Squares",
+    "difficulty": "medium",
+    "category": "Math & Geometry",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/detect-squares/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function detectSquares() {\n  // your code here\n}\n",
+      "python": "def detect_squares():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement detectSquares\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement detectSquares\n};\n"
+    },
+    "order": 142
+  },
+  {
+    "slug": "single-number",
+    "title": "Single Number",
+    "difficulty": "easy",
+    "category": "Bit Manipulation",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/single-number/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function singleNumber() {\n  // your code here\n}\n",
+      "python": "def single_number():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement singleNumber\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement singleNumber\n};\n"
+    },
+    "order": 143
+  },
+  {
+    "slug": "number-of-1-bits",
+    "title": "Number of 1 Bits",
+    "difficulty": "easy",
+    "category": "Bit Manipulation",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/number-of-1-bits/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function numberOf1Bits() {\n  // your code here\n}\n",
+      "python": "def number_of1_bits():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement numberOf1Bits\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement numberOf1Bits\n};\n"
+    },
+    "order": 144
+  },
+  {
+    "slug": "counting-bits",
+    "title": "Counting Bits",
+    "difficulty": "easy",
+    "category": "Bit Manipulation",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/counting-bits/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function countingBits() {\n  // your code here\n}\n",
+      "python": "def counting_bits():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement countingBits\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement countingBits\n};\n"
+    },
+    "order": 145
+  },
+  {
+    "slug": "reverse-bits",
+    "title": "Reverse Bits",
+    "difficulty": "easy",
+    "category": "Bit Manipulation",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/reverse-bits/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function reverseBits() {\n  // your code here\n}\n",
+      "python": "def reverse_bits():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement reverseBits\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement reverseBits\n};\n"
+    },
+    "order": 146
+  },
+  {
+    "slug": "missing-number",
+    "title": "Missing Number",
+    "difficulty": "easy",
+    "category": "Bit Manipulation",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/missing-number/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function missingNumber() {\n  // your code here\n}\n",
+      "python": "def missing_number():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement missingNumber\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement missingNumber\n};\n"
+    },
+    "order": 147
+  },
+  {
+    "slug": "sum-of-two-integers",
+    "title": "Sum of Two Integers",
+    "difficulty": "medium",
+    "category": "Bit Manipulation",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/sum-of-two-integers/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function sumOfTwoIntegers() {\n  // your code here\n}\n",
+      "python": "def sum_of_two_integers():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement sumOfTwoIntegers\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement sumOfTwoIntegers\n};\n"
+    },
+    "order": 148
+  },
+  {
+    "slug": "reverse-integer",
+    "title": "Reverse Integer",
+    "difficulty": "medium",
+    "category": "Bit Manipulation",
+    "tags": [],
+    "sourceUrl": "https://leetcode.com/problems/reverse-integer/",
+    "description": null,
+    "examples": null,
+    "constraints": null,
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function reverseInteger() {\n  // your code here\n}\n",
+      "python": "def reverse_integer():\n    # your code here\n    pass\n",
+      "java": "class Solution {\n    // implement reverseInteger\n}\n",
+      "cpp": "class Solution {\npublic:\n    // implement reverseInteger\n};\n"
+    },
+    "order": 149
   }
 ]
