@@ -1,4 +1,4 @@
--- V3: durable, paginated record of past code executions. The in-memory ExecutionRegistry
+-- V5: durable, paginated record of past code executions. The in-memory ExecutionRegistry
 -- (see ExecutionRegistry.java) is the fast live-status path; this table is what GET /history
 -- reads from and survives restarts/eviction of that in-memory map.
 
