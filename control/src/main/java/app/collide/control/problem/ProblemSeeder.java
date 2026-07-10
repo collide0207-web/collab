@@ -62,6 +62,7 @@ public class ProblemSeeder implements ApplicationRunner {
             p.setSourceUrl(n.hasNonNull("sourceUrl") ? n.get("sourceUrl").asText() : null);
             p.setStarterCode(n.has("starterCode") ? toStringMap(n.get("starterCode")) : Map.of());
             p.setSupportedLanguages(n.has("supportedLanguages") ? toStringList(n.get("supportedLanguages")) : List.of());
+            p.setHarness(n.hasNonNull("harness") ? mapper.convertValue(n.get("harness"), ProblemHarness.class) : null);
             p.setOrderIndex(n.path("order").asInt(idx));
             problems.save(p);
             idx++;

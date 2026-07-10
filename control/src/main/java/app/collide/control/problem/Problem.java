@@ -64,6 +64,10 @@ public class Problem {
     @Column(name = "supported_languages", columnDefinition = "jsonb", nullable = false)
     private List<String> supportedLanguages;
 
+    @JdbcTypeCode(SqlTypes.JSON)
+    @Column(columnDefinition = "jsonb")
+    private ProblemHarness harness;
+
     @Column(name = "order_index", nullable = false)
     private int orderIndex;
 
@@ -90,6 +94,7 @@ public class Problem {
     public String getSourceUrl() { return sourceUrl; }
     public Map<String, String> getStarterCode() { return starterCode; }
     public List<String> getSupportedLanguages() { return supportedLanguages; }
+    public ProblemHarness getHarness() { return harness; }
     public int getOrderIndex() { return orderIndex; }
 
     public void setSheet(String sheet) { this.sheet = sheet; }
@@ -103,5 +108,6 @@ public class Problem {
     public void setSourceUrl(String sourceUrl) { this.sourceUrl = sourceUrl; }
     public void setStarterCode(Map<String, String> starterCode) { this.starterCode = starterCode; }
     public void setSupportedLanguages(List<String> supportedLanguages) { this.supportedLanguages = supportedLanguages; }
+    public void setHarness(ProblemHarness harness) { this.harness = harness; }
     public void setOrderIndex(int orderIndex) { this.orderIndex = orderIndex; }
 }

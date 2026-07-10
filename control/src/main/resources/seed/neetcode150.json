@@ -29,11 +29,45 @@
     ],
     "starterCode": {
       "javascript": "function containsDuplicate(nums) {\n  // your code here\n}\n",
-      "python": "def contains_duplicate(nums):\n    # your code here\n    pass\n",
-      "java": "class Solution {\n    public boolean containsDuplicate(int[] nums) {\n        // your code here\n    }\n}\n",
-      "cpp": "class Solution {\npublic:\n    bool containsDuplicate(vector<int>& nums) {\n        // your code here\n    }\n};\n"
+      "python": "class Solution:\n    def containsDuplicate(self, nums):\n        # your code here\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public boolean containsDuplicate(int[] nums) {\n        // your code here\n        return false;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool containsDuplicate(vector<int>& nums) {\n        // your code here\n        return false;\n    }\n};\n"
     },
-    "order": 0
+    "order": 0,
+    "harness": {
+      "entry": "containsDuplicate",
+      "params": [
+        {
+          "name": "nums",
+          "type": "int[]"
+        }
+      ],
+      "returns": "bool",
+      "tests": [
+        {
+          "input": [
+            [
+              1,
+              2,
+              3,
+              1
+            ]
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            [
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "expected": false
+        }
+      ]
+    }
   },
   {
     "slug": "valid-anagram",
@@ -66,11 +100,41 @@
     ],
     "starterCode": {
       "javascript": "function isAnagram(s, t) {\n  // your code here\n}\n",
-      "python": "def is_anagram(s, t):\n    # your code here\n    pass\n",
-      "java": "class Solution {\n    public boolean isAnagram(String s, String t) {\n        // your code here\n    }\n}\n",
-      "cpp": "class Solution {\npublic:\n    bool isAnagram(string s, string t) {\n        // your code here\n    }\n};\n"
+      "python": "class Solution:\n    def isAnagram(self, s, t):\n        # your code here\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public boolean isAnagram(String s, String t) {\n        // your code here\n        return false;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool isAnagram(string s, string t) {\n        // your code here\n        return false;\n    }\n};\n"
     },
-    "order": 1
+    "order": 1,
+    "harness": {
+      "entry": "isAnagram",
+      "params": [
+        {
+          "name": "s",
+          "type": "string"
+        },
+        {
+          "name": "t",
+          "type": "string"
+        }
+      ],
+      "returns": "bool",
+      "tests": [
+        {
+          "input": [
+            "anagram",
+            "nagaram"
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            "rat",
+            "car"
+          ],
+          "expected": false
+        }
+      ]
+    }
   },
   {
     "slug": "two-sum",
@@ -103,11 +167,56 @@
     ],
     "starterCode": {
       "javascript": "function twoSum(nums, target) {\n  // your code here\n}\n",
-      "python": "def two_sum(nums, target):\n    # your code here\n    pass\n",
-      "java": "class Solution {\n    public int[] twoSum(int[] nums, int target) {\n        // your code here\n    }\n}\n",
-      "cpp": "class Solution {\npublic:\n    vector<int> twoSum(vector<int>& nums, int target) {\n        // your code here\n    }\n};\n"
+      "python": "class Solution:\n    def twoSum(self, nums, target):\n        # your code here\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int[] twoSum(int[] nums, int target) {\n        // your code here\n        return new int[]{};\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> twoSum(vector<int>& nums, int target) {\n        // your code here\n        return {};\n    }\n};\n"
     },
-    "order": 2
+    "order": 2,
+    "harness": {
+      "entry": "twoSum",
+      "params": [
+        {
+          "name": "nums",
+          "type": "int[]"
+        },
+        {
+          "name": "target",
+          "type": "int"
+        }
+      ],
+      "returns": "int[]",
+      "tests": [
+        {
+          "input": [
+            [
+              2,
+              7,
+              11,
+              15
+            ],
+            9
+          ],
+          "expected": [
+            0,
+            1
+          ]
+        },
+        {
+          "input": [
+            [
+              3,
+              2,
+              4
+            ],
+            6
+          ],
+          "expected": [
+            1,
+            2
+          ]
+        }
+      ]
+    }
   },
   {
     "slug": "group-anagrams",
@@ -183,11 +292,55 @@
     ],
     "starterCode": {
       "javascript": "function topKFrequent(nums, k) {\n  // your code here\n}\n",
-      "python": "def top_k_frequent(nums, k):\n    # your code here\n    pass\n",
-      "java": "class Solution {\n    public int[] topKFrequent(int[] nums, int k) {\n        // your code here\n    }\n}\n",
-      "cpp": "class Solution {\npublic:\n    vector<int> topKFrequent(vector<int>& nums, int k) {\n        // your code here\n    }\n};\n"
+      "python": "class Solution:\n    def topKFrequent(self, nums, k):\n        # your code here\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int[] topKFrequent(int[] nums, int k) {\n        // your code here\n        return new int[]{};\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> topKFrequent(vector<int>& nums, int k) {\n        // your code here\n        return {};\n    }\n};\n"
     },
-    "order": 4
+    "order": 4,
+    "harness": {
+      "entry": "topKFrequent",
+      "params": [
+        {
+          "name": "nums",
+          "type": "int[]"
+        },
+        {
+          "name": "k",
+          "type": "int"
+        }
+      ],
+      "returns": "int[]",
+      "tests": [
+        {
+          "input": [
+            [
+              1,
+              1,
+              1,
+              2,
+              2,
+              3
+            ],
+            2
+          ],
+          "expected": [
+            1,
+            2
+          ]
+        },
+        {
+          "input": [
+            [
+              1
+            ],
+            1
+          ],
+          "expected": [
+            1
+          ]
+        }
+      ]
+    }
   },
   {
     "slug": "product-of-array-except-self",
@@ -219,11 +372,57 @@
     ],
     "starterCode": {
       "javascript": "function productExceptSelf(nums) {\n  // your code here\n}\n",
-      "python": "def product_except_self(nums):\n    # your code here\n    pass\n",
-      "java": "class Solution {\n    public int[] productExceptSelf(int[] nums) {\n        // your code here\n    }\n}\n",
-      "cpp": "class Solution {\npublic:\n    vector<int> productExceptSelf(vector<int>& nums) {\n        // your code here\n    }\n};\n"
+      "python": "class Solution:\n    def productExceptSelf(self, nums):\n        # your code here\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int[] productExceptSelf(int[] nums) {\n        // your code here\n        return new int[]{};\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> productExceptSelf(vector<int>& nums) {\n        // your code here\n        return {};\n    }\n};\n"
     },
-    "order": 5
+    "order": 5,
+    "harness": {
+      "entry": "productExceptSelf",
+      "params": [
+        {
+          "name": "nums",
+          "type": "int[]"
+        }
+      ],
+      "returns": "int[]",
+      "tests": [
+        {
+          "input": [
+            [
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "expected": [
+            24,
+            12,
+            8,
+            6
+          ]
+        },
+        {
+          "input": [
+            [
+              -1,
+              1,
+              0,
+              -3,
+              3
+            ]
+          ],
+          "expected": [
+            0,
+            0,
+            9,
+            0,
+            0
+          ]
+        }
+      ]
+    }
   },
   {
     "slug": "valid-sudoku",
@@ -333,11 +532,53 @@
     ],
     "starterCode": {
       "javascript": "function longestConsecutive(nums) {\n  // your code here\n}\n",
-      "python": "def longest_consecutive(nums):\n    # your code here\n    pass\n",
-      "java": "class Solution {\n    public int longestConsecutive(int[] nums) {\n        // your code here\n    }\n}\n",
-      "cpp": "class Solution {\npublic:\n    int longestConsecutive(vector<int>& nums) {\n        // your code here\n    }\n};\n"
+      "python": "class Solution:\n    def longestConsecutive(self, nums):\n        # your code here\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int longestConsecutive(int[] nums) {\n        // your code here\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int longestConsecutive(vector<int>& nums) {\n        // your code here\n        return 0;\n    }\n};\n"
     },
-    "order": 8
+    "order": 8,
+    "harness": {
+      "entry": "longestConsecutive",
+      "params": [
+        {
+          "name": "nums",
+          "type": "int[]"
+        }
+      ],
+      "returns": "int",
+      "tests": [
+        {
+          "input": [
+            [
+              100,
+              4,
+              200,
+              1,
+              3,
+              2
+            ]
+          ],
+          "expected": 4
+        },
+        {
+          "input": [
+            [
+              0,
+              3,
+              7,
+              2,
+              5,
+              8,
+              4,
+              6,
+              0,
+              1
+            ]
+          ],
+          "expected": 9
+        }
+      ]
+    }
   },
   {
     "slug": "valid-palindrome",
@@ -370,11 +611,35 @@
     ],
     "starterCode": {
       "javascript": "function isPalindrome(s) {\n  // your code here\n}\n",
-      "python": "def is_palindrome(s):\n    # your code here\n    pass\n",
-      "java": "class Solution {\n    public boolean isPalindrome(String s) {\n        // your code here\n    }\n}\n",
-      "cpp": "class Solution {\npublic:\n    bool isPalindrome(string s) {\n        // your code here\n    }\n};\n"
+      "python": "class Solution:\n    def isPalindrome(self, s):\n        # your code here\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public boolean isPalindrome(String s) {\n        // your code here\n        return false;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool isPalindrome(string s) {\n        // your code here\n        return false;\n    }\n};\n"
     },
-    "order": 9
+    "order": 9,
+    "harness": {
+      "entry": "isPalindrome",
+      "params": [
+        {
+          "name": "s",
+          "type": "string"
+        }
+      ],
+      "returns": "bool",
+      "tests": [
+        {
+          "input": [
+            "A man, a plan, a canal: Panama"
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            "race a car"
+          ],
+          "expected": false
+        }
+      ]
+    }
   },
   {
     "slug": "two-sum-ii-input-array-is-sorted",
@@ -509,11 +774,48 @@
     ],
     "starterCode": {
       "javascript": "function maxProfit(prices) {\n  // your code here\n}\n",
-      "python": "def max_profit(prices):\n    # your code here\n    pass\n",
-      "java": "class Solution {\n    public int maxProfit(int[] prices) {\n        // your code here\n    }\n}\n",
-      "cpp": "class Solution {\npublic:\n    int maxProfit(vector<int>& prices) {\n        // your code here\n    }\n};\n"
+      "python": "class Solution:\n    def maxProfit(self, prices):\n        # your code here\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int maxProfit(int[] prices) {\n        // your code here\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int maxProfit(vector<int>& prices) {\n        // your code here\n        return 0;\n    }\n};\n"
     },
-    "order": 14
+    "order": 14,
+    "harness": {
+      "entry": "maxProfit",
+      "params": [
+        {
+          "name": "prices",
+          "type": "int[]"
+        }
+      ],
+      "returns": "int",
+      "tests": [
+        {
+          "input": [
+            [
+              7,
+              1,
+              5,
+              3,
+              6,
+              4
+            ]
+          ],
+          "expected": 5
+        },
+        {
+          "input": [
+            [
+              7,
+              6,
+              4,
+              3,
+              1
+            ]
+          ],
+          "expected": 0
+        }
+      ]
+    }
   },
   {
     "slug": "longest-substring-without-repeating-characters",
@@ -673,11 +975,41 @@
     ],
     "starterCode": {
       "javascript": "function isValid(s) {\n  // your code here\n}\n",
-      "python": "def is_valid(s):\n    # your code here\n    pass\n",
-      "java": "class Solution {\n    public boolean isValid(String s) {\n        // your code here\n    }\n}\n",
-      "cpp": "class Solution {\npublic:\n    bool isValid(string s) {\n        // your code here\n    }\n};\n"
+      "python": "class Solution:\n    def isValid(self, s):\n        # your code here\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public boolean isValid(String s) {\n        // your code here\n        return false;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool isValid(string s) {\n        // your code here\n        return false;\n    }\n};\n"
     },
-    "order": 20
+    "order": 20,
+    "harness": {
+      "entry": "isValid",
+      "params": [
+        {
+          "name": "s",
+          "type": "string"
+        }
+      ],
+      "returns": "bool",
+      "tests": [
+        {
+          "input": [
+            "()[]{}"
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            "(]"
+          ],
+          "expected": false
+        },
+        {
+          "input": [
+            "([)]"
+          ],
+          "expected": false
+        }
+      ]
+    }
   },
   {
     "slug": "min-stack",
@@ -853,11 +1185,55 @@
     ],
     "starterCode": {
       "javascript": "function search(nums, target) {\n  // your code here\n}\n",
-      "python": "def search(nums, target):\n    # your code here\n    pass\n",
-      "java": "class Solution {\n    public int search(int[] nums, int target) {\n        // your code here\n    }\n}\n",
-      "cpp": "class Solution {\npublic:\n    int search(vector<int>& nums, int target) {\n        // your code here\n    }\n};\n"
+      "python": "class Solution:\n    def search(self, nums, target):\n        # your code here\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int search(int[] nums, int target) {\n        // your code here\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int search(vector<int>& nums, int target) {\n        // your code here\n        return 0;\n    }\n};\n"
     },
-    "order": 27
+    "order": 27,
+    "harness": {
+      "entry": "search",
+      "params": [
+        {
+          "name": "nums",
+          "type": "int[]"
+        },
+        {
+          "name": "target",
+          "type": "int"
+        }
+      ],
+      "returns": "int",
+      "tests": [
+        {
+          "input": [
+            [
+              -1,
+              0,
+              3,
+              5,
+              9,
+              12
+            ],
+            9
+          ],
+          "expected": 4
+        },
+        {
+          "input": [
+            [
+              -1,
+              0,
+              3,
+              5,
+              9,
+              12
+            ],
+            2
+          ],
+          "expected": -1
+        }
+      ]
+    }
   },
   {
     "slug": "search-a-2d-matrix",
@@ -2609,11 +2985,35 @@
     ],
     "starterCode": {
       "javascript": "function climbStairs(n) {\n  // your code here\n}\n",
-      "python": "def climb_stairs(n):\n    # your code here\n    pass\n",
-      "java": "class Solution {\n    public int climbStairs(int n) {\n        // your code here\n    }\n}\n",
-      "cpp": "class Solution {\npublic:\n    int climbStairs(int n) {\n        // your code here\n    }\n};\n"
+      "python": "class Solution:\n    def climbStairs(self, n):\n        # your code here\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int climbStairs(int n) {\n        // your code here\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int climbStairs(int n) {\n        // your code here\n        return 0;\n    }\n};\n"
     },
-    "order": 98
+    "order": 98,
+    "harness": {
+      "entry": "climbStairs",
+      "params": [
+        {
+          "name": "n",
+          "type": "int"
+        }
+      ],
+      "returns": "int",
+      "tests": [
+        {
+          "input": [
+            2
+          ],
+          "expected": 2
+        },
+        {
+          "input": [
+            3
+          ],
+          "expected": 3
+        }
+      ]
+    }
   },
   {
     "slug": "min-cost-climbing-stairs",
