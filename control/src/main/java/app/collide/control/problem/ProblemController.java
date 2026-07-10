@@ -46,11 +46,11 @@ public class ProblemController {
     public record Detail(String id, String slug, String title, String difficulty, String category,
                          List<String> tags, String description, List<Map<String, String>> examples,
                          String constraints, String sourceUrl, Map<String, String> starterCode,
-                         List<String> supportedLanguages) {
+                         List<String> supportedLanguages, ProblemHarness harness) {
         static Detail of(Problem p) {
             return new Detail(p.getId().toString(), p.getSlug(), p.getTitle(), p.getDifficulty(),
                     p.getCategory(), p.getTags(), p.getDescription(), p.getExamples(), p.getConstraints(),
-                    p.getSourceUrl(), p.getStarterCode(), p.getSupportedLanguages());
+                    p.getSourceUrl(), p.getStarterCode(), p.getSupportedLanguages(), p.getHarness());
         }
     }
 }
