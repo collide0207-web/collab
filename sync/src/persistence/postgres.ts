@@ -1,5 +1,6 @@
 import pg from 'pg'
 import type { DocRecord, DocStore } from './store.js'
+import { log } from '../logger.js'
 
 /**
  * PostgreSQL-backed document store.
@@ -17,6 +18,13 @@ export class PostgresDocStore implements DocStore {
 
   constructor(databaseUrl: string) {
     this.pool = new pg.Pool({ connectionString: databaseUrl, max: 10 })
+    // node-postgres emits 'error' on IDLE clients when the DB drops the connection
+    // (restart, network blip, idle timeout). Without a listener Node treats it as an
+    // unhandled 'error' and crashes the whole process. Log and swallow it — the pool
+    // discards the dead client and opens a fresh one on the next query.
+    this.pool.on('error', (err) => {
+      log.error('postgres pool: idle client error (recovering)', { err: String(err) })
+    })
   }
 
   async init(): Promise<void> {
