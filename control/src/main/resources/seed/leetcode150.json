@@ -23,5 +23,919 @@
         { "input": [[3,2,4], 6], "expected": [1,2] }
       ]
     }
+  },
+  {
+    "id": "p-merge-sorted-array", "slug": "merge-sorted-array", "title": "Merge Sorted Array",
+    "difficulty": "easy", "category": "Array/String", "tags": ["array", "two-pointers", "sorting"],
+    "sheet": "leetcode150", "order": 1,
+    "sourceUrl": "https://leetcode.com/problems/merge-sorted-array/",
+    "description": "You are given two sorted integer arrays. The first has length m+n, with only the first m entries meaningful and the rest zero-filled padding; the second has length n and is fully populated. Merge the second array into the first in place so the first array becomes one sorted array of length m+n, then return it.",
+    "examples": [{ "input": "nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3", "output": "[1,2,2,3,5,6]" }],
+    "constraints": "nums1.length == m+n; nums2.length == n; 0 <= m, n <= 200; -1e9 <= nums1[i], nums2[j] <= 1e9.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function merge(nums1, m, nums2, n) {\n  // your code here\n  return nums1;\n}\n",
+      "python": "class Solution:\n    def merge(self, nums1, m, nums2, n):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int[] merge(int[] nums1, int m, int[] nums2, int n) {\n        return nums1;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {\n        return nums1;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "merge",
+      "params": [{ "name": "nums1", "type": "int[]" }, { "name": "m", "type": "int" }, { "name": "nums2", "type": "int[]" }, { "name": "n", "type": "int" }],
+      "returns": "int[]", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": [[1,2,3,0,0,0], 3, [2,5,6], 3], "expected": [1,2,2,3,5,6] },
+        { "input": [[1], 1, [], 0], "expected": [1] },
+        { "input": [[0], 0, [1], 1], "expected": [1] }
+      ]
+    }
+  },
+  {
+    "id": "p-remove-element", "slug": "remove-element", "title": "Remove Element",
+    "difficulty": "easy", "category": "Array/String", "tags": ["array", "two-pointers"],
+    "sheet": "leetcode150", "order": 2,
+    "sourceUrl": "https://leetcode.com/problems/remove-element/",
+    "description": "Given an array of integers and a value, remove every occurrence of that value in place, keeping the relative order of the remaining elements irrelevant, and return the count of elements that are not equal to the value.",
+    "examples": [{ "input": "nums = [3,2,2,3], val = 3", "output": "2" }],
+    "constraints": "0 <= nums.length <= 100; 0 <= nums[i] <= 50; 0 <= val <= 100.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function removeElement(nums, val) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def removeElement(self, nums, val):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int removeElement(int[] nums, int val) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int removeElement(vector<int>& nums, int val) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "removeElement",
+      "params": [{ "name": "nums", "type": "int[]" }, { "name": "val", "type": "int" }],
+      "returns": "int", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": [[3,2,2,3], 3], "expected": 2 },
+        { "input": [[0,1,2,2,3,0,4,2], 2], "expected": 5 },
+        { "input": [[], 5], "expected": 0 }
+      ]
+    }
+  },
+  {
+    "id": "p-majority-element", "slug": "majority-element", "title": "Majority Element",
+    "difficulty": "easy", "category": "Array/String", "tags": ["array", "voting-algorithm"],
+    "sheet": "leetcode150", "order": 3,
+    "sourceUrl": "https://leetcode.com/problems/majority-element/",
+    "description": "Given an array of integers, return the value that appears in more than half of the elements. It is guaranteed such an element exists.",
+    "examples": [{ "input": "nums = [3,2,3]", "output": "3" }],
+    "constraints": "1 <= nums.length <= 5e4; -1e9 <= nums[i] <= 1e9; a majority element always exists.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function majorityElement(nums) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def majorityElement(self, nums):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int majorityElement(int[] nums) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int majorityElement(vector<int>& nums) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "majorityElement",
+      "params": [{ "name": "nums", "type": "int[]" }],
+      "returns": "int", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": [[3,2,3]], "expected": 3 },
+        { "input": [[2,2,1,1,1,2,2]], "expected": 2 }
+      ]
+    }
+  },
+  {
+    "id": "p-rotate-array", "slug": "rotate-array", "title": "Rotate Array",
+    "difficulty": "medium", "category": "Array/String", "tags": ["array", "two-pointers"],
+    "sheet": "leetcode150", "order": 4,
+    "sourceUrl": "https://leetcode.com/problems/rotate-array/",
+    "description": "Given an integer array, rotate it to the right by k steps (k can exceed the array length) and return the rotated array.",
+    "examples": [{ "input": "nums = [1,2,3,4,5,6,7], k = 3", "output": "[5,6,7,1,2,3,4]" }],
+    "constraints": "1 <= nums.length <= 1e5; -2^31 <= nums[i] <= 2^31-1; 0 <= k <= 1e5.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function rotate(nums, k) {\n  // your code here\n  return nums;\n}\n",
+      "python": "class Solution:\n    def rotate(self, nums, k):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int[] rotate(int[] nums, int k) {\n        return nums;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> rotate(vector<int>& nums, int k) {\n        return nums;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "rotate",
+      "params": [{ "name": "nums", "type": "int[]" }, { "name": "k", "type": "int" }],
+      "returns": "int[]", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": [[1,2,3,4,5,6,7], 3], "expected": [5,6,7,1,2,3,4] },
+        { "input": [[-1,-100,3,99], 2], "expected": [3,99,-1,-100] }
+      ]
+    }
+  },
+  {
+    "id": "p-best-time-to-buy-and-sell-stock", "slug": "best-time-to-buy-and-sell-stock", "title": "Best Time to Buy and Sell Stock",
+    "difficulty": "easy", "category": "Array/String", "tags": ["array", "dp", "greedy"],
+    "sheet": "leetcode150", "order": 5,
+    "sourceUrl": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+    "description": "Given daily stock prices, choose one day to buy and a later day to sell to maximize profit, and return that maximum profit (0 if no profit is possible).",
+    "examples": [{ "input": "prices = [7,1,5,3,6,4]", "output": "5" }],
+    "constraints": "1 <= prices.length <= 1e5; 0 <= prices[i] <= 1e4.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function maxProfit(prices) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def maxProfit(self, prices):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int maxProfit(int[] prices) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int maxProfit(vector<int>& prices) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "maxProfit",
+      "params": [{ "name": "prices", "type": "int[]" }],
+      "returns": "int", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": [[7,1,5,3,6,4]], "expected": 5 },
+        { "input": [[7,6,4,3,1]], "expected": 0 }
+      ]
+    }
+  },
+  {
+    "id": "p-best-time-to-buy-and-sell-stock-ii", "slug": "best-time-to-buy-and-sell-stock-ii", "title": "Best Time to Buy and Sell Stock II",
+    "difficulty": "medium", "category": "Array/String", "tags": ["array", "dp", "greedy"],
+    "sheet": "leetcode150", "order": 6,
+    "sourceUrl": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/",
+    "description": "Given daily stock prices, you may buy and sell as many times as you like (holding at most one share at a time). Return the maximum total profit achievable.",
+    "examples": [{ "input": "prices = [7,1,5,3,6,4]", "output": "7" }],
+    "constraints": "1 <= prices.length <= 3e4; 0 <= prices[i] <= 1e4.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function maxProfit(prices) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def maxProfit(self, prices):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int maxProfit(int[] prices) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int maxProfit(vector<int>& prices) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "maxProfit",
+      "params": [{ "name": "prices", "type": "int[]" }],
+      "returns": "int", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": [[7,1,5,3,6,4]], "expected": 7 },
+        { "input": [[1,2,3,4,5]], "expected": 4 },
+        { "input": [[7,6,4,3,1]], "expected": 0 }
+      ]
+    }
+  },
+  {
+    "id": "p-jump-game", "slug": "jump-game", "title": "Jump Game",
+    "difficulty": "medium", "category": "Array/String", "tags": ["array", "greedy", "dp"],
+    "sheet": "leetcode150", "order": 7,
+    "sourceUrl": "https://leetcode.com/problems/jump-game/",
+    "description": "Each element of an array is the maximum jump length from that position. Starting at index 0, determine whether the last index is reachable.",
+    "examples": [{ "input": "nums = [2,3,1,1,4]", "output": "true" }],
+    "constraints": "1 <= nums.length <= 1e4; 0 <= nums[i] <= 1e5.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function canJump(nums) {\n  // your code here\n  return false;\n}\n",
+      "python": "class Solution:\n    def canJump(self, nums):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public boolean canJump(int[] nums) {\n        return false;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool canJump(vector<int>& nums) {\n        return false;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "canJump",
+      "params": [{ "name": "nums", "type": "int[]" }],
+      "returns": "bool", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": [[2,3,1,1,4]], "expected": true },
+        { "input": [[3,2,1,0,4]], "expected": false }
+      ]
+    }
+  },
+  {
+    "id": "p-jump-game-ii", "slug": "jump-game-ii", "title": "Jump Game II",
+    "difficulty": "medium", "category": "Array/String", "tags": ["array", "greedy", "dp"],
+    "sheet": "leetcode150", "order": 8,
+    "sourceUrl": "https://leetcode.com/problems/jump-game-ii/",
+    "description": "Each element of an array is the maximum jump length from that position, and the last index is always reachable. Return the minimum number of jumps needed to reach the last index starting from index 0.",
+    "examples": [{ "input": "nums = [2,3,1,1,4]", "output": "2" }],
+    "constraints": "1 <= nums.length <= 1e4; 0 <= nums[i] <= 1000; last index always reachable.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function jump(nums) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def jump(self, nums):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int jump(int[] nums) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int jump(vector<int>& nums) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "jump",
+      "params": [{ "name": "nums", "type": "int[]" }],
+      "returns": "int", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": [[2,3,1,1,4]], "expected": 2 },
+        { "input": [[2,3,0,1,4]], "expected": 2 }
+      ]
+    }
+  },
+  {
+    "id": "p-h-index", "slug": "h-index", "title": "H-Index",
+    "difficulty": "medium", "category": "Array/String", "tags": ["array", "sorting", "counting-sort"],
+    "sheet": "leetcode150", "order": 9,
+    "sourceUrl": "https://leetcode.com/problems/h-index/",
+    "description": "Given the citation counts for a researcher's papers, compute the h-index: the largest value h such that the researcher has at least h papers with at least h citations each.",
+    "examples": [{ "input": "citations = [3,0,6,1,5]", "output": "3" }],
+    "constraints": "1 <= citations.length <= 5000; 0 <= citations[i] <= 1000.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function hIndex(citations) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def hIndex(self, citations):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int hIndex(int[] citations) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int hIndex(vector<int>& citations) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "hIndex",
+      "params": [{ "name": "citations", "type": "int[]" }],
+      "returns": "int", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": [[3,0,6,1,5]], "expected": 3 },
+        { "input": [[1,3,1]], "expected": 1 }
+      ]
+    }
+  },
+  {
+    "id": "p-insert-delete-getrandom-o1", "slug": "insert-delete-getrandom-o1", "title": "Insert Delete GetRandom O(1)",
+    "difficulty": "medium", "category": "Array/String", "tags": ["array", "hash-map", "design", "randomization"],
+    "sheet": "leetcode150", "order": 10,
+    "sourceUrl": "https://leetcode.com/problems/insert-delete-getrandom-o1/",
+    "description": "Design a data structure supporting average O(1) insert(val), remove(val), and getRandom() (uniformly random among current elements). Given a sequence of operations and their arguments, return the sequence of results (insert/remove return whether the set changed; getRandom returns an element currently present).",
+    "examples": [{ "input": "[\"insert\",1] then [\"insert\",2] then [\"remove\",1] then [\"insert\",2] then [\"getRandom\"]", "output": "[true, true, true, false, 2]" }],
+    "constraints": "-2^31 <= val <= 2^31-1; at most 2e5 calls total; getRandom is called only when the structure is non-empty.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "class RandomizedSet {\n  constructor() {\n    // your code here\n  }\n  insert(val) {}\n  remove(val) {}\n  getRandom() {}\n}\n",
+      "python": "class RandomizedSet:\n    def __init__(self):\n        pass\n    def insert(self, val):\n        pass\n    def remove(self, val):\n        pass\n    def getRandom(self):\n        pass\n",
+      "java": "import java.util.*;\n\nclass RandomizedSet {\n    public RandomizedSet() {}\n    public boolean insert(int val) { return false; }\n    public boolean remove(int val) { return false; }\n    public int getRandom() { return 0; }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass RandomizedSet {\npublic:\n    RandomizedSet() {}\n    bool insert(int val) { return false; }\n    bool remove(int val) { return false; }\n    int getRandom() { return 0; }\n};\n"
+    },
+    "harness": {
+      "entry": "randomizedSetOps",
+      "params": [{ "name": "operations", "type": "operations" }],
+      "returns": "operations", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": [[["insert",1],["remove",2],["insert",2],["getRandom"],["remove",1],["insert",2],["getRandom"]]], "expected": [true, false, true, 2, true, false, 2] }
+      ]
+    }
+  },
+  {
+    "id": "p-product-of-array-except-self", "slug": "product-of-array-except-self", "title": "Product of Array Except Self",
+    "difficulty": "medium", "category": "Array/String", "tags": ["array", "prefix-sum"],
+    "sheet": "leetcode150", "order": 11,
+    "sourceUrl": "https://leetcode.com/problems/product-of-array-except-self/",
+    "description": "Given an integer array, return an array where each element is the product of all the other elements (not itself), without using division and in O(n) time.",
+    "examples": [{ "input": "nums = [1,2,3,4]", "output": "[24,12,8,6]" }],
+    "constraints": "2 <= nums.length <= 1e5; -30 <= nums[i] <= 30; product of any prefix/suffix fits in a 32-bit signed integer.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function productExceptSelf(nums) {\n  // your code here\n  return [];\n}\n",
+      "python": "class Solution:\n    def productExceptSelf(self, nums):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int[] productExceptSelf(int[] nums) {\n        return new int[]{};\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> productExceptSelf(vector<int>& nums) {\n        return {};\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "productExceptSelf",
+      "params": [{ "name": "nums", "type": "int[]" }],
+      "returns": "int[]", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": [[1,2,3,4]], "expected": [24,12,8,6] },
+        { "input": [[-1,1,0,-3,3]], "expected": [0,0,9,0,0] }
+      ]
+    }
+  },
+  {
+    "id": "p-gas-station", "slug": "gas-station", "title": "Gas Station",
+    "difficulty": "medium", "category": "Array/String", "tags": ["array", "greedy"],
+    "sheet": "leetcode150", "order": 12,
+    "sourceUrl": "https://leetcode.com/problems/gas-station/",
+    "description": "There are gas stations in a circle, each with a gas amount and a cost to travel to the next station. Starting with an empty tank, find the index of the station to start from to complete the full circuit, or return -1 if impossible. A solution, if it exists, is unique.",
+    "examples": [{ "input": "gas = [1,2,3,4,5], cost = [3,4,5,1,2]", "output": "3" }],
+    "constraints": "gas.length == cost.length; 1 <= gas.length <= 1e5; 0 <= gas[i], cost[i] <= 1e4.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function canCompleteCircuit(gas, cost) {\n  // your code here\n  return -1;\n}\n",
+      "python": "class Solution:\n    def canCompleteCircuit(self, gas, cost):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int canCompleteCircuit(int[] gas, int[] cost) {\n        return -1;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {\n        return -1;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "canCompleteCircuit",
+      "params": [{ "name": "gas", "type": "int[]" }, { "name": "cost", "type": "int[]" }],
+      "returns": "int", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": [[1,2,3,4,5],[3,4,5,1,2]], "expected": 3 },
+        { "input": [[2,3,4],[3,4,3]], "expected": -1 }
+      ]
+    }
+  },
+  {
+    "id": "p-candy", "slug": "candy", "title": "Candy",
+    "difficulty": "hard", "category": "Array/String", "tags": ["array", "greedy"],
+    "sheet": "leetcode150", "order": 13,
+    "sourceUrl": "https://leetcode.com/problems/candy/",
+    "description": "Children stand in a line, each with a rating. Every child gets at least one candy, and a child with a strictly higher rating than either neighbor must get more candy than that neighbor. Return the minimum total candies needed.",
+    "examples": [{ "input": "ratings = [1,0,2]", "output": "5" }],
+    "constraints": "1 <= ratings.length <= 2e4; 0 <= ratings[i] <= 2e4.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function candy(ratings) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def candy(self, ratings):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int candy(int[] ratings) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int candy(vector<int>& ratings) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "candy",
+      "params": [{ "name": "ratings", "type": "int[]" }],
+      "returns": "int", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": [[1,0,2]], "expected": 5 },
+        { "input": [[1,2,2]], "expected": 4 }
+      ]
+    }
+  },
+  {
+    "id": "p-trapping-rain-water", "slug": "trapping-rain-water", "title": "Trapping Rain Water",
+    "difficulty": "hard", "category": "Array/String", "tags": ["array", "two-pointers", "dp", "stack"],
+    "sheet": "leetcode150", "order": 14,
+    "sourceUrl": "https://leetcode.com/problems/trapping-rain-water/",
+    "description": "Given an elevation map represented by non-negative bar heights of width 1, compute how much rainwater it can trap after raining.",
+    "examples": [{ "input": "height = [0,1,0,2,1,0,1,3,2,1,2,1]", "output": "6" }],
+    "constraints": "1 <= height.length <= 2e4; 0 <= height[i] <= 1e5.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function trap(height) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def trap(self, height):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int trap(int[] height) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int trap(vector<int>& height) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "trap",
+      "params": [{ "name": "height", "type": "int[]" }],
+      "returns": "int", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": [[0,1,0,2,1,0,1,3,2,1,2,1]], "expected": 6 },
+        { "input": [[4,2,0,3,2,5]], "expected": 9 }
+      ]
+    }
+  },
+  {
+    "id": "p-roman-to-integer", "slug": "roman-to-integer", "title": "Roman to Integer",
+    "difficulty": "easy", "category": "Array/String", "tags": ["string", "hash-map", "math"],
+    "sheet": "leetcode150", "order": 15,
+    "sourceUrl": "https://leetcode.com/problems/roman-to-integer/",
+    "description": "Convert a Roman numeral string (using symbols I, V, X, L, C, D, M with standard subtractive notation) to its integer value.",
+    "examples": [{ "input": "s = \"LVIII\"", "output": "58" }],
+    "constraints": "1 <= s.length <= 15; s is a valid Roman numeral in the range [1, 3999].",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function romanToInt(s) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def romanToInt(self, s):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int romanToInt(String s) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int romanToInt(string s) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "romanToInt",
+      "params": [{ "name": "s", "type": "string" }],
+      "returns": "int", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": ["III"], "expected": 3 },
+        { "input": ["LVIII"], "expected": 58 },
+        { "input": ["MCMXCIV"], "expected": 1994 }
+      ]
+    }
+  },
+  {
+    "id": "p-integer-to-roman", "slug": "integer-to-roman", "title": "Integer to Roman",
+    "difficulty": "medium", "category": "Array/String", "tags": ["string", "hash-map", "math", "greedy"],
+    "sheet": "leetcode150", "order": 16,
+    "sourceUrl": "https://leetcode.com/problems/integer-to-roman/",
+    "description": "Convert an integer in the range [1, 3999] into its Roman numeral representation using standard subtractive notation.",
+    "examples": [{ "input": "num = 58", "output": "\"LVIII\"" }],
+    "constraints": "1 <= num <= 3999.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function intToRoman(num) {\n  // your code here\n  return \"\";\n}\n",
+      "python": "class Solution:\n    def intToRoman(self, num):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public String intToRoman(int num) {\n        return \"\";\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    string intToRoman(int num) {\n        return \"\";\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "intToRoman",
+      "params": [{ "name": "num", "type": "int" }],
+      "returns": "string", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": [3749], "expected": "MMMDCCXLIX" },
+        { "input": [58], "expected": "LVIII" },
+        { "input": [1994], "expected": "MCMXCIV" }
+      ]
+    }
+  },
+  {
+    "id": "p-length-of-last-word", "slug": "length-of-last-word", "title": "Length of Last Word",
+    "difficulty": "easy", "category": "Array/String", "tags": ["string"],
+    "sheet": "leetcode150", "order": 17,
+    "sourceUrl": "https://leetcode.com/problems/length-of-last-word/",
+    "description": "Given a string of words separated by spaces, return the length of the last word (a word is a maximal run of non-space characters).",
+    "examples": [{ "input": "s = \"Hello World\"", "output": "5" }],
+    "constraints": "1 <= s.length <= 1e4; s consists of English letters and spaces; s contains at least one non-space character.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function lengthOfLastWord(s) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def lengthOfLastWord(self, s):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int lengthOfLastWord(String s) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int lengthOfLastWord(string s) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "lengthOfLastWord",
+      "params": [{ "name": "s", "type": "string" }],
+      "returns": "int", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": ["Hello World"], "expected": 5 },
+        { "input": ["   fly me   to   the moon  "], "expected": 4 },
+        { "input": ["luffy is still joyboy"], "expected": 6 }
+      ]
+    }
+  },
+  {
+    "id": "p-longest-common-prefix", "slug": "longest-common-prefix", "title": "Longest Common Prefix",
+    "difficulty": "easy", "category": "Array/String", "tags": ["string"],
+    "sheet": "leetcode150", "order": 18,
+    "sourceUrl": "https://leetcode.com/problems/longest-common-prefix/",
+    "description": "Given an array of strings, find the longest prefix common to all of them. Return an empty string if none exists.",
+    "examples": [{ "input": "strs = [\"flower\",\"flow\",\"flight\"]", "output": "\"fl\"" }],
+    "constraints": "1 <= strs.length <= 200; 0 <= strs[i].length <= 200; strs[i] consists of lowercase English letters.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function longestCommonPrefix(strs) {\n  // your code here\n  return \"\";\n}\n",
+      "python": "class Solution:\n    def longestCommonPrefix(self, strs):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public String longestCommonPrefix(String[] strs) {\n        return \"\";\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    string longestCommonPrefix(vector<string>& strs) {\n        return \"\";\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "longestCommonPrefix",
+      "params": [{ "name": "strs", "type": "string[]" }],
+      "returns": "string", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": [["flower","flow","flight"]], "expected": "fl" },
+        { "input": [["dog","racecar","car"]], "expected": "" }
+      ]
+    }
+  },
+  {
+    "id": "p-reverse-words-in-a-string", "slug": "reverse-words-in-a-string", "title": "Reverse Words in a String",
+    "difficulty": "medium", "category": "Array/String", "tags": ["string", "two-pointers"],
+    "sheet": "leetcode150", "order": 19,
+    "sourceUrl": "https://leetcode.com/problems/reverse-words-in-a-string/",
+    "description": "Given a string, reverse the order of the words (maximal runs of non-space characters), collapsing any leading, trailing, or multiple in-between spaces to a single space between words.",
+    "examples": [{ "input": "s = \"the sky is blue\"", "output": "\"blue is sky the\"" }],
+    "constraints": "1 <= s.length <= 1e4; s contains English letters, spaces, and digits; s has at least one non-space character.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function reverseWords(s) {\n  // your code here\n  return \"\";\n}\n",
+      "python": "class Solution:\n    def reverseWords(self, s):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public String reverseWords(String s) {\n        return \"\";\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    string reverseWords(string s) {\n        return \"\";\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "reverseWords",
+      "params": [{ "name": "s", "type": "string" }],
+      "returns": "string", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": ["the sky is blue"], "expected": "blue is sky the" },
+        { "input": ["  hello world  "], "expected": "world hello" },
+        { "input": ["a good   example"], "expected": "example good a" }
+      ]
+    }
+  },
+  {
+    "id": "p-zigzag-conversion", "slug": "zigzag-conversion", "title": "Zigzag Conversion",
+    "difficulty": "medium", "category": "Array/String", "tags": ["string", "simulation"],
+    "sheet": "leetcode150", "order": 20,
+    "sourceUrl": "https://leetcode.com/problems/zigzag-conversion/",
+    "description": "Write a string in a zigzag pattern across a given number of rows (top to bottom, then diagonally back up, repeating), then read the characters row by row and return the resulting string.",
+    "examples": [{ "input": "s = \"PAYPALISHIRING\", numRows = 3", "output": "\"PAHNAPLSIIGYIR\"" }],
+    "constraints": "1 <= s.length <= 1000; 1 <= numRows <= 1000; s consists of English letters, commas, and periods.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function convert(s, numRows) {\n  // your code here\n  return \"\";\n}\n",
+      "python": "class Solution:\n    def convert(self, s, numRows):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public String convert(String s, int numRows) {\n        return \"\";\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    string convert(string s, int numRows) {\n        return \"\";\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "convert",
+      "params": [{ "name": "s", "type": "string" }, { "name": "numRows", "type": "int" }],
+      "returns": "string", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": ["PAYPALISHIRING", 3], "expected": "PAHNAPLSIIGYIR" },
+        { "input": ["PAYPALISHIRING", 4], "expected": "PINALSIGYAHRPI" },
+        { "input": ["A", 1], "expected": "A" }
+      ]
+    }
+  },
+  {
+    "id": "p-find-the-index-of-the-first-occurrence-in-a-string", "slug": "find-the-index-of-the-first-occurrence-in-a-string", "title": "Find the Index of the First Occurrence in a String",
+    "difficulty": "easy", "category": "Array/String", "tags": ["string", "string-matching"],
+    "sheet": "leetcode150", "order": 21,
+    "sourceUrl": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/",
+    "description": "Given a haystack string and a needle string, return the index of the first occurrence of the needle in the haystack, or -1 if the needle does not occur.",
+    "examples": [{ "input": "haystack = \"sadbutsad\", needle = \"sad\"", "output": "0" }],
+    "constraints": "1 <= haystack.length, needle.length <= 1e4; both consist of lowercase English letters.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function strStr(haystack, needle) {\n  // your code here\n  return -1;\n}\n",
+      "python": "class Solution:\n    def strStr(self, haystack, needle):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int strStr(String haystack, String needle) {\n        return -1;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int strStr(string haystack, string needle) {\n        return -1;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "strStr",
+      "params": [{ "name": "haystack", "type": "string" }, { "name": "needle", "type": "string" }],
+      "returns": "int", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": ["sadbutsad", "sad"], "expected": 0 },
+        { "input": ["leetcode", "leeto"], "expected": -1 }
+      ]
+    }
+  },
+  {
+    "id": "p-text-justification", "slug": "text-justification", "title": "Text Justification",
+    "difficulty": "hard", "category": "Array/String", "tags": ["string", "simulation", "greedy"],
+    "sheet": "leetcode150", "order": 22,
+    "sourceUrl": "https://leetcode.com/problems/text-justification/",
+    "description": "Given a list of words and a line width, greedily pack words onto lines, then space-pad each line so left and right edges are flush (extra spaces distributed as evenly as possible, leftmost gaps get any remainder). The last line, and any line with a single word, is left-justified with trailing spaces to fill the width.",
+    "examples": [{ "input": "words = [\"This\",\"is\",\"an\",\"example\",\"of\",\"text\",\"justification.\"], maxWidth = 16", "output": "[\"This    is    an\",\"example  of text\",\"justification.  \"]" }],
+    "constraints": "1 <= words.length <= 300; 1 <= words[i].length <= 20; 1 <= maxWidth <= 100; words[i] consists of English letters and no spaces.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function fullJustify(words, maxWidth) {\n  // your code here\n  return [];\n}\n",
+      "python": "class Solution:\n    def fullJustify(self, words, maxWidth):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public String[] fullJustify(String[] words, int maxWidth) {\n        return new String[]{};\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<string> fullJustify(vector<string>& words, int maxWidth) {\n        return {};\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "fullJustify",
+      "params": [{ "name": "words", "type": "string[]" }, { "name": "maxWidth", "type": "int" }],
+      "returns": "string[]", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": [["This","is","an","example","of","text","justification."], 16], "expected": ["This    is    an","example  of text","justification.  "] },
+        { "input": [["What","must","be","acknowledgment","shall","be"], 16], "expected": ["What   must   be","acknowledgment  ","shall be        "] }
+      ]
+    }
+  },
+  {
+    "id": "p-valid-palindrome", "slug": "valid-palindrome", "title": "Valid Palindrome",
+    "difficulty": "easy", "category": "Two Pointers", "tags": ["string", "two-pointers"],
+    "sheet": "leetcode150", "order": 23,
+    "sourceUrl": "https://leetcode.com/problems/valid-palindrome/",
+    "description": "Given a string, determine whether it reads the same forwards and backwards after lowercasing and removing every character that is not a letter or digit.",
+    "examples": [{ "input": "s = \"A man, a plan, a canal: Panama\"", "output": "true" }],
+    "constraints": "1 <= s.length <= 2e5; s consists of printable ASCII characters.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function isPalindrome(s) {\n  // your code here\n  return false;\n}\n",
+      "python": "class Solution:\n    def isPalindrome(self, s):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public boolean isPalindrome(String s) {\n        return false;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool isPalindrome(string s) {\n        return false;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "isPalindrome",
+      "params": [{ "name": "s", "type": "string" }],
+      "returns": "bool", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": ["A man, a plan, a canal: Panama"], "expected": true },
+        { "input": ["race a car"], "expected": false },
+        { "input": [" "], "expected": true }
+      ]
+    }
+  },
+  {
+    "id": "p-is-subsequence", "slug": "is-subsequence", "title": "Is Subsequence",
+    "difficulty": "easy", "category": "Two Pointers", "tags": ["string", "two-pointers", "dp"],
+    "sheet": "leetcode150", "order": 24,
+    "sourceUrl": "https://leetcode.com/problems/is-subsequence/",
+    "description": "Given strings s and t, determine whether s can be formed by deleting some (possibly zero) characters from t without reordering the remaining characters.",
+    "examples": [{ "input": "s = \"abc\", t = \"ahbgdc\"", "output": "true" }],
+    "constraints": "0 <= s.length <= 100; 0 <= t.length <= 1e4; both consist of lowercase English letters.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function isSubsequence(s, t) {\n  // your code here\n  return false;\n}\n",
+      "python": "class Solution:\n    def isSubsequence(self, s, t):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public boolean isSubsequence(String s, String t) {\n        return false;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool isSubsequence(string s, string t) {\n        return false;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "isSubsequence",
+      "params": [{ "name": "s", "type": "string" }, { "name": "t", "type": "string" }],
+      "returns": "bool", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": ["abc", "ahbgdc"], "expected": true },
+        { "input": ["axc", "ahbgdc"], "expected": false }
+      ]
+    }
+  },
+  {
+    "id": "p-two-sum-ii-input-array-is-sorted", "slug": "two-sum-ii-input-array-is-sorted", "title": "Two Sum II - Input Array Is Sorted",
+    "difficulty": "medium", "category": "Two Pointers", "tags": ["array", "two-pointers", "binary-search"],
+    "sheet": "leetcode150", "order": 25,
+    "sourceUrl": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/",
+    "description": "Given a 1-indexed array sorted in non-decreasing order, find two numbers that add up to a target and return their 1-indexed positions as [index1, index2] with index1 < index2. Exactly one solution exists.",
+    "examples": [{ "input": "numbers = [2,7,11,15], target = 9", "output": "[1,2]" }],
+    "constraints": "2 <= numbers.length <= 3e4; -1000 <= numbers[i] <= 1000; numbers is sorted non-decreasing; exactly one solution exists.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function twoSum(numbers, target) {\n  // your code here\n  return [];\n}\n",
+      "python": "class Solution:\n    def twoSum(self, numbers, target):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int[] twoSum(int[] numbers, int target) {\n        return new int[]{};\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> twoSum(vector<int>& numbers, int target) {\n        return {};\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "twoSum",
+      "params": [{ "name": "numbers", "type": "int[]" }, { "name": "target", "type": "int" }],
+      "returns": "int[]", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": [[2,7,11,15], 9], "expected": [1,2] },
+        { "input": [[2,3,4], 6], "expected": [1,3] },
+        { "input": [[-1,0], -1], "expected": [1,2] }
+      ]
+    }
+  },
+  {
+    "id": "p-container-with-most-water", "slug": "container-with-most-water", "title": "Container With Most Water",
+    "difficulty": "medium", "category": "Two Pointers", "tags": ["array", "two-pointers", "greedy"],
+    "sheet": "leetcode150", "order": 26,
+    "sourceUrl": "https://leetcode.com/problems/container-with-most-water/",
+    "description": "Given heights of vertical lines at each index, choose two lines that together with the x-axis form a container holding the most water, and return that maximum area.",
+    "examples": [{ "input": "height = [1,8,6,2,5,4,8,3,7]", "output": "49" }],
+    "constraints": "2 <= height.length <= 1e5; 0 <= height[i] <= 1e4.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function maxArea(height) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def maxArea(self, height):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int maxArea(int[] height) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int maxArea(vector<int>& height) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "maxArea",
+      "params": [{ "name": "height", "type": "int[]" }],
+      "returns": "int", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": [[1,8,6,2,5,4,8,3,7]], "expected": 49 },
+        { "input": [[1,1]], "expected": 1 }
+      ]
+    }
+  },
+  {
+    "id": "p-3sum", "slug": "3sum", "title": "3Sum",
+    "difficulty": "medium", "category": "Two Pointers", "tags": ["array", "two-pointers", "sorting"],
+    "sheet": "leetcode150", "order": 27,
+    "sourceUrl": "https://leetcode.com/problems/3sum/",
+    "description": "Given an integer array, return all unique triplets [a,b,c] (as a list of index-independent triplets, not indices) with a+b+c == 0. The solution set must not contain duplicate triplets.",
+    "examples": [{ "input": "nums = [-1,0,1,2,-1,-4]", "output": "[[-1,-1,2],[-1,0,1]]" }],
+    "constraints": "3 <= nums.length <= 3000; -1e5 <= nums[i] <= 1e5.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function threeSum(nums) {\n  // your code here\n  return [];\n}\n",
+      "python": "class Solution:\n    def threeSum(self, nums):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int[][] threeSum(int[] nums) {\n        return new int[][]{};\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<vector<int>> threeSum(vector<int>& nums) {\n        return {};\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "threeSum",
+      "params": [{ "name": "nums", "type": "int[]" }],
+      "returns": "int[][]", "judge": "unordered", "timeLimitMs": 2000, "memoryLimitKb": 131072,
+      "tests": [
+        { "input": [[-1,0,1,2,-1,-4]], "expected": [[-1,-1,2],[-1,0,1]] },
+        { "input": [[0,1,1]], "expected": [] },
+        { "input": [[0,0,0]], "expected": [[0,0,0]] }
+      ]
+    }
+  },
+  {
+    "id": "p-minimum-size-subarray-sum", "slug": "minimum-size-subarray-sum", "title": "Minimum Size Subarray Sum",
+    "difficulty": "medium", "category": "Sliding Window", "tags": ["array", "sliding-window", "binary-search"],
+    "sheet": "leetcode150", "order": 28,
+    "sourceUrl": "https://leetcode.com/problems/minimum-size-subarray-sum/",
+    "description": "Given an array of positive integers and a target sum, find the length of the shortest contiguous subarray whose sum is at least the target. Return 0 if no such subarray exists.",
+    "examples": [{ "input": "target = 7, nums = [2,3,1,2,4,3]", "output": "2" }],
+    "constraints": "1 <= target <= 1e9; 1 <= nums.length <= 1e5; 1 <= nums[i] <= 1e4.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function minSubArrayLen(target, nums) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def minSubArrayLen(self, target, nums):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int minSubArrayLen(int target, int[] nums) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int minSubArrayLen(int target, vector<int>& nums) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "minSubArrayLen",
+      "params": [{ "name": "target", "type": "int" }, { "name": "nums", "type": "int[]" }],
+      "returns": "int", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": [7, [2,3,1,2,4,3]], "expected": 2 },
+        { "input": [4, [1,4,4]], "expected": 1 },
+        { "input": [11, [1,1,1,1,1,1,1,1]], "expected": 0 }
+      ]
+    }
+  },
+  {
+    "id": "p-longest-substring-without-repeating-characters", "slug": "longest-substring-without-repeating-characters", "title": "Longest Substring Without Repeating Characters",
+    "difficulty": "medium", "category": "Sliding Window", "tags": ["string", "sliding-window", "hash-map"],
+    "sheet": "leetcode150", "order": 29,
+    "sourceUrl": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+    "description": "Given a string, find the length of the longest contiguous substring that contains no repeated characters.",
+    "examples": [{ "input": "s = \"abcabcbb\"", "output": "3" }],
+    "constraints": "0 <= s.length <= 5e4; s consists of English letters, digits, symbols, and spaces.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function lengthOfLongestSubstring(s) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def lengthOfLongestSubstring(self, s):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int lengthOfLongestSubstring(String s) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int lengthOfLongestSubstring(string s) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "lengthOfLongestSubstring",
+      "params": [{ "name": "s", "type": "string" }],
+      "returns": "int", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": ["abcabcbb"], "expected": 3 },
+        { "input": ["bbbbb"], "expected": 1 },
+        { "input": ["pwwkew"], "expected": 3 }
+      ]
+    }
+  },
+  {
+    "id": "p-substring-with-concatenation-of-all-words", "slug": "substring-with-concatenation-of-all-words", "title": "Substring with Concatenation of All Words",
+    "difficulty": "hard", "category": "Sliding Window", "tags": ["string", "sliding-window", "hash-map"],
+    "sheet": "leetcode150", "order": 30,
+    "sourceUrl": "https://leetcode.com/problems/substring-with-concatenation-of-all-words/",
+    "description": "Given a string s and an array of equal-length words, find every starting index in s where a substring is exactly a concatenation, in any order, of each word in the array exactly once (with no extra characters in between).",
+    "examples": [{ "input": "s = \"barfoothefoobarman\", words = [\"foo\",\"bar\"]", "output": "[0,9]" }],
+    "constraints": "1 <= s.length <= 1e4; 1 <= words.length <= 5000; 1 <= words[i].length <= 30; all words have the same length; s and words[i] consist of lowercase English letters.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function findSubstring(s, words) {\n  // your code here\n  return [];\n}\n",
+      "python": "class Solution:\n    def findSubstring(self, s, words):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int[] findSubstring(String s, String[] words) {\n        return new int[]{};\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> findSubstring(string s, vector<string>& words) {\n        return {};\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "findSubstring",
+      "params": [{ "name": "s", "type": "string" }, { "name": "words", "type": "string[]" }],
+      "returns": "int[]", "judge": "unordered", "timeLimitMs": 2000, "memoryLimitKb": 131072,
+      "tests": [
+        { "input": ["barfoothefoobarman", ["foo","bar"]], "expected": [0,9] },
+        { "input": ["wordgoodgoodgoodbestword", ["word","good","best","word"]], "expected": [] },
+        { "input": ["barfoofoobarthefoobarman", ["bar","foo","the"]], "expected": [6,9,12] }
+      ]
+    }
+  },
+  {
+    "id": "p-minimum-window-substring", "slug": "minimum-window-substring", "title": "Minimum Window Substring",
+    "difficulty": "hard", "category": "Sliding Window", "tags": ["string", "sliding-window", "hash-map"],
+    "sheet": "leetcode150", "order": 31,
+    "sourceUrl": "https://leetcode.com/problems/minimum-window-substring/",
+    "description": "Given strings s and t, find the shortest contiguous substring of s that contains every character of t (including duplicates) at least as many times as it appears in t. Return an empty string if no such window exists.",
+    "examples": [{ "input": "s = \"ADOBECODEBANC\", t = \"ABC\"", "output": "\"BANC\"" }],
+    "constraints": "1 <= s.length, t.length <= 1e5; s and t consist of English letters.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function minWindow(s, t) {\n  // your code here\n  return \"\";\n}\n",
+      "python": "class Solution:\n    def minWindow(self, s, t):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public String minWindow(String s, String t) {\n        return \"\";\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    string minWindow(string s, string t) {\n        return \"\";\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "minWindow",
+      "params": [{ "name": "s", "type": "string" }, { "name": "t", "type": "string" }],
+      "returns": "string", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": ["ADOBECODEBANC", "ABC"], "expected": "BANC" },
+        { "input": ["a", "a"], "expected": "a" },
+        { "input": ["a", "aa"], "expected": "" }
+      ]
+    }
+  },
+  {
+    "id": "p-valid-sudoku", "slug": "valid-sudoku", "title": "Valid Sudoku",
+    "difficulty": "medium", "category": "Matrix", "tags": ["matrix", "hash-map"],
+    "sheet": "leetcode150", "order": 32,
+    "sourceUrl": "https://leetcode.com/problems/valid-sudoku/",
+    "description": "Given a 9x9 board where 0 marks an empty cell, determine whether the currently filled cells satisfy Sudoku rules: no repeated digit 1-9 in any row, column, or 3x3 box (empty cells are ignored and the board need not be solvable/complete).",
+    "examples": [{ "input": "a partially filled 9x9 board with no row/column/box conflicts", "output": "true" }],
+    "constraints": "board.length == board[i].length == 9; board[i][j] is 0 (empty) or 1-9.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function isValidSudoku(board) {\n  // your code here\n  return false;\n}\n",
+      "python": "class Solution:\n    def isValidSudoku(self, board):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public boolean isValidSudoku(int[][] board) {\n        return false;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool isValidSudoku(vector<vector<int>>& board) {\n        return false;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "isValidSudoku",
+      "params": [{ "name": "board", "type": "int[][]" }],
+      "returns": "bool", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": [[[5,3,0,0,7,0,0,0,0],[6,0,0,1,9,5,0,0,0],[0,9,8,0,0,0,0,6,0],[8,0,0,0,6,0,0,0,3],[4,0,0,8,0,3,0,0,1],[7,0,0,0,2,0,0,0,6],[0,6,0,0,0,0,2,8,0],[0,0,0,4,1,9,0,0,5],[0,0,0,0,8,0,0,7,9]]], "expected": true },
+        { "input": [[[8,3,0,0,7,0,0,0,0],[6,0,0,1,9,5,0,0,0],[0,9,8,0,0,0,0,6,0],[8,0,0,0,6,0,0,0,3],[4,0,0,8,0,3,0,0,1],[7,0,0,0,2,0,0,0,6],[0,6,0,0,0,0,2,8,0],[0,0,0,4,1,9,0,0,5],[0,0,0,0,8,0,0,7,9]]], "expected": false }
+      ]
+    }
+  },
+  {
+    "id": "p-spiral-matrix", "slug": "spiral-matrix", "title": "Spiral Matrix",
+    "difficulty": "medium", "category": "Matrix", "tags": ["matrix", "simulation"],
+    "sheet": "leetcode150", "order": 33,
+    "sourceUrl": "https://leetcode.com/problems/spiral-matrix/",
+    "description": "Given an m x n matrix, return all its elements visited in spiral order starting from the top-left, going right, then down, then left, then up, spiraling inward.",
+    "examples": [{ "input": "matrix = [[1,2,3],[4,5,6],[7,8,9]]", "output": "[1,2,3,6,9,8,7,4,5]" }],
+    "constraints": "1 <= m, n <= 10; -100 <= matrix[i][j] <= 100.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function spiralOrder(matrix) {\n  // your code here\n  return [];\n}\n",
+      "python": "class Solution:\n    def spiralOrder(self, matrix):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int[] spiralOrder(int[][] matrix) {\n        return new int[]{};\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> spiralOrder(vector<vector<int>>& matrix) {\n        return {};\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "spiralOrder",
+      "params": [{ "name": "matrix", "type": "int[][]" }],
+      "returns": "int[]", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": [[[1,2,3],[4,5,6],[7,8,9]]], "expected": [1,2,3,6,9,8,7,4,5] },
+        { "input": [[[1,2,3,4],[5,6,7,8],[9,10,11,12]]], "expected": [1,2,3,4,8,12,11,10,9,5,6,7] }
+      ]
+    }
+  },
+  {
+    "id": "p-rotate-image", "slug": "rotate-image", "title": "Rotate Image",
+    "difficulty": "medium", "category": "Matrix", "tags": ["matrix", "simulation"],
+    "sheet": "leetcode150", "order": 34,
+    "sourceUrl": "https://leetcode.com/problems/rotate-image/",
+    "description": "Given an n x n matrix representing an image, rotate it 90 degrees clockwise in place and return it.",
+    "examples": [{ "input": "matrix = [[1,2,3],[4,5,6],[7,8,9]]", "output": "[[7,4,1],[8,5,2],[9,6,3]]" }],
+    "constraints": "n == matrix.length == matrix[i].length; 1 <= n <= 20; -1000 <= matrix[i][j] <= 1000.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function rotate(matrix) {\n  // your code here\n  return matrix;\n}\n",
+      "python": "class Solution:\n    def rotate(self, matrix):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int[][] rotate(int[][] matrix) {\n        return matrix;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<vector<int>> rotate(vector<vector<int>>& matrix) {\n        return matrix;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "rotate",
+      "params": [{ "name": "matrix", "type": "int[][]" }],
+      "returns": "int[][]", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": [[[1,2,3],[4,5,6],[7,8,9]]], "expected": [[7,4,1],[8,5,2],[9,6,3]] },
+        { "input": [[[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]], "expected": [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]] }
+      ]
+    }
+  },
+  {
+    "id": "p-set-matrix-zeroes", "slug": "set-matrix-zeroes", "title": "Set Matrix Zeroes",
+    "difficulty": "medium", "category": "Matrix", "tags": ["matrix", "simulation"],
+    "sheet": "leetcode150", "order": 35,
+    "sourceUrl": "https://leetcode.com/problems/set-matrix-zeroes/",
+    "description": "Given an m x n matrix, if an element is 0, set its entire row and column to 0, in place, and return the modified matrix.",
+    "examples": [{ "input": "matrix = [[1,1,1],[1,0,1],[1,1,1]]", "output": "[[1,0,1],[0,0,0],[1,0,1]]" }],
+    "constraints": "1 <= m, n <= 200; -2^31 <= matrix[i][j] <= 2^31-1.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function setZeroes(matrix) {\n  // your code here\n  return matrix;\n}\n",
+      "python": "class Solution:\n    def setZeroes(self, matrix):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int[][] setZeroes(int[][] matrix) {\n        return matrix;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<vector<int>> setZeroes(vector<vector<int>>& matrix) {\n        return matrix;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "setZeroes",
+      "params": [{ "name": "matrix", "type": "int[][]" }],
+      "returns": "int[][]", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": [[[1,1,1],[1,0,1],[1,1,1]]], "expected": [[1,0,1],[0,0,0],[1,0,1]] },
+        { "input": [[[0,1,2,0],[3,4,5,2],[1,3,1,5]]], "expected": [[0,0,0,0],[0,4,5,0],[0,3,1,0]] }
+      ]
+    }
+  },
+  {
+    "id": "p-game-of-life", "slug": "game-of-life", "title": "Game of Life",
+    "difficulty": "medium", "category": "Matrix", "tags": ["matrix", "simulation"],
+    "sheet": "leetcode150", "order": 36,
+    "sourceUrl": "https://leetcode.com/problems/game-of-life/",
+    "description": "Given a board of 0 (dead) and 1 (live) cells, compute the next generation under Conway's rules (a live cell with 2-3 live neighbors survives, a dead cell with exactly 3 live neighbors becomes alive, all others die/stay dead) simultaneously for every cell, and return the updated board.",
+    "examples": [{ "input": "board = [[0,1,0],[0,0,1],[1,1,1],[0,0,0]]", "output": "[[0,0,0],[1,0,1],[0,1,1],[0,1,0]]" }],
+    "constraints": "m == board.length; n == board[i].length; 1 <= m, n <= 25; board[i][j] is 0 or 1.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function gameOfLife(board) {\n  // your code here\n  return board;\n}\n",
+      "python": "class Solution:\n    def gameOfLife(self, board):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int[][] gameOfLife(int[][] board) {\n        return board;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<vector<int>> gameOfLife(vector<vector<int>>& board) {\n        return board;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "gameOfLife",
+      "params": [{ "name": "board", "type": "int[][]" }],
+      "returns": "int[][]", "judge": "exact", "timeLimitMs": 1000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": [[[0,1,0],[0,0,1],[1,1,1],[0,0,0]]], "expected": [[0,0,0],[1,0,1],[0,1,1],[0,1,0]] },
+        { "input": [[[1,1],[1,0]]], "expected": [[1,1],[1,1]] }
+      ]
+    }
   }
 ]
