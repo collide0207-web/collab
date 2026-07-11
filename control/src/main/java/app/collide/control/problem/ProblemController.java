@@ -20,12 +20,12 @@ public class ProblemController {
 
     /** Browsable list (metadata only — search/filter/sort happen client-side for now). */
     @GetMapping
-    public List<Summary> list(@RequestParam(defaultValue = "neetcode150") String sheet) {
+    public List<Summary> list(@RequestParam(defaultValue = "leetcode150") String sheet) {
         return problems.list(sheet).stream().map(Summary::of).toList();
     }
 
     @GetMapping("/categories")
-    public List<String> categories(@RequestParam(defaultValue = "neetcode150") String sheet) {
+    public List<String> categories(@RequestParam(defaultValue = "leetcode150") String sheet) {
         return problems.categories(sheet);
     }
 
