@@ -3,8 +3,10 @@ package app.collide.control.problem;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,7 +25,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class ProblemSeeder implements ApplicationRunner {
 
     private static final Logger log = LoggerFactory.getLogger(ProblemSeeder.class);
-    private static final String RESOURCE = "seed/neetcode150.json";
+    private static final String RESOURCE = "seed/leetcode150.json";
 
     private final ProblemRepository problems;
     private final ObjectMapper mapper;
@@ -31,6 +33,11 @@ public class ProblemSeeder implements ApplicationRunner {
     public ProblemSeeder(ProblemRepository problems, ObjectMapper mapper) {
         this.problems = problems;
         this.mapper = mapper;
+    }
+
+    /** Rows in {@code existing} whose slug is absent from {@code seededSlugs} — safe to delete. */
+    static List<Problem> prune(List<Problem> existing, Set<String> seededSlugs) {
+        return existing.stream().filter(p -> !seededSlugs.contains(p.getSlug())).toList();
     }
 
     @Override
@@ -48,8 +55,10 @@ public class ProblemSeeder implements ApplicationRunner {
         }
 
         int idx = 0;
+        Set<String> seeded = new HashSet<>();
         for (JsonNode n : root) {
             String slug = n.get("slug").asText();
+            seeded.add(slug);
             Problem p = problems.findBySlug(slug).orElseGet(() -> new Problem(UUID.randomUUID(), slug));
             p.setSheet(n.path("sheet").asText("neetcode150"));
             p.setTitle(n.get("title").asText());
@@ -66,6 +75,12 @@ public class ProblemSeeder implements ApplicationRunner {
             p.setOrderIndex(n.path("order").asInt(idx));
             problems.save(p);
             idx++;
+        }
+        String sheet = "leetcode150";
+        List<Problem> orphans = prune(problems.findBySheet(sheet), seeded);
+        if (!orphans.isEmpty()) {
+            problems.deleteAll(orphans);
+            log.info("Pruned {} orphaned problems from sheet {}", orphans.size(), sheet);
         }
         log.info("Seeded {} problems from {}", idx, RESOURCE);
     }

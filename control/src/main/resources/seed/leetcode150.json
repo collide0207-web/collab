@@ -1,0 +1,27 @@
+[
+  {
+    "id": "p-two-sum", "slug": "two-sum", "title": "Two Sum",
+    "difficulty": "easy", "category": "Arrays & Hashing", "tags": ["array", "hash-map"],
+    "sheet": "leetcode150", "order": 0,
+    "sourceUrl": "https://leetcode.com/problems/two-sum/",
+    "description": "Given an array of integers and a target, return the indices of the two numbers that add up to the target. Exactly one solution exists; you may not reuse an element.",
+    "examples": [{ "input": "nums = [2,7,11,15], target = 9", "output": "[0,1]", "explanation": "nums[0]+nums[1]==9." }],
+    "constraints": "2 <= nums.length <= 1e4; -1e9 <= nums[i] <= 1e9; exactly one valid answer.",
+    "supportedLanguages": ["javascript", "python", "java", "cpp"],
+    "starterCode": {
+      "javascript": "function twoSum(nums, target) {\n  // your code here\n}\n",
+      "python": "class Solution:\n    def twoSum(self, nums, target):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int[] twoSum(int[] nums, int target) {\n        return new int[]{};\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> twoSum(vector<int>& nums, int target) {\n        return {};\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "twoSum",
+      "params": [{ "name": "nums", "type": "int[]" }, { "name": "target", "type": "int" }],
+      "returns": "int[]", "judge": "unordered", "timeLimitMs": 2000, "memoryLimitKb": 65536,
+      "tests": [
+        { "input": [[2,7,11,15], 9], "expected": [0,1] },
+        { "input": [[3,2,4], 6], "expected": [1,2] }
+      ]
+    }
+  }
+]
