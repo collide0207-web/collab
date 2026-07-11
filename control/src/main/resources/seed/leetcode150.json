@@ -12610,5 +12610,2750 @@
       "java",
       "cpp"
     ]
+  },
+  {
+    "id": "p-add-binary",
+    "slug": "add-binary",
+    "title": "Add Binary",
+    "difficulty": "easy",
+    "category": "Bit Manipulation",
+    "tags": [
+      "bit-manipulation",
+      "string",
+      "math"
+    ],
+    "sheet": "leetcode150",
+    "order": 123,
+    "sourceUrl": "https://leetcode.com/problems/add-binary/",
+    "description": "Given two binary strings, return their sum, also expressed as a binary string (no leading zeros unless the result is \"0\").",
+    "examples": [
+      {
+        "input": "a = \"11\", b = \"1\"",
+        "output": "\"100\""
+      },
+      {
+        "input": "a = \"1010\", b = \"1011\"",
+        "output": "\"10101\""
+      }
+    ],
+    "constraints": "1 <= a.length, b.length <= 1e4; each string contains only characters '0' or '1'; neither string has leading zeros except the string \"0\" itself.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function addBinary(a, b) {\n  // your code here\n  return \"\";\n}\n",
+      "python": "class Solution:\n    def addBinary(self, a, b):\n        pass\n",
+      "java": "class Solution {\n    public String addBinary(String a, String b) {\n        return \"\";\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    string addBinary(string a, string b) {\n        return \"\";\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "addBinary",
+      "params": [
+        {
+          "name": "a",
+          "type": "string"
+        },
+        {
+          "name": "b",
+          "type": "string"
+        }
+      ],
+      "returns": "string",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            "11",
+            "1"
+          ],
+          "expected": "100"
+        },
+        {
+          "input": [
+            "1010",
+            "1011"
+          ],
+          "expected": "10101"
+        },
+        {
+          "input": [
+            "0",
+            "0"
+          ],
+          "expected": "0"
+        },
+        {
+          "input": [
+            "1111",
+            "1111"
+          ],
+          "expected": "11110"
+        },
+        {
+          "input": [
+            "100",
+            "110010"
+          ],
+          "expected": "110110"
+        }
+      ]
+    }
+  },
+  {
+    "id": "p-reverse-bits",
+    "slug": "reverse-bits",
+    "title": "Reverse Bits",
+    "difficulty": "easy",
+    "category": "Bit Manipulation",
+    "tags": [
+      "bit-manipulation"
+    ],
+    "sheet": "leetcode150",
+    "order": 124,
+    "sourceUrl": "https://leetcode.com/problems/reverse-bits/",
+    "description": "Given a 32-bit unsigned integer, return the unsigned integer obtained by reversing the order of its bits.",
+    "examples": [
+      {
+        "input": "n = 43261596",
+        "output": "964176192",
+        "explanation": "43261596 is 00000010100101000001111010011100 in binary; reversed it is 00111001011110000010100101000000."
+      }
+    ],
+    "constraints": "The input is treated as an unsigned 32-bit integer, so the result may exceed 2^31 - 1; represented here as a long to avoid sign issues.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function reverseBits(n) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def reverseBits(self, n):\n        pass\n",
+      "java": "class Solution {\n    public long reverseBits(long n) {\n        return 0L;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    long long reverseBits(long long n) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "reverseBits",
+      "params": [
+        {
+          "name": "n",
+          "type": "long"
+        }
+      ],
+      "returns": "long",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            43261596
+          ],
+          "expected": 964176192
+        },
+        {
+          "input": [
+            4294967293
+          ],
+          "expected": 3221225471
+        },
+        {
+          "input": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "input": [
+            1
+          ],
+          "expected": 2147483648
+        },
+        {
+          "input": [
+            2147483648
+          ],
+          "expected": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "p-number-of-1-bits",
+    "slug": "number-of-1-bits",
+    "title": "Number of 1 Bits",
+    "difficulty": "easy",
+    "category": "Bit Manipulation",
+    "tags": [
+      "bit-manipulation"
+    ],
+    "sheet": "leetcode150",
+    "order": 125,
+    "sourceUrl": "https://leetcode.com/problems/number-of-1-bits/",
+    "description": "Given a 32-bit unsigned integer, return the count of set bits ('1' bits) in its binary representation (the Hamming weight).",
+    "examples": [
+      {
+        "input": "n = 11",
+        "output": "3",
+        "explanation": "11 is 1011 in binary, which has three set bits."
+      }
+    ],
+    "constraints": "The input is treated as an unsigned 32-bit integer, so it is represented here as a long to avoid sign issues.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function hammingWeight(n) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def hammingWeight(self, n):\n        pass\n",
+      "java": "class Solution {\n    public int hammingWeight(long n) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int hammingWeight(long long n) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "hammingWeight",
+      "params": [
+        {
+          "name": "n",
+          "type": "long"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            11
+          ],
+          "expected": 3
+        },
+        {
+          "input": [
+            128
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            4294967293
+          ],
+          "expected": 31
+        },
+        {
+          "input": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "input": [
+            2147483647
+          ],
+          "expected": 31
+        }
+      ]
+    }
+  },
+  {
+    "id": "p-single-number",
+    "slug": "single-number",
+    "title": "Single Number",
+    "difficulty": "easy",
+    "category": "Bit Manipulation",
+    "tags": [
+      "bit-manipulation",
+      "array"
+    ],
+    "sheet": "leetcode150",
+    "order": 126,
+    "sourceUrl": "https://leetcode.com/problems/single-number/",
+    "description": "Given an array where every element appears exactly twice except for one, return the element that appears only once, using O(1) extra space.",
+    "examples": [
+      {
+        "input": "nums = [2,2,1]",
+        "output": "1"
+      },
+      {
+        "input": "nums = [4,1,2,1,2]",
+        "output": "4"
+      }
+    ],
+    "constraints": "1 <= nums.length <= 3e4; -3e4 <= nums[i] <= 3e4; exactly one element appears once and every other element appears exactly twice.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function singleNumber(nums) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def singleNumber(self, nums):\n        pass\n",
+      "java": "class Solution {\n    public int singleNumber(int[] nums) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int singleNumber(vector<int>& nums) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "singleNumber",
+      "params": [
+        {
+          "name": "nums",
+          "type": "int[]"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              2,
+              2,
+              1
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            [
+              4,
+              1,
+              2,
+              1,
+              2
+            ]
+          ],
+          "expected": 4
+        },
+        {
+          "input": [
+            [
+              1
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            [
+              -1,
+              -1,
+              -2
+            ]
+          ],
+          "expected": -2
+        },
+        {
+          "input": [
+            [
+              7,
+              3,
+              5,
+              3,
+              7
+            ]
+          ],
+          "expected": 5
+        }
+      ]
+    }
+  },
+  {
+    "id": "p-single-number-ii",
+    "slug": "single-number-ii",
+    "title": "Single Number II",
+    "difficulty": "medium",
+    "category": "Bit Manipulation",
+    "tags": [
+      "bit-manipulation",
+      "array"
+    ],
+    "sheet": "leetcode150",
+    "order": 127,
+    "sourceUrl": "https://leetcode.com/problems/single-number-ii/",
+    "description": "Given an array where every element appears exactly three times except for one which appears exactly once, return that single element using O(1) extra space.",
+    "examples": [
+      {
+        "input": "nums = [2,2,3,2]",
+        "output": "3"
+      },
+      {
+        "input": "nums = [0,1,0,1,0,1,99]",
+        "output": "99"
+      }
+    ],
+    "constraints": "1 <= nums.length <= 3e4; -2^31 <= nums[i] <= 2^31 - 1; every element appears exactly three times except one element which appears exactly once.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function singleNumberII(nums) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def singleNumberII(self, nums):\n        pass\n",
+      "java": "class Solution {\n    public int singleNumberII(int[] nums) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int singleNumberII(vector<int>& nums) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "singleNumberII",
+      "params": [
+        {
+          "name": "nums",
+          "type": "int[]"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              2,
+              2,
+              3,
+              2
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "input": [
+            [
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              99
+            ]
+          ],
+          "expected": 99
+        },
+        {
+          "input": [
+            [
+              -2,
+              -2,
+              1,
+              -2
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            [
+              5,
+              5,
+              5,
+              8
+            ]
+          ],
+          "expected": 8
+        },
+        {
+          "input": [
+            [
+              30000,
+              -30000,
+              30000,
+              30000
+            ]
+          ],
+          "expected": -30000
+        }
+      ]
+    }
+  },
+  {
+    "id": "p-bitwise-and-of-numbers-range",
+    "slug": "bitwise-and-of-numbers-range",
+    "title": "Bitwise AND of Numbers Range",
+    "difficulty": "medium",
+    "category": "Bit Manipulation",
+    "tags": [
+      "bit-manipulation"
+    ],
+    "sheet": "leetcode150",
+    "order": 128,
+    "sourceUrl": "https://leetcode.com/problems/bitwise-and-of-numbers-range/",
+    "description": "Given two integers left and right that represent the boundaries of an inclusive range, return the bitwise AND of every number in that range.",
+    "examples": [
+      {
+        "input": "left = 5, right = 7",
+        "output": "4",
+        "explanation": "5 & 6 & 7 = 4."
+      },
+      {
+        "input": "left = 0, right = 0",
+        "output": "0"
+      }
+    ],
+    "constraints": "0 <= left <= right <= 2^31 - 1.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function rangeBitwiseAnd(left, right) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def rangeBitwiseAnd(self, left, right):\n        pass\n",
+      "java": "class Solution {\n    public int rangeBitwiseAnd(int left, int right) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int rangeBitwiseAnd(int left, int right) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "rangeBitwiseAnd",
+      "params": [
+        {
+          "name": "left",
+          "type": "int"
+        },
+        {
+          "name": "right",
+          "type": "int"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            5,
+            7
+          ],
+          "expected": 4
+        },
+        {
+          "input": [
+            0,
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "input": [
+            1,
+            2147483647
+          ],
+          "expected": 0
+        },
+        {
+          "input": [
+            8,
+            8
+          ],
+          "expected": 8
+        },
+        {
+          "input": [
+            10,
+            11
+          ],
+          "expected": 10
+        }
+      ]
+    }
+  },
+  {
+    "id": "p-palindrome-number",
+    "slug": "palindrome-number",
+    "title": "Palindrome Number",
+    "difficulty": "easy",
+    "category": "Math",
+    "tags": [
+      "math"
+    ],
+    "sheet": "leetcode150",
+    "order": 129,
+    "sourceUrl": "https://leetcode.com/problems/palindrome-number/",
+    "description": "Given an integer, determine whether it reads the same forwards and backwards, without converting it to a string.",
+    "examples": [
+      {
+        "input": "x = 121",
+        "output": "true"
+      },
+      {
+        "input": "x = -121",
+        "output": "false",
+        "explanation": "Reading backwards gives 121-, which is not equal to the original."
+      }
+    ],
+    "constraints": "-2^31 <= x <= 2^31 - 1.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function isPalindrome(x) {\n  // your code here\n  return false;\n}\n",
+      "python": "class Solution:\n    def isPalindrome(self, x):\n        pass\n",
+      "java": "class Solution {\n    public boolean isPalindrome(int x) {\n        return false;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool isPalindrome(int x) {\n        return false;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "isPalindrome",
+      "params": [
+        {
+          "name": "x",
+          "type": "int"
+        }
+      ],
+      "returns": "bool",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            121
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            -121
+          ],
+          "expected": false
+        },
+        {
+          "input": [
+            10
+          ],
+          "expected": false
+        },
+        {
+          "input": [
+            0
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            12321
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            1234
+          ],
+          "expected": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "p-plus-one",
+    "slug": "plus-one",
+    "title": "Plus One",
+    "difficulty": "easy",
+    "category": "Math",
+    "tags": [
+      "math",
+      "array"
+    ],
+    "sheet": "leetcode150",
+    "order": 130,
+    "sourceUrl": "https://leetcode.com/problems/plus-one/",
+    "description": "A non-negative integer is represented as an array of digits in order from most to least significant, with no leading zeros. Return the array of digits representing that integer plus one.",
+    "examples": [
+      {
+        "input": "digits = [1,2,3]",
+        "output": "[1,2,4]"
+      },
+      {
+        "input": "digits = [9,9]",
+        "output": "[1,0,0]"
+      }
+    ],
+    "constraints": "1 <= digits.length <= 100; 0 <= digits[i] <= 9; digits does not contain leading zeros except for a single-digit 0.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function plusOne(digits) {\n  // your code here\n  return [];\n}\n",
+      "python": "class Solution:\n    def plusOne(self, digits):\n        pass\n",
+      "java": "class Solution {\n    public int[] plusOne(int[] digits) {\n        return new int[0];\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> plusOne(vector<int>& digits) {\n        return {};\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "plusOne",
+      "params": [
+        {
+          "name": "digits",
+          "type": "int[]"
+        }
+      ],
+      "returns": "int[]",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "expected": [
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "input": [
+            [
+              9,
+              9
+            ]
+          ],
+          "expected": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "input": [
+            [
+              0
+            ]
+          ],
+          "expected": [
+            1
+          ]
+        },
+        {
+          "input": [
+            [
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "expected": [
+            4,
+            3,
+            2,
+            2
+          ]
+        },
+        {
+          "input": [
+            [
+              9
+            ]
+          ],
+          "expected": [
+            1,
+            0
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "p-factorial-trailing-zeroes",
+    "slug": "factorial-trailing-zeroes",
+    "title": "Factorial Trailing Zeroes",
+    "difficulty": "medium",
+    "category": "Math",
+    "tags": [
+      "math"
+    ],
+    "sheet": "leetcode150",
+    "order": 131,
+    "sourceUrl": "https://leetcode.com/problems/factorial-trailing-zeroes/",
+    "description": "Given an integer n, return the number of trailing zero digits in n! (n factorial).",
+    "examples": [
+      {
+        "input": "n = 3",
+        "output": "0",
+        "explanation": "3! = 6, no trailing zero."
+      },
+      {
+        "input": "n = 5",
+        "output": "1",
+        "explanation": "5! = 120, one trailing zero."
+      }
+    ],
+    "constraints": "0 <= n <= 10^4.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function trailingZeroes(n) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def trailingZeroes(self, n):\n        pass\n",
+      "java": "class Solution {\n    public int trailingZeroes(int n) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int trailingZeroes(int n) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "trailingZeroes",
+      "params": [
+        {
+          "name": "n",
+          "type": "int"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            3
+          ],
+          "expected": 0
+        },
+        {
+          "input": [
+            5
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "input": [
+            25
+          ],
+          "expected": 6
+        },
+        {
+          "input": [
+            100
+          ],
+          "expected": 24
+        }
+      ]
+    }
+  },
+  {
+    "id": "p-sqrtx",
+    "slug": "sqrtx",
+    "title": "Sqrt(x)",
+    "difficulty": "easy",
+    "category": "Math",
+    "tags": [
+      "math",
+      "binary-search"
+    ],
+    "sheet": "leetcode150",
+    "order": 132,
+    "sourceUrl": "https://leetcode.com/problems/sqrtx/",
+    "description": "Given a non-negative integer x, return the largest integer whose square is less than or equal to x (i.e. the floor of the square root), without using a built-in exponent/power function.",
+    "examples": [
+      {
+        "input": "x = 4",
+        "output": "2"
+      },
+      {
+        "input": "x = 8",
+        "output": "2",
+        "explanation": "sqrt(8) is approximately 2.828, and the floor of that is 2."
+      }
+    ],
+    "constraints": "0 <= x <= 2^31 - 1.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function mySqrt(x) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def mySqrt(self, x):\n        pass\n",
+      "java": "class Solution {\n    public int mySqrt(int x) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int mySqrt(int x) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "mySqrt",
+      "params": [
+        {
+          "name": "x",
+          "type": "int"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            4
+          ],
+          "expected": 2
+        },
+        {
+          "input": [
+            8
+          ],
+          "expected": 2
+        },
+        {
+          "input": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "input": [
+            1
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            2147395599
+          ],
+          "expected": 46339
+        }
+      ]
+    }
+  },
+  {
+    "id": "p-powx-n",
+    "slug": "powx-n",
+    "title": "Pow(x, n)",
+    "difficulty": "medium",
+    "category": "Math",
+    "tags": [
+      "math",
+      "recursion",
+      "binary-exponentiation"
+    ],
+    "sheet": "leetcode150",
+    "order": 133,
+    "sourceUrl": "https://leetcode.com/problems/powx-n/",
+    "description": "Implement a function that computes x raised to the integer power n (x^n), where n may be negative or zero.",
+    "examples": [
+      {
+        "input": "x = 2.0, n = 10",
+        "output": "1024.0"
+      },
+      {
+        "input": "x = 2.1, n = 3",
+        "output": "9.261"
+      },
+      {
+        "input": "x = 2.0, n = -2",
+        "output": "0.25"
+      }
+    ],
+    "constraints": "-100 < x < 100; -2^31 <= n <= 2^31 - 1; either x is not zero or n is positive; results are within double precision range.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function myPow(x, n) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def myPow(self, x, n):\n        pass\n",
+      "java": "class Solution {\n    public double myPow(double x, int n) {\n        return 0.0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    double myPow(double x, int n) {\n        return 0.0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "myPow",
+      "params": [
+        {
+          "name": "x",
+          "type": "double"
+        },
+        {
+          "name": "n",
+          "type": "int"
+        }
+      ],
+      "returns": "double",
+      "judge": "float:1e-6",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            2,
+            10
+          ],
+          "expected": 1024
+        },
+        {
+          "input": [
+            2.1,
+            3
+          ],
+          "expected": 9.261
+        },
+        {
+          "input": [
+            2,
+            -2
+          ],
+          "expected": 0.25
+        },
+        {
+          "input": [
+            1,
+            2147483647
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            2,
+            0
+          ],
+          "expected": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "p-max-points-on-a-line",
+    "slug": "max-points-on-a-line",
+    "title": "Max Points on a Line",
+    "difficulty": "hard",
+    "category": "Math",
+    "tags": [
+      "math",
+      "hash-map",
+      "geometry"
+    ],
+    "sheet": "leetcode150",
+    "order": 134,
+    "sourceUrl": "https://leetcode.com/problems/max-points-on-a-line/",
+    "description": "Given an array of integer coordinate points on the X-Y plane, return the largest number of points that all lie on a single straight line.",
+    "examples": [
+      {
+        "input": "points = [[1,1],[2,2],[3,3]]",
+        "output": "3"
+      },
+      {
+        "input": "points = [[1,1],[3,2],[5,3],[4,1],[2,3],[1,4]]",
+        "output": "4"
+      }
+    ],
+    "constraints": "1 <= points.length <= 300; each point is a pair [x, y] with -1e4 <= x, y <= 1e4; every point is distinct.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function maxPoints(points) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def maxPoints(self, points):\n        pass\n",
+      "java": "class Solution {\n    public int maxPoints(int[][] points) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int maxPoints(vector<vector<int>>& points) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "maxPoints",
+      "params": [
+        {
+          "name": "points",
+          "type": "int[][]"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3
+              ]
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "input": [
+            [
+              [
+                1,
+                1
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                5,
+                3
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                1,
+                4
+              ]
+            ]
+          ],
+          "expected": 4
+        },
+        {
+          "input": [
+            [
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          ],
+          "expected": 2
+        },
+        {
+          "input": [
+            [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                2,
+                5
+              ]
+            ]
+          ],
+          "expected": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": "p-climbing-stairs",
+    "slug": "climbing-stairs",
+    "title": "Climbing Stairs",
+    "difficulty": "easy",
+    "category": "1D DP",
+    "tags": [
+      "dp",
+      "math"
+    ],
+    "sheet": "leetcode150",
+    "order": 135,
+    "sourceUrl": "https://leetcode.com/problems/climbing-stairs/",
+    "description": "You are climbing a staircase that takes n steps to reach the top. Each move you can advance either 1 or 2 steps. Return how many distinct sequences of moves reach the top.",
+    "examples": [
+      {
+        "input": "n = 2",
+        "output": "2",
+        "explanation": "1+1 or 2."
+      },
+      {
+        "input": "n = 3",
+        "output": "3",
+        "explanation": "1+1+1, 1+2, or 2+1."
+      }
+    ],
+    "constraints": "1 <= n <= 45.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function climbStairs(n) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def climbStairs(self, n):\n        pass\n",
+      "java": "class Solution {\n    public int climbStairs(int n) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int climbStairs(int n) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "climbStairs",
+      "params": [
+        {
+          "name": "n",
+          "type": "int"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            2
+          ],
+          "expected": 2
+        },
+        {
+          "input": [
+            3
+          ],
+          "expected": 3
+        },
+        {
+          "input": [
+            1
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            5
+          ],
+          "expected": 8
+        },
+        {
+          "input": [
+            10
+          ],
+          "expected": 89
+        }
+      ]
+    }
+  },
+  {
+    "id": "p-house-robber",
+    "slug": "house-robber",
+    "title": "House Robber",
+    "difficulty": "medium",
+    "category": "1D DP",
+    "tags": [
+      "dp",
+      "array"
+    ],
+    "sheet": "leetcode150",
+    "order": 136,
+    "sourceUrl": "https://leetcode.com/problems/house-robber/",
+    "description": "Given the amount of money stashed in each house along a street, where robbing two adjacent houses trips an alarm, return the maximum total amount that can be robbed without robbing two adjacent houses.",
+    "examples": [
+      {
+        "input": "nums = [1,2,3,1]",
+        "output": "4",
+        "explanation": "Rob house 1 (1) and house 3 (3): total 4."
+      },
+      {
+        "input": "nums = [2,7,9,3,1]",
+        "output": "12",
+        "explanation": "Rob houses 1, 3, and 5: 2 + 9 + 1 = 12."
+      }
+    ],
+    "constraints": "1 <= nums.length <= 100; 0 <= nums[i] <= 400.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function rob(nums) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def rob(self, nums):\n        pass\n",
+      "java": "class Solution {\n    public int rob(int[] nums) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int rob(vector<int>& nums) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "rob",
+      "params": [
+        {
+          "name": "nums",
+          "type": "int[]"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              1,
+              2,
+              3,
+              1
+            ]
+          ],
+          "expected": 4
+        },
+        {
+          "input": [
+            [
+              2,
+              7,
+              9,
+              3,
+              1
+            ]
+          ],
+          "expected": 12
+        },
+        {
+          "input": [
+            [
+              5
+            ]
+          ],
+          "expected": 5
+        },
+        {
+          "input": [
+            [
+              2,
+              1
+            ]
+          ],
+          "expected": 2
+        },
+        {
+          "input": [
+            [
+              1,
+              2
+            ]
+          ],
+          "expected": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "p-word-break",
+    "slug": "word-break",
+    "title": "Word Break",
+    "difficulty": "medium",
+    "category": "1D DP",
+    "tags": [
+      "dp",
+      "string",
+      "hash-map"
+    ],
+    "sheet": "leetcode150",
+    "order": 137,
+    "sourceUrl": "https://leetcode.com/problems/word-break/",
+    "description": "Given a string s and a dictionary of words, determine whether s can be segmented into a sequence of one or more space-free dictionary words (words may be reused any number of times).",
+    "examples": [
+      {
+        "input": "s = \"leetcode\", wordDict = [\"leet\",\"code\"]",
+        "output": "true"
+      },
+      {
+        "input": "s = \"catsandog\", wordDict = [\"cats\",\"dog\",\"sand\",\"and\",\"cat\"]",
+        "output": "false"
+      }
+    ],
+    "constraints": "1 <= s.length <= 300; 1 <= wordDict.length <= 1000; 1 <= wordDict[i].length <= 20; s and each word consist of lowercase English letters; all words in wordDict are distinct.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function wordBreak(s, wordDict) {\n  // your code here\n  return false;\n}\n",
+      "python": "class Solution:\n    def wordBreak(self, s, wordDict):\n        pass\n",
+      "java": "class Solution {\n    public boolean wordBreak(String s, String[] wordDict) {\n        return false;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool wordBreak(string s, vector<string>& wordDict) {\n        return false;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "wordBreak",
+      "params": [
+        {
+          "name": "s",
+          "type": "string"
+        },
+        {
+          "name": "wordDict",
+          "type": "string[]"
+        }
+      ],
+      "returns": "bool",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            "leetcode",
+            [
+              "leet",
+              "code"
+            ]
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            "applepenapple",
+            [
+              "apple",
+              "pen"
+            ]
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            "catsandog",
+            [
+              "cats",
+              "dog",
+              "sand",
+              "and",
+              "cat"
+            ]
+          ],
+          "expected": false
+        },
+        {
+          "input": [
+            "a",
+            [
+              "b"
+            ]
+          ],
+          "expected": false
+        },
+        {
+          "input": [
+            "aaaaaaa",
+            [
+              "aaaa",
+              "aaa"
+            ]
+          ],
+          "expected": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "p-longest-increasing-subsequence",
+    "slug": "longest-increasing-subsequence",
+    "title": "Longest Increasing Subsequence",
+    "difficulty": "medium",
+    "category": "1D DP",
+    "tags": [
+      "dp",
+      "binary-search",
+      "array"
+    ],
+    "sheet": "leetcode150",
+    "order": 138,
+    "sourceUrl": "https://leetcode.com/problems/longest-increasing-subsequence/",
+    "description": "Given an integer array, return the length of the longest strictly increasing subsequence (elements need not be contiguous).",
+    "examples": [
+      {
+        "input": "nums = [10,9,2,5,3,7,101,18]",
+        "output": "4",
+        "explanation": "One longest subsequence is [2,3,7,101]."
+      }
+    ],
+    "constraints": "1 <= nums.length <= 2500; -1e4 <= nums[i] <= 1e4.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function lengthOfLIS(nums) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def lengthOfLIS(self, nums):\n        pass\n",
+      "java": "class Solution {\n    public int lengthOfLIS(int[] nums) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int lengthOfLIS(vector<int>& nums) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "lengthOfLIS",
+      "params": [
+        {
+          "name": "nums",
+          "type": "int[]"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              10,
+              9,
+              2,
+              5,
+              3,
+              7,
+              101,
+              18
+            ]
+          ],
+          "expected": 4
+        },
+        {
+          "input": [
+            [
+              0,
+              1,
+              0,
+              3,
+              2,
+              3
+            ]
+          ],
+          "expected": 4
+        },
+        {
+          "input": [
+            [
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            [
+              1
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            [
+              4,
+              10,
+              4,
+              3,
+              8,
+              9
+            ]
+          ],
+          "expected": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": "p-coin-change",
+    "slug": "coin-change",
+    "title": "Coin Change",
+    "difficulty": "medium",
+    "category": "1D DP",
+    "tags": [
+      "dp",
+      "array",
+      "bfs"
+    ],
+    "sheet": "leetcode150",
+    "order": 139,
+    "sourceUrl": "https://leetcode.com/problems/coin-change/",
+    "description": "Given an array of coin denominations and a target amount, return the fewest number of coins needed to make up that amount (unlimited supply of each coin), or -1 if it cannot be made.",
+    "examples": [
+      {
+        "input": "coins = [1,2,5], amount = 11",
+        "output": "3",
+        "explanation": "11 = 5 + 5 + 1."
+      },
+      {
+        "input": "coins = [2], amount = 3",
+        "output": "-1"
+      }
+    ],
+    "constraints": "1 <= coins.length <= 12; 1 <= coins[i] <= 2^31 - 1; 0 <= amount <= 10^4.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function coinChange(coins, amount) {\n  // your code here\n  return -1;\n}\n",
+      "python": "class Solution:\n    def coinChange(self, coins, amount):\n        pass\n",
+      "java": "class Solution {\n    public int coinChange(int[] coins, int amount) {\n        return -1;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int coinChange(vector<int>& coins, int amount) {\n        return -1;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "coinChange",
+      "params": [
+        {
+          "name": "coins",
+          "type": "int[]"
+        },
+        {
+          "name": "amount",
+          "type": "int"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              1,
+              2,
+              5
+            ],
+            11
+          ],
+          "expected": 3
+        },
+        {
+          "input": [
+            [
+              2
+            ],
+            3
+          ],
+          "expected": -1
+        },
+        {
+          "input": [
+            [
+              1
+            ],
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "input": [
+            [
+              1
+            ],
+            2
+          ],
+          "expected": 2
+        },
+        {
+          "input": [
+            [
+              1,
+              2,
+              5
+            ],
+            100
+          ],
+          "expected": 20
+        }
+      ]
+    }
+  },
+  {
+    "id": "p-triangle",
+    "slug": "triangle",
+    "title": "Triangle",
+    "difficulty": "medium",
+    "category": "Multidimensional DP",
+    "tags": [
+      "dp",
+      "array"
+    ],
+    "sheet": "leetcode150",
+    "order": 140,
+    "sourceUrl": "https://leetcode.com/problems/triangle/",
+    "description": "Given a triangle array (row i has i+1 elements), find the minimum total sum from top to bottom, where each step moves to an adjacent index on the row directly below (index i or i+1).",
+    "examples": [
+      {
+        "input": "triangle = [[2],[3,4],[6,5,7],[4,1,8,3]]",
+        "output": "11",
+        "explanation": "The path 2 -> 3 -> 5 -> 1 sums to 11."
+      }
+    ],
+    "constraints": "1 <= triangle.length <= 200; triangle[0].length == 1 and triangle[i].length == i + 1; -1e4 <= triangle[i][j] <= 1e4.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function minimumTotal(triangle) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def minimumTotal(self, triangle):\n        pass\n",
+      "java": "class Solution {\n    public int minimumTotal(int[][] triangle) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int minimumTotal(vector<vector<int>>& triangle) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "minimumTotal",
+      "params": [
+        {
+          "name": "triangle",
+          "type": "int[][]"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              [
+                2
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                6,
+                5,
+                7
+              ],
+              [
+                4,
+                1,
+                8,
+                3
+              ]
+            ]
+          ],
+          "expected": 11
+        },
+        {
+          "input": [
+            [
+              [
+                -10
+              ]
+            ]
+          ],
+          "expected": -10
+        },
+        {
+          "input": [
+            [
+              [
+                1
+              ],
+              [
+                2,
+                3
+              ]
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "input": [
+            [
+              [
+                1
+              ],
+              [
+                -2,
+                -3
+              ]
+            ]
+          ],
+          "expected": -2
+        },
+        {
+          "input": [
+            [
+              [
+                -1
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                1,
+                -1,
+                -3
+              ]
+            ]
+          ],
+          "expected": -1
+        }
+      ]
+    }
+  },
+  {
+    "id": "p-minimum-path-sum",
+    "slug": "minimum-path-sum",
+    "title": "Minimum Path Sum",
+    "difficulty": "medium",
+    "category": "Multidimensional DP",
+    "tags": [
+      "dp",
+      "array",
+      "matrix"
+    ],
+    "sheet": "leetcode150",
+    "order": 141,
+    "sourceUrl": "https://leetcode.com/problems/minimum-path-sum/",
+    "description": "Given a grid of non-negative integers, find a path from the top-left to the bottom-right corner (moving only right or down) that minimizes the sum of numbers along it, and return that sum.",
+    "examples": [
+      {
+        "input": "grid = [[1,3,1],[1,5,1],[4,2,1]]",
+        "output": "7",
+        "explanation": "The path 1 -> 3 -> 1 -> 1 -> 1 sums to 7."
+      }
+    ],
+    "constraints": "1 <= grid.length, grid[0].length <= 200; 0 <= grid[i][j] <= 200.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function minPathSum(grid) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def minPathSum(self, grid):\n        pass\n",
+      "java": "class Solution {\n    public int minPathSum(int[][] grid) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int minPathSum(vector<vector<int>>& grid) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "minPathSum",
+      "params": [
+        {
+          "name": "grid",
+          "type": "int[][]"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              [
+                1,
+                3,
+                1
+              ],
+              [
+                1,
+                5,
+                1
+              ],
+              [
+                4,
+                2,
+                1
+              ]
+            ]
+          ],
+          "expected": 7
+        },
+        {
+          "input": [
+            [
+              [
+                1,
+                2,
+                3
+              ],
+              [
+                4,
+                5,
+                6
+              ]
+            ]
+          ],
+          "expected": 12
+        },
+        {
+          "input": [
+            [
+              [
+                5
+              ]
+            ]
+          ],
+          "expected": 5
+        },
+        {
+          "input": [
+            [
+              [
+                1,
+                2
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "input": [
+            [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ]
+          ],
+          "expected": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "p-unique-paths-ii",
+    "slug": "unique-paths-ii",
+    "title": "Unique Paths II",
+    "difficulty": "medium",
+    "category": "Multidimensional DP",
+    "tags": [
+      "dp",
+      "array",
+      "matrix"
+    ],
+    "sheet": "leetcode150",
+    "order": 142,
+    "sourceUrl": "https://leetcode.com/problems/unique-paths-ii/",
+    "description": "Given an m x n grid where 1 marks an obstacle and 0 marks open space, count the number of distinct paths from the top-left to the bottom-right corner, moving only right or down and never through an obstacle.",
+    "examples": [
+      {
+        "input": "obstacleGrid = [[0,0,0],[0,1,0],[0,0,0]]",
+        "output": "2"
+      },
+      {
+        "input": "obstacleGrid = [[0,1],[0,0]]",
+        "output": "1"
+      }
+    ],
+    "constraints": "1 <= m, n <= 100; obstacleGrid[i][j] is 0 or 1.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function uniquePathsWithObstacles(obstacleGrid) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def uniquePathsWithObstacles(self, obstacleGrid):\n        pass\n",
+      "java": "class Solution {\n    public int uniquePathsWithObstacles(int[][] obstacleGrid) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "uniquePathsWithObstacles",
+      "params": [
+        {
+          "name": "obstacleGrid",
+          "type": "int[][]"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ]
+          ],
+          "expected": 2
+        },
+        {
+          "input": [
+            [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            [
+              [
+                1
+              ]
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "input": [
+            [
+              [
+                0
+              ]
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "expected": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "p-longest-palindromic-substring",
+    "slug": "longest-palindromic-substring",
+    "title": "Longest Palindromic Substring",
+    "difficulty": "medium",
+    "category": "Multidimensional DP",
+    "tags": [
+      "dp",
+      "string",
+      "two-pointers"
+    ],
+    "sheet": "leetcode150",
+    "order": 143,
+    "sourceUrl": "https://leetcode.com/problems/longest-palindromic-substring/",
+    "description": "Given a string s, return the longest contiguous substring of s that reads the same forwards and backwards. If several have the maximum length, returning any one of them is accepted.",
+    "examples": [
+      {
+        "input": "s = \"babad\"",
+        "output": "\"bab\"",
+        "explanation": "\"aba\" is also a valid answer."
+      },
+      {
+        "input": "s = \"cbbd\"",
+        "output": "\"bb\""
+      }
+    ],
+    "constraints": "1 <= s.length <= 1000; s consists only of digits and English letters.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function longestPalindrome(s) {\n  // your code here\n  return \"\";\n}\n",
+      "python": "class Solution:\n    def longestPalindrome(self, s):\n        pass\n",
+      "java": "class Solution {\n    public String longestPalindrome(String s) {\n        return \"\";\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    string longestPalindrome(string s) {\n        return \"\";\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "longestPalindrome",
+      "params": [
+        {
+          "name": "s",
+          "type": "string"
+        }
+      ],
+      "returns": "string",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            "cbbd"
+          ],
+          "expected": "bb"
+        },
+        {
+          "input": [
+            "a"
+          ],
+          "expected": "a"
+        },
+        {
+          "input": [
+            "racecarxyz"
+          ],
+          "expected": "racecar"
+        },
+        {
+          "input": [
+            "forgeeksskeegfor"
+          ],
+          "expected": "geeksskeeg"
+        },
+        {
+          "input": [
+            "aaaa"
+          ],
+          "expected": "aaaa"
+        }
+      ]
+    }
+  },
+  {
+    "id": "p-interleaving-string",
+    "slug": "interleaving-string",
+    "title": "Interleaving String",
+    "difficulty": "medium",
+    "category": "Multidimensional DP",
+    "tags": [
+      "dp",
+      "string"
+    ],
+    "sheet": "leetcode150",
+    "order": 144,
+    "sourceUrl": "https://leetcode.com/problems/interleaving-string/",
+    "description": "Given strings s1, s2, and s3, determine whether s3 can be formed by interleaving the characters of s1 and s2 while preserving the relative order of characters within each of s1 and s2.",
+    "examples": [
+      {
+        "input": "s1 = \"aabcc\", s2 = \"dbbca\", s3 = \"aadbbcbcac\"",
+        "output": "true"
+      },
+      {
+        "input": "s1 = \"aabcc\", s2 = \"dbbca\", s3 = \"aadbbbaccc\"",
+        "output": "false"
+      }
+    ],
+    "constraints": "0 <= s1.length, s2.length <= 100; 0 <= s3.length <= 200; all strings consist of lowercase English letters.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function isInterleave(s1, s2, s3) {\n  // your code here\n  return false;\n}\n",
+      "python": "class Solution:\n    def isInterleave(self, s1, s2, s3):\n        pass\n",
+      "java": "class Solution {\n    public boolean isInterleave(String s1, String s2, String s3) {\n        return false;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool isInterleave(string s1, string s2, string s3) {\n        return false;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "isInterleave",
+      "params": [
+        {
+          "name": "s1",
+          "type": "string"
+        },
+        {
+          "name": "s2",
+          "type": "string"
+        },
+        {
+          "name": "s3",
+          "type": "string"
+        }
+      ],
+      "returns": "bool",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            "aabcc",
+            "dbbca",
+            "aadbbcbcac"
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            "aabcc",
+            "dbbca",
+            "aadbbbaccc"
+          ],
+          "expected": false
+        },
+        {
+          "input": [
+            "",
+            "",
+            ""
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            "abc",
+            "",
+            "abc"
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            "a",
+            "b",
+            "ab"
+          ],
+          "expected": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "p-edit-distance",
+    "slug": "edit-distance",
+    "title": "Edit Distance",
+    "difficulty": "medium",
+    "category": "Multidimensional DP",
+    "tags": [
+      "dp",
+      "string"
+    ],
+    "sheet": "leetcode150",
+    "order": 145,
+    "sourceUrl": "https://leetcode.com/problems/edit-distance/",
+    "description": "Given two strings word1 and word2, return the minimum number of single-character insert, delete, or replace operations needed to transform word1 into word2.",
+    "examples": [
+      {
+        "input": "word1 = \"horse\", word2 = \"ros\"",
+        "output": "3",
+        "explanation": "horse -> rorse -> rose -> ros."
+      },
+      {
+        "input": "word1 = \"intention\", word2 = \"execution\"",
+        "output": "5"
+      }
+    ],
+    "constraints": "0 <= word1.length, word2.length <= 500; word1 and word2 consist of lowercase English letters.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function minDistance(word1, word2) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def minDistance(self, word1, word2):\n        pass\n",
+      "java": "class Solution {\n    public int minDistance(String word1, String word2) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int minDistance(string word1, string word2) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "minDistance",
+      "params": [
+        {
+          "name": "word1",
+          "type": "string"
+        },
+        {
+          "name": "word2",
+          "type": "string"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            "horse",
+            "ros"
+          ],
+          "expected": 3
+        },
+        {
+          "input": [
+            "intention",
+            "execution"
+          ],
+          "expected": 5
+        },
+        {
+          "input": [
+            "",
+            ""
+          ],
+          "expected": 0
+        },
+        {
+          "input": [
+            "abc",
+            ""
+          ],
+          "expected": 3
+        },
+        {
+          "input": [
+            "abc",
+            "abc"
+          ],
+          "expected": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "p-best-time-to-buy-and-sell-stock-iii",
+    "slug": "best-time-to-buy-and-sell-stock-iii",
+    "title": "Best Time to Buy and Sell Stock III",
+    "difficulty": "hard",
+    "category": "Multidimensional DP",
+    "tags": [
+      "dp",
+      "array"
+    ],
+    "sheet": "leetcode150",
+    "order": 146,
+    "sourceUrl": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/",
+    "description": "Given an array of daily stock prices, return the maximum profit achievable using at most two non-overlapping buy-sell transactions (you must sell before buying again).",
+    "examples": [
+      {
+        "input": "prices = [3,3,5,0,0,3,1,4]",
+        "output": "6",
+        "explanation": "Buy at 0, sell at 3 (profit 3); buy at 1, sell at 4 (profit 3); total 6."
+      },
+      {
+        "input": "prices = [1,2,3,4,5]",
+        "output": "4"
+      }
+    ],
+    "constraints": "1 <= prices.length <= 1e5; 0 <= prices[i] <= 1e5.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function maxProfit(prices) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def maxProfit(self, prices):\n        pass\n",
+      "java": "class Solution {\n    public int maxProfit(int[] prices) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int maxProfit(vector<int>& prices) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "maxProfit",
+      "params": [
+        {
+          "name": "prices",
+          "type": "int[]"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              3,
+              3,
+              5,
+              0,
+              0,
+              3,
+              1,
+              4
+            ]
+          ],
+          "expected": 6
+        },
+        {
+          "input": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "expected": 4
+        },
+        {
+          "input": [
+            [
+              7,
+              6,
+              4,
+              3,
+              1
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "input": [
+            [
+              1
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "input": [
+            [
+              1,
+              2,
+              4,
+              2,
+              5,
+              7,
+              2,
+              4,
+              9,
+              0
+            ]
+          ],
+          "expected": 13
+        }
+      ]
+    }
+  },
+  {
+    "id": "p-best-time-to-buy-and-sell-stock-iv",
+    "slug": "best-time-to-buy-and-sell-stock-iv",
+    "title": "Best Time to Buy and Sell Stock IV",
+    "difficulty": "hard",
+    "category": "Multidimensional DP",
+    "tags": [
+      "dp",
+      "array"
+    ],
+    "sheet": "leetcode150",
+    "order": 147,
+    "sourceUrl": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/",
+    "description": "Given an array of daily stock prices and an integer k, return the maximum profit achievable using at most k non-overlapping buy-sell transactions (you must sell before buying again).",
+    "examples": [
+      {
+        "input": "k = 2, prices = [2,4,1]",
+        "output": "2",
+        "explanation": "Buy at 2, sell at 4, for a profit of 2."
+      },
+      {
+        "input": "k = 2, prices = [3,2,6,5,0,3]",
+        "output": "7"
+      }
+    ],
+    "constraints": "0 <= k <= 100; 0 <= prices.length <= 1000; 0 <= prices[i] <= 1000.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function maxProfit(k, prices) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def maxProfit(self, k, prices):\n        pass\n",
+      "java": "class Solution {\n    public int maxProfit(int k, int[] prices) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int maxProfit(int k, vector<int>& prices) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "maxProfit",
+      "params": [
+        {
+          "name": "k",
+          "type": "int"
+        },
+        {
+          "name": "prices",
+          "type": "int[]"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            2,
+            [
+              2,
+              4,
+              1
+            ]
+          ],
+          "expected": 2
+        },
+        {
+          "input": [
+            2,
+            [
+              3,
+              2,
+              6,
+              5,
+              0,
+              3
+            ]
+          ],
+          "expected": 7
+        },
+        {
+          "input": [
+            1,
+            [
+              1,
+              2
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            0,
+            [
+              1,
+              5
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "input": [
+            2,
+            [
+              1
+            ]
+          ],
+          "expected": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "p-maximal-square",
+    "slug": "maximal-square",
+    "title": "Maximal Square",
+    "difficulty": "medium",
+    "category": "Multidimensional DP",
+    "tags": [
+      "dp",
+      "matrix"
+    ],
+    "sheet": "leetcode150",
+    "order": 148,
+    "sourceUrl": "https://leetcode.com/problems/maximal-square/",
+    "description": "Given an m x n binary matrix filled with 0's and 1's, find the largest square containing only 1's and return its area.",
+    "examples": [
+      {
+        "input": "matrix = [[1,0,1,0,0],[1,0,1,1,1],[1,1,1,1,1],[1,0,0,1,0]]",
+        "output": "4"
+      },
+      {
+        "input": "matrix = [[0,1],[1,0]]",
+        "output": "1"
+      }
+    ],
+    "constraints": "1 <= m, n <= 300; matrix[i][j] is 0 or 1.",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ],
+    "starterCode": {
+      "javascript": "function maximalSquare(matrix) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def maximalSquare(self, matrix):\n        pass\n",
+      "java": "class Solution {\n    public int maximalSquare(int[][] matrix) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int maximalSquare(vector<vector<int>>& matrix) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "maximalSquare",
+      "params": [
+        {
+          "name": "matrix",
+          "type": "int[][]"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              [
+                1,
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                0,
+                0,
+                1,
+                0
+              ]
+            ]
+          ],
+          "expected": 4
+        },
+        {
+          "input": [
+            [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ]
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            [
+              [
+                0
+              ]
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "input": [
+            [
+              [
+                1
+              ]
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          ],
+          "expected": 4
+        }
+      ]
+    }
   }
 ]
