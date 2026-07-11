@@ -6367,5 +6367,2938 @@
       "java",
       "cpp"
     ]
+  },
+  {
+    "id": "p-maximum-depth-of-binary-tree",
+    "slug": "maximum-depth-of-binary-tree",
+    "title": "Maximum Depth of Binary Tree",
+    "difficulty": "easy",
+    "category": "Binary Tree General",
+    "tags": [
+      "tree",
+      "binary-tree",
+      "dfs",
+      "bfs"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+    "description": "Given the root of a binary tree, return the number of nodes along the longest path from the root down to the farthest leaf node (a tree with a single node has depth 1; an empty tree has depth 0).",
+    "examples": [
+      {
+        "input": "root = [3,9,20,null,null,15,7]",
+        "output": "3"
+      }
+    ],
+    "constraints": "the number of nodes is n; 0 <= n <= 1e4; -100 <= Node.val <= 100.",
+    "starterCode": {
+      "javascript": "function maxDepth(root) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def maxDepth(self, root):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int maxDepth(TreeNode root) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int maxDepth(TreeNode* root) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "maxDepth",
+      "params": [
+        {
+          "name": "root",
+          "type": "tree-node<int>"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 65536,
+      "tests": [
+        {
+          "input": [
+            [
+              3,
+              9,
+              20,
+              null,
+              null,
+              15,
+              7
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "input": [
+            [
+              1,
+              null,
+              2
+            ]
+          ],
+          "expected": 2
+        },
+        {
+          "input": [
+            []
+          ],
+          "expected": 0
+        },
+        {
+          "input": [
+            [
+              1
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            [
+              1,
+              2,
+              3,
+              4,
+              null,
+              null,
+              5,
+              6
+            ]
+          ],
+          "expected": 3
+        }
+      ]
+    },
+    "order": 65,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-same-tree",
+    "slug": "same-tree",
+    "title": "Same Tree",
+    "difficulty": "easy",
+    "category": "Binary Tree General",
+    "tags": [
+      "tree",
+      "binary-tree",
+      "dfs"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/same-tree/",
+    "description": "Given the roots of two binary trees p and q, return true if they are structurally identical and every corresponding pair of nodes holds the same value.",
+    "examples": [
+      {
+        "input": "p = [1,2,3], q = [1,2,3]",
+        "output": "true"
+      }
+    ],
+    "constraints": "each tree has n nodes; 0 <= n <= 100; -1e4 <= Node.val <= 1e4.",
+    "starterCode": {
+      "javascript": "function isSameTree(p, q) {\n  // your code here\n  return false;\n}\n",
+      "python": "class Solution:\n    def isSameTree(self, p, q):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public boolean isSameTree(TreeNode p, TreeNode q) {\n        return false;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool isSameTree(TreeNode* p, TreeNode* q) {\n        return false;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "isSameTree",
+      "params": [
+        {
+          "name": "p",
+          "type": "tree-node<int>"
+        },
+        {
+          "name": "q",
+          "type": "tree-node<int>"
+        }
+      ],
+      "returns": "bool",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 65536,
+      "tests": [
+        {
+          "input": [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              null,
+              2
+            ]
+          ],
+          "expected": false
+        },
+        {
+          "input": [
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ],
+          "expected": false
+        },
+        {
+          "input": [
+            [],
+            []
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            [
+              1
+            ],
+            [
+              1
+            ]
+          ],
+          "expected": true
+        }
+      ]
+    },
+    "order": 66,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-invert-binary-tree",
+    "slug": "invert-binary-tree",
+    "title": "Invert Binary Tree",
+    "difficulty": "easy",
+    "category": "Binary Tree General",
+    "tags": [
+      "tree",
+      "binary-tree",
+      "dfs",
+      "bfs"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/invert-binary-tree/",
+    "description": "Given the root of a binary tree, swap every node's left and right child recursively and return the root of the resulting mirrored tree.",
+    "examples": [
+      {
+        "input": "root = [4,2,7,1,3,6,9]",
+        "output": "[4,7,2,9,6,3,1]"
+      }
+    ],
+    "constraints": "the number of nodes is n; 0 <= n <= 100; -100 <= Node.val <= 100.",
+    "starterCode": {
+      "javascript": "function invertTree(root) {\n  // your code here\n  return root;\n}\n",
+      "python": "class Solution:\n    def invertTree(self, root):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public TreeNode invertTree(TreeNode root) {\n        return root;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    TreeNode* invertTree(TreeNode* root) {\n        return root;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "invertTree",
+      "params": [
+        {
+          "name": "root",
+          "type": "tree-node<int>"
+        }
+      ],
+      "returns": "tree-node<int>",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 65536,
+      "tests": [
+        {
+          "input": [
+            [
+              4,
+              2,
+              7,
+              1,
+              3,
+              6,
+              9
+            ]
+          ],
+          "expected": [
+            4,
+            7,
+            2,
+            9,
+            6,
+            3,
+            1
+          ]
+        },
+        {
+          "input": [
+            [
+              2,
+              1,
+              3
+            ]
+          ],
+          "expected": [
+            2,
+            3,
+            1
+          ]
+        },
+        {
+          "input": [
+            []
+          ],
+          "expected": []
+        },
+        {
+          "input": [
+            [
+              1
+            ]
+          ],
+          "expected": [
+            1
+          ]
+        }
+      ]
+    },
+    "order": 67,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-symmetric-tree",
+    "slug": "symmetric-tree",
+    "title": "Symmetric Tree",
+    "difficulty": "easy",
+    "category": "Binary Tree General",
+    "tags": [
+      "tree",
+      "binary-tree",
+      "dfs",
+      "bfs"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/symmetric-tree/",
+    "description": "Given the root of a binary tree, return true if it is a mirror of itself around its center (the left subtree is the mirror reflection of the right subtree).",
+    "examples": [
+      {
+        "input": "root = [1,2,2,3,4,4,3]",
+        "output": "true"
+      }
+    ],
+    "constraints": "the number of nodes is n; 1 <= n <= 1000; -100 <= Node.val <= 100.",
+    "starterCode": {
+      "javascript": "function isSymmetric(root) {\n  // your code here\n  return false;\n}\n",
+      "python": "class Solution:\n    def isSymmetric(self, root):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public boolean isSymmetric(TreeNode root) {\n        return false;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool isSymmetric(TreeNode* root) {\n        return false;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "isSymmetric",
+      "params": [
+        {
+          "name": "root",
+          "type": "tree-node<int>"
+        }
+      ],
+      "returns": "bool",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 65536,
+      "tests": [
+        {
+          "input": [
+            [
+              1,
+              2,
+              2,
+              3,
+              4,
+              4,
+              3
+            ]
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            [
+              1,
+              2,
+              2,
+              null,
+              3,
+              null,
+              3
+            ]
+          ],
+          "expected": false
+        },
+        {
+          "input": [
+            [
+              1
+            ]
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            []
+          ],
+          "expected": true
+        }
+      ]
+    },
+    "order": 68,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-construct-binary-tree-from-preorder-and-inorder-traversal",
+    "slug": "construct-binary-tree-from-preorder-and-inorder-traversal",
+    "title": "Construct Binary Tree from Preorder and Inorder Traversal",
+    "difficulty": "medium",
+    "category": "Binary Tree General",
+    "tags": [
+      "tree",
+      "binary-tree",
+      "array",
+      "divide-and-conquer"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
+    "description": "Given two integer arrays preorder and inorder representing the preorder and inorder traversal of the same binary tree with unique node values, rebuild and return that binary tree.",
+    "examples": [
+      {
+        "input": "preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]",
+        "output": "[3,9,20,null,null,15,7]"
+      }
+    ],
+    "constraints": "1 <= preorder.length == inorder.length <= 3000; -3000 <= values <= 3000; all values are unique; inorder is the in-order traversal of the same tree as preorder.",
+    "starterCode": {
+      "javascript": "function buildTree(preorder, inorder) {\n  // your code here\n  return null;\n}\n",
+      "python": "class Solution:\n    def buildTree(self, preorder, inorder):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public TreeNode buildTree(int[] preorder, int[] inorder) {\n        return null;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {\n        return nullptr;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "buildTree",
+      "params": [
+        {
+          "name": "preorder",
+          "type": "int[]"
+        },
+        {
+          "name": "inorder",
+          "type": "int[]"
+        }
+      ],
+      "returns": "tree-node<int>",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 131072,
+      "tests": [
+        {
+          "input": [
+            [
+              3,
+              9,
+              20,
+              15,
+              7
+            ],
+            [
+              9,
+              3,
+              15,
+              20,
+              7
+            ]
+          ],
+          "expected": [
+            3,
+            9,
+            20,
+            null,
+            null,
+            15,
+            7
+          ]
+        },
+        {
+          "input": [
+            [
+              -1
+            ],
+            [
+              -1
+            ]
+          ],
+          "expected": [
+            -1
+          ]
+        },
+        {
+          "input": [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              3,
+              2,
+              1
+            ]
+          ],
+          "expected": [
+            1,
+            2,
+            null,
+            3
+          ]
+        }
+      ]
+    },
+    "order": 69,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-populating-next-right-pointers-in-each-node-ii",
+    "slug": "populating-next-right-pointers-in-each-node-ii",
+    "title": "Populating Next Right Pointers in Each Node II",
+    "difficulty": "medium",
+    "category": "Binary Tree General",
+    "tags": [
+      "tree",
+      "binary-tree",
+      "bfs"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/",
+    "description": "Given the root of a binary tree (not necessarily perfect or complete) where each node has an extra next pointer, set every next pointer to point to the node immediately to its right on the same level, or to null if there is none, using O(1) extra space besides recursion/output, and return the root.",
+    "examples": [
+      {
+        "input": "root = [1,2,3,4,5,null,7]",
+        "output": "[1,2,3,4,5,null,7]"
+      }
+    ],
+    "constraints": "the number of nodes is n; 0 <= n <= 6000; -100 <= Node.val <= 100. The returned tree structure/values are unchanged by this operation; only next pointers (not observable in the level-order value array) are set.",
+    "starterCode": {
+      "javascript": "function connect(root) {\n  // your code here\n  return root;\n}\n",
+      "python": "class Solution:\n    def connect(self, root):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public Node connect(Node root) {\n        return root;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    Node* connect(Node* root) {\n        return root;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "connect",
+      "params": [
+        {
+          "name": "root",
+          "type": "tree-node<int>"
+        }
+      ],
+      "returns": "tree-node<int>",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 65536,
+      "tests": [
+        {
+          "input": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5,
+              null,
+              7
+            ]
+          ],
+          "expected": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            null,
+            7
+          ]
+        },
+        {
+          "input": [
+            []
+          ],
+          "expected": []
+        },
+        {
+          "input": [
+            [
+              1
+            ]
+          ],
+          "expected": [
+            1
+          ]
+        }
+      ]
+    },
+    "order": 70,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-flatten-binary-tree-to-linked-list",
+    "slug": "flatten-binary-tree-to-linked-list",
+    "title": "Flatten Binary Tree to Linked List",
+    "difficulty": "medium",
+    "category": "Binary Tree General",
+    "tags": [
+      "tree",
+      "binary-tree",
+      "dfs"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/flatten-binary-tree-to-linked-list/",
+    "description": "Given the root of a binary tree, rearrange it in place into a \"linked list\" shape: every node's left child becomes null and every node's right child points to the next node in the tree's preorder traversal. Return the root.",
+    "examples": [
+      {
+        "input": "root = [1,2,5,3,4,null,6]",
+        "output": "[1,null,2,null,3,null,4,null,5,null,6]"
+      }
+    ],
+    "constraints": "the number of nodes is n; 0 <= n <= 2000; -100 <= Node.val <= 100. The expected result is expressed as a level-order array where every node has an empty left child.",
+    "starterCode": {
+      "javascript": "function flatten(root) {\n  // your code here\n  return root;\n}\n",
+      "python": "class Solution:\n    def flatten(self, root):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public TreeNode flatten(TreeNode root) {\n        return root;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    TreeNode* flatten(TreeNode* root) {\n        return root;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "flatten",
+      "params": [
+        {
+          "name": "root",
+          "type": "tree-node<int>"
+        }
+      ],
+      "returns": "tree-node<int>",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 65536,
+      "tests": [
+        {
+          "input": [
+            [
+              1,
+              2,
+              5,
+              3,
+              4,
+              null,
+              6
+            ]
+          ],
+          "expected": [
+            1,
+            null,
+            2,
+            null,
+            3,
+            null,
+            4,
+            null,
+            5,
+            null,
+            6
+          ]
+        },
+        {
+          "input": [
+            []
+          ],
+          "expected": []
+        },
+        {
+          "input": [
+            [
+              0
+            ]
+          ],
+          "expected": [
+            0
+          ]
+        }
+      ]
+    },
+    "order": 71,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-path-sum",
+    "slug": "path-sum",
+    "title": "Path Sum",
+    "difficulty": "easy",
+    "category": "Binary Tree General",
+    "tags": [
+      "tree",
+      "binary-tree",
+      "dfs"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/path-sum/",
+    "description": "Given the root of a binary tree and an integer targetSum, return true if there is a root-to-leaf path whose node values add up to exactly targetSum.",
+    "examples": [
+      {
+        "input": "root = [5,4,8,11,null,13,4,7,2,null,null,null,1], targetSum = 22",
+        "output": "true"
+      }
+    ],
+    "constraints": "the number of nodes is n; 0 <= n <= 5000; -1000 <= Node.val <= 1000; -1000 <= targetSum <= 1000.",
+    "starterCode": {
+      "javascript": "function hasPathSum(root, targetSum) {\n  // your code here\n  return false;\n}\n",
+      "python": "class Solution:\n    def hasPathSum(self, root, targetSum):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public boolean hasPathSum(TreeNode root, int targetSum) {\n        return false;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool hasPathSum(TreeNode* root, int targetSum) {\n        return false;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "hasPathSum",
+      "params": [
+        {
+          "name": "root",
+          "type": "tree-node<int>"
+        },
+        {
+          "name": "targetSum",
+          "type": "int"
+        }
+      ],
+      "returns": "bool",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 65536,
+      "tests": [
+        {
+          "input": [
+            [
+              5,
+              4,
+              8,
+              11,
+              null,
+              13,
+              4,
+              7,
+              2,
+              null,
+              null,
+              null,
+              1
+            ],
+            22
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            [
+              1,
+              2,
+              3
+            ],
+            5
+          ],
+          "expected": false
+        },
+        {
+          "input": [
+            [],
+            0
+          ],
+          "expected": false
+        },
+        {
+          "input": [
+            [
+              1,
+              2
+            ],
+            1
+          ],
+          "expected": false
+        },
+        {
+          "input": [
+            [
+              -2,
+              null,
+              -3
+            ],
+            -5
+          ],
+          "expected": true
+        }
+      ]
+    },
+    "order": 72,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-sum-root-to-leaf-numbers",
+    "slug": "sum-root-to-leaf-numbers",
+    "title": "Sum Root to Leaf Numbers",
+    "difficulty": "medium",
+    "category": "Binary Tree General",
+    "tags": [
+      "tree",
+      "binary-tree",
+      "dfs"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/sum-root-to-leaf-numbers/",
+    "description": "Given the root of a binary tree where each node holds a single digit 0-9, each root-to-leaf path spells a number formed by concatenating the digits from root to leaf. Return the sum of all such numbers over every root-to-leaf path.",
+    "examples": [
+      {
+        "input": "root = [1,2,3]",
+        "output": "25"
+      }
+    ],
+    "constraints": "the number of nodes is n; 1 <= n <= 1000; 0 <= Node.val <= 9; the tree depth does not exceed 10.",
+    "starterCode": {
+      "javascript": "function sumNumbers(root) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def sumNumbers(self, root):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int sumNumbers(TreeNode root) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int sumNumbers(TreeNode* root) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "sumNumbers",
+      "params": [
+        {
+          "name": "root",
+          "type": "tree-node<int>"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 65536,
+      "tests": [
+        {
+          "input": [
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "expected": 25
+        },
+        {
+          "input": [
+            [
+              4,
+              9,
+              0,
+              5,
+              1
+            ]
+          ],
+          "expected": 1026
+        },
+        {
+          "input": [
+            [
+              0
+            ]
+          ],
+          "expected": 0
+        }
+      ]
+    },
+    "order": 73,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-binary-tree-maximum-path-sum",
+    "slug": "binary-tree-maximum-path-sum",
+    "title": "Binary Tree Maximum Path Sum",
+    "difficulty": "hard",
+    "category": "Binary Tree General",
+    "tags": [
+      "tree",
+      "binary-tree",
+      "dfs",
+      "dynamic-programming"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
+    "description": "A path in a binary tree is any non-empty sequence of nodes connected by edges where each node appears at most once, and it need not pass through the root. Given the root of a binary tree, return the maximum possible sum of node values along any such path.",
+    "examples": [
+      {
+        "input": "root = [1,2,3]",
+        "output": "6"
+      }
+    ],
+    "constraints": "the number of nodes is n; 1 <= n <= 3 * 1e4; -1000 <= Node.val <= 1000.",
+    "starterCode": {
+      "javascript": "function maxPathSum(root) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def maxPathSum(self, root):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int maxPathSum(TreeNode root) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int maxPathSum(TreeNode* root) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "maxPathSum",
+      "params": [
+        {
+          "name": "root",
+          "type": "tree-node<int>"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 131072,
+      "tests": [
+        {
+          "input": [
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "expected": 6
+        },
+        {
+          "input": [
+            [
+              -10,
+              9,
+              20,
+              null,
+              null,
+              15,
+              7
+            ]
+          ],
+          "expected": 42
+        },
+        {
+          "input": [
+            [
+              -3
+            ]
+          ],
+          "expected": -3
+        },
+        {
+          "input": [
+            [
+              2,
+              -1
+            ]
+          ],
+          "expected": 2
+        }
+      ]
+    },
+    "order": 74,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-count-complete-tree-nodes",
+    "slug": "count-complete-tree-nodes",
+    "title": "Count Complete Tree Nodes",
+    "difficulty": "medium",
+    "category": "Binary Tree General",
+    "tags": [
+      "tree",
+      "binary-tree",
+      "binary-search",
+      "bit-manipulation"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/count-complete-tree-nodes/",
+    "description": "Given the root of a complete binary tree (every level is fully filled except possibly the last, which is filled left to right), count and return its total number of nodes in less than O(n) time by exploiting the completeness property.",
+    "examples": [
+      {
+        "input": "root = [1,2,3,4,5,6]",
+        "output": "6"
+      }
+    ],
+    "constraints": "the number of nodes is n; 0 <= n <= 5 * 1e4; 0 <= Node.val <= 5 * 1e4; the tree is guaranteed complete.",
+    "starterCode": {
+      "javascript": "function countNodes(root) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def countNodes(self, root):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int countNodes(TreeNode root) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int countNodes(TreeNode* root) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "countNodes",
+      "params": [
+        {
+          "name": "root",
+          "type": "tree-node<int>"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 131072,
+      "tests": [
+        {
+          "input": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "expected": 6
+        },
+        {
+          "input": [
+            []
+          ],
+          "expected": 0
+        },
+        {
+          "input": [
+            [
+              1
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "expected": 7
+        }
+      ]
+    },
+    "order": 75,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-lowest-common-ancestor-of-a-binary-tree",
+    "slug": "lowest-common-ancestor-of-a-binary-tree",
+    "title": "Lowest Common Ancestor of a Binary Tree",
+    "difficulty": "medium",
+    "category": "Binary Tree General",
+    "tags": [
+      "tree",
+      "binary-tree",
+      "dfs"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
+    "description": "Given the root of a binary tree with unique node values and two values p and q that are guaranteed to exist in the tree, return the value of the lowest node that has both p and q as descendants (a node is allowed to be a descendant of itself).",
+    "examples": [
+      {
+        "input": "root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1",
+        "output": "3"
+      }
+    ],
+    "constraints": "the number of nodes is n; 2 <= n <= 1e5; -1e9 <= Node.val <= 1e9; all Node.val are unique; p and q are values present in the tree and p != q.",
+    "starterCode": {
+      "javascript": "function lowestCommonAncestor(root, p, q) {\n  // your code here\n  return -1;\n}\n",
+      "python": "class Solution:\n    def lowestCommonAncestor(self, root, p, q):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int lowestCommonAncestor(TreeNode root, int p, int q) {\n        return -1;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int lowestCommonAncestor(TreeNode* root, int p, int q) {\n        return -1;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "lowestCommonAncestor",
+      "params": [
+        {
+          "name": "root",
+          "type": "tree-node<int>"
+        },
+        {
+          "name": "p",
+          "type": "int"
+        },
+        {
+          "name": "q",
+          "type": "int"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 131072,
+      "tests": [
+        {
+          "input": [
+            [
+              3,
+              5,
+              1,
+              6,
+              2,
+              0,
+              8,
+              null,
+              null,
+              7,
+              4
+            ],
+            5,
+            1
+          ],
+          "expected": 3
+        },
+        {
+          "input": [
+            [
+              3,
+              5,
+              1,
+              6,
+              2,
+              0,
+              8,
+              null,
+              null,
+              7,
+              4
+            ],
+            5,
+            4
+          ],
+          "expected": 5
+        },
+        {
+          "input": [
+            [
+              1,
+              2
+            ],
+            1,
+            2
+          ],
+          "expected": 1
+        }
+      ]
+    },
+    "order": 76,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-binary-tree-right-side-view",
+    "slug": "binary-tree-right-side-view",
+    "title": "Binary Tree Right Side View",
+    "difficulty": "medium",
+    "category": "Binary Tree BFS",
+    "tags": [
+      "tree",
+      "binary-tree",
+      "bfs",
+      "dfs"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/binary-tree-right-side-view/",
+    "description": "Given the root of a binary tree, imagine standing to its right side. Return, top to bottom, the value of the rightmost node visible at each level.",
+    "examples": [
+      {
+        "input": "root = [1,2,3,null,5,null,4]",
+        "output": "[1,3,4]"
+      }
+    ],
+    "constraints": "the number of nodes is n; 0 <= n <= 100; -100 <= Node.val <= 100.",
+    "starterCode": {
+      "javascript": "function rightSideView(root) {\n  // your code here\n  return [];\n}\n",
+      "python": "class Solution:\n    def rightSideView(self, root):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public List<Integer> rightSideView(TreeNode root) {\n        return new ArrayList<>();\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> rightSideView(TreeNode* root) {\n        return {};\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "rightSideView",
+      "params": [
+        {
+          "name": "root",
+          "type": "tree-node<int>"
+        }
+      ],
+      "returns": "int[]",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 65536,
+      "tests": [
+        {
+          "input": [
+            [
+              1,
+              2,
+              3,
+              null,
+              5,
+              null,
+              4
+            ]
+          ],
+          "expected": [
+            1,
+            3,
+            4
+          ]
+        },
+        {
+          "input": [
+            [
+              1,
+              null,
+              3
+            ]
+          ],
+          "expected": [
+            1,
+            3
+          ]
+        },
+        {
+          "input": [
+            []
+          ],
+          "expected": []
+        }
+      ]
+    },
+    "order": 77,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-average-of-levels-in-binary-tree",
+    "slug": "average-of-levels-in-binary-tree",
+    "title": "Average of Levels in Binary Tree",
+    "difficulty": "easy",
+    "category": "Binary Tree BFS",
+    "tags": [
+      "tree",
+      "binary-tree",
+      "bfs"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/average-of-levels-in-binary-tree/",
+    "description": "Given the root of a binary tree, return the average value of the nodes on each level, ordered from top to bottom.",
+    "examples": [
+      {
+        "input": "root = [3,9,20,null,null,15,7]",
+        "output": "[3.0, 14.5, 11.0]"
+      }
+    ],
+    "constraints": "the number of nodes is n; 1 <= n <= 1e4; -1e5 <= Node.val <= 1e5.",
+    "starterCode": {
+      "javascript": "function averageOfLevels(root) {\n  // your code here\n  return [];\n}\n",
+      "python": "class Solution:\n    def averageOfLevels(self, root):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public double[] averageOfLevels(TreeNode root) {\n        return new double[0];\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<double> averageOfLevels(TreeNode* root) {\n        return {};\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "averageOfLevels",
+      "params": [
+        {
+          "name": "root",
+          "type": "tree-node<int>"
+        }
+      ],
+      "returns": "double[]",
+      "judge": "float:1e-5",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 65536,
+      "tests": [
+        {
+          "input": [
+            [
+              3,
+              9,
+              20,
+              null,
+              null,
+              15,
+              7
+            ]
+          ],
+          "expected": [
+            3,
+            14.5,
+            11
+          ]
+        },
+        {
+          "input": [
+            [
+              3,
+              9,
+              20,
+              15,
+              7
+            ]
+          ],
+          "expected": [
+            3,
+            14.5,
+            11
+          ]
+        },
+        {
+          "input": [
+            [
+              1
+            ]
+          ],
+          "expected": [
+            1
+          ]
+        }
+      ]
+    },
+    "order": 78,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-binary-tree-level-order-traversal",
+    "slug": "binary-tree-level-order-traversal",
+    "title": "Binary Tree Level Order Traversal",
+    "difficulty": "medium",
+    "category": "Binary Tree BFS",
+    "tags": [
+      "tree",
+      "binary-tree",
+      "bfs"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+    "description": "Given the root of a binary tree, return its nodes' values grouped level by level, from left to right, top to bottom (a list of lists, one list per depth).",
+    "examples": [
+      {
+        "input": "root = [3,9,20,null,null,15,7]",
+        "output": "[[3],[9,20],[15,7]]"
+      }
+    ],
+    "constraints": "the number of nodes is n; 0 <= n <= 2000; -1000 <= Node.val <= 1000.",
+    "starterCode": {
+      "javascript": "function levelOrder(root) {\n  // your code here\n  return [];\n}\n",
+      "python": "class Solution:\n    def levelOrder(self, root):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public List<List<Integer>> levelOrder(TreeNode root) {\n        return new ArrayList<>();\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<vector<int>> levelOrder(TreeNode* root) {\n        return {};\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "levelOrder",
+      "params": [
+        {
+          "name": "root",
+          "type": "tree-node<int>"
+        }
+      ],
+      "returns": "int[][]",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 65536,
+      "tests": [
+        {
+          "input": [
+            [
+              3,
+              9,
+              20,
+              null,
+              null,
+              15,
+              7
+            ]
+          ],
+          "expected": [
+            [
+              3
+            ],
+            [
+              9,
+              20
+            ],
+            [
+              15,
+              7
+            ]
+          ]
+        },
+        {
+          "input": [
+            [
+              1
+            ]
+          ],
+          "expected": [
+            [
+              1
+            ]
+          ]
+        },
+        {
+          "input": [
+            []
+          ],
+          "expected": []
+        }
+      ]
+    },
+    "order": 79,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-binary-tree-zigzag-level-order-traversal",
+    "slug": "binary-tree-zigzag-level-order-traversal",
+    "title": "Binary Tree Zigzag Level Order Traversal",
+    "difficulty": "medium",
+    "category": "Binary Tree BFS",
+    "tags": [
+      "tree",
+      "binary-tree",
+      "bfs"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/",
+    "description": "Given the root of a binary tree, return its nodes' values grouped level by level, but alternate the reading direction: the first level left to right, the next right to left, and so on.",
+    "examples": [
+      {
+        "input": "root = [3,9,20,null,null,15,7]",
+        "output": "[[3],[20,9],[15,7]]"
+      }
+    ],
+    "constraints": "the number of nodes is n; 0 <= n <= 2000; -100 <= Node.val <= 100.",
+    "starterCode": {
+      "javascript": "function zigzagLevelOrder(root) {\n  // your code here\n  return [];\n}\n",
+      "python": "class Solution:\n    def zigzagLevelOrder(self, root):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {\n        return new ArrayList<>();\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<vector<int>> zigzagLevelOrder(TreeNode* root) {\n        return {};\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "zigzagLevelOrder",
+      "params": [
+        {
+          "name": "root",
+          "type": "tree-node<int>"
+        }
+      ],
+      "returns": "int[][]",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 65536,
+      "tests": [
+        {
+          "input": [
+            [
+              3,
+              9,
+              20,
+              null,
+              null,
+              15,
+              7
+            ]
+          ],
+          "expected": [
+            [
+              3
+            ],
+            [
+              20,
+              9
+            ],
+            [
+              15,
+              7
+            ]
+          ]
+        },
+        {
+          "input": [
+            [
+              1
+            ]
+          ],
+          "expected": [
+            [
+              1
+            ]
+          ]
+        },
+        {
+          "input": [
+            []
+          ],
+          "expected": []
+        }
+      ]
+    },
+    "order": 80,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-minimum-absolute-difference-in-bst",
+    "slug": "minimum-absolute-difference-in-bst",
+    "title": "Minimum Absolute Difference in BST",
+    "difficulty": "easy",
+    "category": "Binary Search Tree",
+    "tags": [
+      "tree",
+      "binary-search-tree",
+      "dfs"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/minimum-absolute-difference-in-bst/",
+    "description": "Given the root of a binary search tree with all unique node values, return the smallest possible absolute difference between the values of any two distinct nodes in the tree.",
+    "examples": [
+      {
+        "input": "root = [4,2,6,1,3]",
+        "output": "1"
+      }
+    ],
+    "constraints": "the number of nodes is n; 2 <= n <= 1e4; 0 <= Node.val <= 1e5.",
+    "starterCode": {
+      "javascript": "function getMinimumDifference(root) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def getMinimumDifference(self, root):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int getMinimumDifference(TreeNode root) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int getMinimumDifference(TreeNode* root) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "getMinimumDifference",
+      "params": [
+        {
+          "name": "root",
+          "type": "tree-node<int>"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 65536,
+      "tests": [
+        {
+          "input": [
+            [
+              4,
+              2,
+              6,
+              1,
+              3
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            [
+              1,
+              0,
+              48,
+              null,
+              null,
+              12,
+              49
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            [
+              1,
+              0,
+              2
+            ]
+          ],
+          "expected": 1
+        }
+      ]
+    },
+    "order": 81,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-kth-smallest-element-in-a-bst",
+    "slug": "kth-smallest-element-in-a-bst",
+    "title": "Kth Smallest Element in a BST",
+    "difficulty": "medium",
+    "category": "Binary Search Tree",
+    "tags": [
+      "tree",
+      "binary-search-tree",
+      "dfs"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
+    "description": "Given the root of a binary search tree and an integer k, return the k-th smallest value among all node values (1-indexed).",
+    "examples": [
+      {
+        "input": "root = [3,1,4,null,2], k = 1",
+        "output": "1"
+      }
+    ],
+    "constraints": "the number of nodes is n; 1 <= k <= n <= 1e4; 0 <= Node.val <= 1e4.",
+    "starterCode": {
+      "javascript": "function kthSmallest(root, k) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def kthSmallest(self, root, k):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int kthSmallest(TreeNode root, int k) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int kthSmallest(TreeNode* root, int k) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "kthSmallest",
+      "params": [
+        {
+          "name": "root",
+          "type": "tree-node<int>"
+        },
+        {
+          "name": "k",
+          "type": "int"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 65536,
+      "tests": [
+        {
+          "input": [
+            [
+              3,
+              1,
+              4,
+              null,
+              2
+            ],
+            1
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            [
+              5,
+              3,
+              6,
+              2,
+              4,
+              null,
+              null,
+              1
+            ],
+            3
+          ],
+          "expected": 3
+        },
+        {
+          "input": [
+            [
+              1,
+              null,
+              2
+            ],
+            2
+          ],
+          "expected": 2
+        }
+      ]
+    },
+    "order": 82,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-validate-binary-search-tree",
+    "slug": "validate-binary-search-tree",
+    "title": "Validate Binary Search Tree",
+    "difficulty": "medium",
+    "category": "Binary Search Tree",
+    "tags": [
+      "tree",
+      "binary-search-tree",
+      "dfs"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/validate-binary-search-tree/",
+    "description": "Given the root of a binary tree, return true if it satisfies the binary search tree property: for every node, all values in its left subtree are strictly less than the node's value and all values in its right subtree are strictly greater.",
+    "examples": [
+      {
+        "input": "root = [2,1,3]",
+        "output": "true"
+      }
+    ],
+    "constraints": "the number of nodes is n; 1 <= n <= 1e4; -2^31 <= Node.val <= 2^31 - 1.",
+    "starterCode": {
+      "javascript": "function isValidBST(root) {\n  // your code here\n  return false;\n}\n",
+      "python": "class Solution:\n    def isValidBST(self, root):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public boolean isValidBST(TreeNode root) {\n        return false;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool isValidBST(TreeNode* root) {\n        return false;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "isValidBST",
+      "params": [
+        {
+          "name": "root",
+          "type": "tree-node<int>"
+        }
+      ],
+      "returns": "bool",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 65536,
+      "tests": [
+        {
+          "input": [
+            [
+              2,
+              1,
+              3
+            ]
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            [
+              5,
+              1,
+              4,
+              null,
+              null,
+              3,
+              6
+            ]
+          ],
+          "expected": false
+        },
+        {
+          "input": [
+            []
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            [
+              1
+            ]
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            [
+              10,
+              5,
+              15,
+              null,
+              null,
+              6,
+              20
+            ]
+          ],
+          "expected": false
+        }
+      ]
+    },
+    "order": 83,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-number-of-islands",
+    "slug": "number-of-islands",
+    "title": "Number of Islands",
+    "difficulty": "medium",
+    "category": "Graph General",
+    "tags": [
+      "graph",
+      "grid",
+      "dfs",
+      "bfs",
+      "union-find"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/number-of-islands/",
+    "description": "Given an m x n grid where each cell is either land or water, return the number of islands (maximal groups of land cells connected horizontally or vertically, surrounded by water). The grid is encoded as an integer matrix where 1 marks land and 0 marks water.",
+    "examples": [
+      {
+        "input": "grid = [[1,1,0],[1,0,0],[0,0,1]]",
+        "output": "2"
+      }
+    ],
+    "constraints": "1 <= rows, cols <= 300; grid[i][j] is 0 or 1.",
+    "starterCode": {
+      "javascript": "function numIslands(grid) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def numIslands(self, grid):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int numIslands(int[][] grid) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int numIslands(vector<vector<int>>& grid) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "numIslands",
+      "params": [
+        {
+          "name": "grid",
+          "type": "int[][]"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              [
+                1,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ]
+            ]
+          ],
+          "expected": 2
+        },
+        {
+          "input": [
+            [
+              [
+                1,
+                1,
+                1,
+                1,
+                0
+              ],
+              [
+                1,
+                1,
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "input": [
+            [
+              [
+                1
+              ]
+            ]
+          ],
+          "expected": 1
+        }
+      ]
+    },
+    "order": 84,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-surrounded-regions",
+    "slug": "surrounded-regions",
+    "title": "Surrounded Regions",
+    "difficulty": "medium",
+    "category": "Graph General",
+    "tags": [
+      "graph",
+      "grid",
+      "dfs",
+      "bfs",
+      "union-find"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/surrounded-regions/",
+    "description": "Given an m x n board where each cell is either a capturable region or a boundary, flip every region that is fully enclosed (not connected, directly or indirectly, to a border cell) into the boundary marker, in place, and return the resulting board. The board is encoded as an integer matrix where 0 represents an open region cell (LeetCode's 'O') and 1 represents the boundary/captured marker (LeetCode's 'X').",
+    "examples": [
+      {
+        "input": "board = [[1,1,1,1],[1,0,0,1],[1,1,0,1],[1,0,1,1]]",
+        "output": "[[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,0,1,1]]"
+      }
+    ],
+    "constraints": "1 <= rows, cols <= 200; board[i][j] is 0 or 1 (0 = 'O', 1 = 'X').",
+    "starterCode": {
+      "javascript": "function solve(board) {\n  // your code here\n  return board;\n}\n",
+      "python": "class Solution:\n    def solve(self, board):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int[][] solve(int[][] board) {\n        return board;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<vector<int>> solve(vector<vector<int>>& board) {\n        return board;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "solve",
+      "params": [
+        {
+          "name": "board",
+          "type": "int[][]"
+        }
+      ],
+      "returns": "int[][]",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              [
+                1,
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                1,
+                0,
+                1
+              ],
+              [
+                1,
+                0,
+                1,
+                1
+              ]
+            ]
+          ],
+          "expected": [
+            [
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "input": [
+            [
+              [
+                1
+              ]
+            ]
+          ],
+          "expected": [
+            [
+              1
+            ]
+          ]
+        },
+        {
+          "input": [
+            [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    "order": 85,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-clone-graph",
+    "slug": "clone-graph",
+    "title": "Clone Graph",
+    "difficulty": "medium",
+    "category": "Graph General",
+    "tags": [
+      "graph",
+      "dfs",
+      "bfs"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/clone-graph/",
+    "description": "Given a reference to a node in a connected undirected graph where each node carries an integer value equal to its 1-indexed position, return a deep copy (clone) of the entire graph reachable from that node. A graph is passed/returned as an adjacency list: entry i lists the neighbor values of node i+1.",
+    "examples": [
+      {
+        "input": "adjList = [[2,4],[1,3],[2,4],[1,3]]",
+        "output": "[[2,4],[1,3],[2,4],[1,3]]"
+      }
+    ],
+    "constraints": "the number of nodes is n; 0 <= n <= 100; 1 <= Node.val <= n; all Node.val are unique; the graph has no repeated edges or self-loops.",
+    "starterCode": {
+      "javascript": "function cloneGraph(node) {\n  // your code here\n  return node;\n}\n",
+      "python": "class Solution:\n    def cloneGraph(self, node):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public Node cloneGraph(Node node) {\n        return node;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    Node* cloneGraph(Node* node) {\n        return node;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "cloneGraph",
+      "params": [
+        {
+          "name": "node",
+          "type": "graph-node<int>"
+        }
+      ],
+      "returns": "graph-node<int>",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 131072,
+      "tests": [
+        {
+          "input": [
+            [
+              [
+                2,
+                4
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                1,
+                3
+              ]
+            ]
+          ],
+          "expected": [
+            [
+              2,
+              4
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        {
+          "input": [
+            [
+              []
+            ]
+          ],
+          "expected": [
+            []
+          ]
+        },
+        {
+          "input": [
+            []
+          ],
+          "expected": []
+        }
+      ]
+    },
+    "order": 86,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-evaluate-division",
+    "slug": "evaluate-division",
+    "title": "Evaluate Division",
+    "difficulty": "medium",
+    "category": "Graph General",
+    "tags": [
+      "graph",
+      "dfs",
+      "bfs",
+      "union-find"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/evaluate-division/",
+    "description": "You are given a list of variable-division equations, each with a known real-valued result (e.g. a/b = 2.0), and a list of queries of the same form. For each query a/b, return its value by chaining known equations (treat each equation as a weighted edge and known transitively through the graph); return -1.0 for a query that cannot be determined (undefined variables or no connecting path). Equations and queries are each encoded as a string \"numerator,denominator\".",
+    "examples": [
+      {
+        "input": "equations = [\"a,b\",\"b,c\"], values = [2.0,3.0], queries = [\"a,c\",\"b,a\",\"a,e\",\"a,a\",\"x,x\"]",
+        "output": "[6.0, 0.5, -1.0, 1.0, -1.0]"
+      }
+    ],
+    "constraints": "1 <= equations.length == values.length <= 20; 1 <= queries.length <= 20; 0.0 < values[i] <= 20.0; variable names are lowercase strings.",
+    "starterCode": {
+      "javascript": "function calcEquation(equations, values, queries) {\n  // your code here\n  return [];\n}\n",
+      "python": "class Solution:\n    def calcEquation(self, equations, values, queries):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public double[] calcEquation(String[] equations, double[] values, String[] queries) {\n        return new double[0];\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<double> calcEquation(vector<string>& equations, vector<double>& values, vector<string>& queries) {\n        return {};\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "calcEquation",
+      "params": [
+        {
+          "name": "equations",
+          "type": "string[]"
+        },
+        {
+          "name": "values",
+          "type": "double[]"
+        },
+        {
+          "name": "queries",
+          "type": "string[]"
+        }
+      ],
+      "returns": "double[]",
+      "judge": "float:1e-4",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 65536,
+      "tests": [
+        {
+          "input": [
+            [
+              "a,b",
+              "b,c"
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              "a,c",
+              "b,a",
+              "a,e",
+              "a,a",
+              "x,x"
+            ]
+          ],
+          "expected": [
+            6,
+            0.5,
+            -1,
+            1,
+            -1
+          ]
+        },
+        {
+          "input": [
+            [
+              "a,b",
+              "b,c",
+              "bc,cd"
+            ],
+            [
+              1.5,
+              2.5,
+              5
+            ],
+            [
+              "a,c",
+              "c,b",
+              "bc,cd",
+              "cd,bc"
+            ]
+          ],
+          "expected": [
+            3.75,
+            0.4,
+            5,
+            0.2
+          ]
+        },
+        {
+          "input": [
+            [
+              "a,b"
+            ],
+            [
+              0.5
+            ],
+            [
+              "a,b",
+              "b,a",
+              "a,c",
+              "x,y"
+            ]
+          ],
+          "expected": [
+            0.5,
+            2,
+            -1,
+            -1
+          ]
+        }
+      ]
+    },
+    "order": 87,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-course-schedule",
+    "slug": "course-schedule",
+    "title": "Course Schedule",
+    "difficulty": "medium",
+    "category": "Graph General",
+    "tags": [
+      "graph",
+      "topological-sort",
+      "dfs",
+      "bfs"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/course-schedule/",
+    "description": "There are numCourses courses labeled 0 to numCourses - 1. prerequisites[i] = [a, b] means course b must be taken before course a. Return true if it is possible to finish every course (equivalently, the prerequisite graph has no cycle).",
+    "examples": [
+      {
+        "input": "numCourses = 2, prerequisites = [[1,0]]",
+        "output": "true"
+      }
+    ],
+    "constraints": "1 <= numCourses <= 2000; 0 <= prerequisites.length <= 5000; each prerequisite pair is distinct.",
+    "starterCode": {
+      "javascript": "function canFinish(numCourses, prerequisites) {\n  // your code here\n  return false;\n}\n",
+      "python": "class Solution:\n    def canFinish(self, numCourses, prerequisites):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public boolean canFinish(int numCourses, int[][] prerequisites) {\n        return false;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {\n        return false;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "canFinish",
+      "params": [
+        {
+          "name": "numCourses",
+          "type": "int"
+        },
+        {
+          "name": "prerequisites",
+          "type": "int[][]"
+        }
+      ],
+      "returns": "bool",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 131072,
+      "tests": [
+        {
+          "input": [
+            2,
+            [
+              [
+                1,
+                0
+              ]
+            ]
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            2,
+            [
+              [
+                1,
+                0
+              ],
+              [
+                0,
+                1
+              ]
+            ]
+          ],
+          "expected": false
+        },
+        {
+          "input": [
+            1,
+            []
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            4,
+            [
+              [
+                1,
+                0
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                3,
+                2
+              ]
+            ]
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            3,
+            [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                0
+              ]
+            ]
+          ],
+          "expected": false
+        }
+      ]
+    },
+    "order": 88,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-course-schedule-ii",
+    "slug": "course-schedule-ii",
+    "title": "Course Schedule II",
+    "difficulty": "medium",
+    "category": "Graph General",
+    "tags": [
+      "graph",
+      "topological-sort",
+      "dfs",
+      "bfs"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/course-schedule-ii/",
+    "description": "There are numCourses courses labeled 0 to numCourses - 1. prerequisites[i] = [a, b] means course b must be taken before course a. Return any valid course order that lets you complete all courses, or an empty array if no valid order exists because of a cycle.",
+    "examples": [
+      {
+        "input": "numCourses = 2, prerequisites = [[1,0]]",
+        "output": "[0,1]"
+      }
+    ],
+    "constraints": "1 <= numCourses <= 2000; 0 <= prerequisites.length <= 5000; each prerequisite pair is distinct.",
+    "starterCode": {
+      "javascript": "function findOrder(numCourses, prerequisites) {\n  // your code here\n  return [];\n}\n",
+      "python": "class Solution:\n    def findOrder(self, numCourses, prerequisites):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int[] findOrder(int numCourses, int[][] prerequisites) {\n        return new int[0];\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> findOrder(int numCourses, vector<vector<int>>& prerequisites) {\n        return {};\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "findOrder",
+      "params": [
+        {
+          "name": "numCourses",
+          "type": "int"
+        },
+        {
+          "name": "prerequisites",
+          "type": "int[][]"
+        }
+      ],
+      "returns": "int[]",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 131072,
+      "tests": [
+        {
+          "input": [
+            2,
+            [
+              [
+                1,
+                0
+              ]
+            ]
+          ],
+          "expected": [
+            0,
+            1
+          ]
+        },
+        {
+          "input": [
+            1,
+            []
+          ],
+          "expected": [
+            0
+          ]
+        },
+        {
+          "input": [
+            3,
+            [
+              [
+                1,
+                0
+              ],
+              [
+                2,
+                1
+              ]
+            ]
+          ],
+          "expected": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "input": [
+            2,
+            [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ]
+            ]
+          ],
+          "expected": []
+        }
+      ]
+    },
+    "order": 89,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-snakes-and-ladders",
+    "slug": "snakes-and-ladders",
+    "title": "Snakes and Ladders",
+    "difficulty": "medium",
+    "category": "Graph BFS",
+    "tags": [
+      "graph",
+      "bfs",
+      "matrix"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/snakes-and-ladders/",
+    "description": "You are given an n x n board numbered in boustrophedon (back-and-forth) order from 1 (bottom-left) to n*n (top or bottom depending on row parity). Each cell is -1 (no snake/ladder) or the destination square of a snake/ladder starting there. Starting on square 1, each move rolls a die and advances 1-6 squares (taking any snake/ladder encountered immediately, but not chaining a second one from the destination). Return the minimum number of moves to reach square n*n, or -1 if impossible.",
+    "examples": [
+      {
+        "input": "board = [[-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1],[-1,35,-1,-1,13,-1],[-1,-1,-1,-1,-1,-1],[-1,15,-1,-1,-1,-1]]",
+        "output": "4"
+      }
+    ],
+    "constraints": "2 <= n <= 20; board.length == board[i].length == n; board[i][j] is either -1 or in the range [1, n*n]; square 1 and square n*n never have a snake or ladder.",
+    "starterCode": {
+      "javascript": "function snakesAndLadders(board) {\n  // your code here\n  return -1;\n}\n",
+      "python": "class Solution:\n    def snakesAndLadders(self, board):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int snakesAndLadders(int[][] board) {\n        return -1;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int snakesAndLadders(vector<vector<int>>& board) {\n        return -1;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "snakesAndLadders",
+      "params": [
+        {
+          "name": "board",
+          "type": "int[][]"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 131072,
+      "tests": [
+        {
+          "input": [
+            [
+              [
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+              ],
+              [
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+              ],
+              [
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+              ],
+              [
+                -1,
+                35,
+                -1,
+                -1,
+                13,
+                -1
+              ],
+              [
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+              ],
+              [
+                -1,
+                15,
+                -1,
+                -1,
+                -1,
+                -1
+              ]
+            ]
+          ],
+          "expected": 4
+        },
+        {
+          "input": [
+            [
+              [
+                -1,
+                -1
+              ],
+              [
+                -1,
+                3
+              ]
+            ]
+          ],
+          "expected": 1
+        }
+      ]
+    },
+    "order": 90,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-minimum-genetic-mutation",
+    "slug": "minimum-genetic-mutation",
+    "title": "Minimum Genetic Mutation",
+    "difficulty": "medium",
+    "category": "Graph BFS",
+    "tags": [
+      "graph",
+      "bfs",
+      "string"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/minimum-genetic-mutation/",
+    "description": "A gene string has length 8 and uses only the characters A, C, G, T. A single mutation changes exactly one character. Given startGene, endGene, and a bank of valid intermediate gene strings, return the minimum number of mutations to turn startGene into endGene such that every intermediate string produced along the way is present in bank, or -1 if it cannot be done.",
+    "examples": [
+      {
+        "input": "startGene = \"AACCGGTT\", endGene = \"AACCGGTA\", bank = [\"AACCGGTA\"]",
+        "output": "1"
+      }
+    ],
+    "constraints": "0 <= bank.length <= 10; startGene.length == endGene.length == bank[i].length == 8; strings use only A, C, G, T; startGene != endGene.",
+    "starterCode": {
+      "javascript": "function minMutation(startGene, endGene, bank) {\n  // your code here\n  return -1;\n}\n",
+      "python": "class Solution:\n    def minMutation(self, startGene, endGene, bank):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int minMutation(String startGene, String endGene, String[] bank) {\n        return -1;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int minMutation(string startGene, string endGene, vector<string>& bank) {\n        return -1;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "minMutation",
+      "params": [
+        {
+          "name": "startGene",
+          "type": "string"
+        },
+        {
+          "name": "endGene",
+          "type": "string"
+        },
+        {
+          "name": "bank",
+          "type": "string[]"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 65536,
+      "tests": [
+        {
+          "input": [
+            "AACCGGTT",
+            "AACCGGTA",
+            [
+              "AACCGGTA"
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            "AACCGGTT",
+            "AAACGGTA",
+            [
+              "AACCGGTA",
+              "AACCGCTA",
+              "AAACGGTA"
+            ]
+          ],
+          "expected": 2
+        },
+        {
+          "input": [
+            "AAAAACCC",
+            "AACCCCCC",
+            [
+              "AAAACCCC",
+              "AAACCCCC",
+              "AACCCCCC"
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "input": [
+            "AACCGGTT",
+            "AACCGGTA",
+            []
+          ],
+          "expected": -1
+        }
+      ]
+    },
+    "order": 91,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-word-ladder",
+    "slug": "word-ladder",
+    "title": "Word Ladder",
+    "difficulty": "hard",
+    "category": "Graph BFS",
+    "tags": [
+      "graph",
+      "bfs",
+      "string"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/word-ladder/",
+    "description": "Given beginWord, endWord, and a wordList, return the number of words in the shortest transformation sequence from beginWord to endWord (counting both endpoints) where each step changes exactly one letter and every intermediate word must appear in wordList. Return 0 if no such sequence exists.",
+    "examples": [
+      {
+        "input": "beginWord = \"hit\", endWord = \"cog\", wordList = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\",\"cog\"]",
+        "output": "5"
+      }
+    ],
+    "constraints": "1 <= beginWord.length == endWord.length <= 10; 1 <= wordList.length <= 5000; words use lowercase English letters only; beginWord != endWord.",
+    "starterCode": {
+      "javascript": "function ladderLength(beginWord, endWord, wordList) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def ladderLength(self, beginWord, endWord, wordList):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public int ladderLength(String beginWord, String endWord, List<String> wordList) {\n        return 0;\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    int ladderLength(string beginWord, string endWord, vector<string>& wordList) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "ladderLength",
+      "params": [
+        {
+          "name": "beginWord",
+          "type": "string"
+        },
+        {
+          "name": "endWord",
+          "type": "string"
+        },
+        {
+          "name": "wordList",
+          "type": "string[]"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 131072,
+      "tests": [
+        {
+          "input": [
+            "hit",
+            "cog",
+            [
+              "hot",
+              "dot",
+              "dog",
+              "lot",
+              "log",
+              "cog"
+            ]
+          ],
+          "expected": 5
+        },
+        {
+          "input": [
+            "hit",
+            "cog",
+            [
+              "hot",
+              "dot",
+              "dog",
+              "lot",
+              "log"
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "input": [
+            "a",
+            "c",
+            [
+              "a",
+              "b",
+              "c"
+            ]
+          ],
+          "expected": 2
+        }
+      ]
+    },
+    "order": 92,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
   }
 ]
