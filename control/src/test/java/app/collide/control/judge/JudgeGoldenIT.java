@@ -121,11 +121,15 @@ class JudgeGoldenIT {
     }
 
     @Test
-    void quadraticMajorityTLEsUnderTightLimit_js() throws Exception {
-        // O(n^2) count-occurrences; a generous 800ms limit that correct O(n) clears (incl. Node
-        // startup) but the max-stress bucket at the constraint ceiling blows.
-        String user = "function majorityElement(nums){ for(const a of nums){ let c=0; for(const b of nums) if(b===a) c++; if(c> nums.length/2) return a; } return -1; }";
-        Verdict v = judgeWithLimit("majority-element", majority(), "exact", Language.JAVASCRIPT, user, 800);
+    void slowSolutionExceedingTimeLimitIsTLE_js() throws Exception {
+        // Proves the per-case wall-clock GUARD: a solution that runs longer than the limit is
+        // killed and reported TLE, deterministically and independent of machine load. (The pilot
+        // majority-element bundle tops out at n≈5000, too small for an O(n^2) solution to blow a
+        // realistic clock — algorithmic-scale TLE needs a larger-n bundle; the framework supports
+        // it. Here we exercise the enforcement mechanism itself with a deliberately slow solution.)
+        String user = "function majorityElement(nums){ const __t=Date.now(); while(Date.now()-__t<1500){} return nums[0]; }";
+        Verdict v = judgeWithLimit("majority-element", majority(), "exact", Language.JAVASCRIPT, user, 500);
         assertThat(v.status()).isEqualTo(VerdictStatus.TLE);
+        assertThat(v.failingCaseIndex()).isEqualTo(0); // killed on the very first case
     }
 }
