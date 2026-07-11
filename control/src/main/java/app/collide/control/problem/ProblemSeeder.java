@@ -68,7 +68,7 @@ public class ProblemSeeder implements ApplicationRunner {
             String slug = n.get("slug").asText();
             seeded.add(slug);
             Problem p = problems.findBySlug(slug).orElseGet(() -> new Problem(UUID.randomUUID(), slug));
-            p.setSheet(n.path("sheet").asText("neetcode150"));
+            p.setSheet(n.path("sheet").asText("leetcode150"));
             p.setTitle(n.get("title").asText());
             p.setDifficulty(n.get("difficulty").asText());
             p.setCategory(n.get("category").asText());
