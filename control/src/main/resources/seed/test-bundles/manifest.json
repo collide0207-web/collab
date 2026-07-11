@@ -1,0 +1,68 @@
+{
+  "generatedAt": "1970-01-01T00:00:00.000Z",
+  "bundles": [
+    {
+      "problemSlug": "clone-graph",
+      "version": 1,
+      "checksum": "e1493a30aee6cd8d07e811d681ec38bb342bf7fc985d1fabee7ed9650fac812e",
+      "caseCount": 100,
+      "storageKey": "clone-graph.v1.json.gz",
+      "timeLimitMs": 2000,
+      "checkerType": "exact"
+    },
+    {
+      "problemSlug": "invert-binary-tree",
+      "version": 1,
+      "checksum": "abb6f38fc771cc32ce0bc76928231330fa71a440c13a602eb934585789bfe924",
+      "caseCount": 100,
+      "storageKey": "invert-binary-tree.v1.json.gz",
+      "timeLimitMs": 2000,
+      "checkerType": "exact"
+    },
+    {
+      "problemSlug": "majority-element",
+      "version": 1,
+      "checksum": "7c50b1f4b82d966df1ed0be47f49552a72e444d8b79f25a8f0e7912654035a88",
+      "caseCount": 100,
+      "storageKey": "majority-element.v1.json.gz",
+      "timeLimitMs": 2000,
+      "checkerType": "exact"
+    },
+    {
+      "problemSlug": "merge-two-sorted-lists",
+      "version": 1,
+      "checksum": "59d9c643c460202010b20c31d75b0cb98d8175f0e4fbdc8b40ca0ff9dbf15546",
+      "caseCount": 100,
+      "storageKey": "merge-two-sorted-lists.v1.json.gz",
+      "timeLimitMs": 2000,
+      "checkerType": "exact"
+    },
+    {
+      "problemSlug": "min-stack",
+      "version": 1,
+      "checksum": "6b61cc2388c64182e784ae56cb3d9a0ed9abb6aa918423afb2fe20d3c0c4dd03",
+      "caseCount": 100,
+      "storageKey": "min-stack.v1.json.gz",
+      "timeLimitMs": 2000,
+      "checkerType": "exact"
+    },
+    {
+      "problemSlug": "powx-n",
+      "version": 1,
+      "checksum": "eb07c42a267c1bea917b0607aab8d153a4607b4863f7b419ddec8b9b371f09de",
+      "caseCount": 100,
+      "storageKey": "powx-n.v1.json.gz",
+      "timeLimitMs": 2000,
+      "checkerType": "float:1e-5"
+    },
+    {
+      "problemSlug": "two-sum",
+      "version": 1,
+      "checksum": "7cdee62341f63e185b67f056247279f8dea902a7c298e11ae5f3b4927f25dd93",
+      "caseCount": 100,
+      "storageKey": "two-sum.v1.json.gz",
+      "timeLimitMs": 2000,
+      "checkerType": "unordered"
+    }
+  ]
+}

@@ -10,4 +10,6 @@ public interface ProblemRepository extends JpaRepository<Problem, UUID> {
     Optional<Problem> findBySlug(String slug);
 
     List<Problem> findBySheet(String sheet, Sort sort);
+
+    List<Problem> findBySheet(String sheet);
 }

@@ -17,7 +17,13 @@ public record ProblemHarness(
         String entry,
         List<Param> params,
         String returns,
-        List<Test> tests) {
+        List<Test> tests,
+        /** Checker spec: "exact" | "unordered" | "float:<eps>" | "custom:<checkerId>". Null → "exact". */
+        String judge,
+        /** Per-case wall-clock limit for server-side Submit. Null → default applied in SP4. */
+        Integer timeLimitMs,
+        /** Per-case memory cap (KB) for server-side Submit. Null → default applied in SP4. */
+        Integer memoryLimitKb) {
 
     /** One positional parameter: {@code name} for display, {@code type} drives codegen. */
     public record Param(String name, String type) {}
