@@ -54,6 +54,14 @@ public class ProblemSeeder implements ApplicationRunner {
             return;
         }
 
+        seed(root);
+    }
+
+    /**
+     * Seeds problems from the parsed root array and prunes orphans on the leetcode150 sheet.
+     * Package-private so it can be exercised without a Spring context in tests.
+     */
+    void seed(JsonNode root) {
         int idx = 0;
         Set<String> seeded = new HashSet<>();
         for (JsonNode n : root) {
@@ -77,10 +85,16 @@ public class ProblemSeeder implements ApplicationRunner {
             idx++;
         }
         String sheet = "leetcode150";
-        List<Problem> orphans = prune(problems.findBySheet(sheet), seeded);
-        if (!orphans.isEmpty()) {
-            problems.deleteAll(orphans);
-            log.info("Pruned {} orphaned problems from sheet {}", orphans.size(), sheet);
+        if (seeded.isEmpty()) {
+            log.warn(
+                    "Problem seed {} parsed to zero entries — skipping orphan pruning on sheet {} to avoid deleting the entire catalog",
+                    RESOURCE, sheet);
+        } else {
+            List<Problem> orphans = prune(problems.findBySheet(sheet), seeded);
+            if (!orphans.isEmpty()) {
+                problems.deleteAll(orphans);
+                log.info("Pruned {} orphaned problems from sheet {}", orphans.size(), sheet);
+            }
         }
         log.info("Seeded {} problems from {}", idx, RESOURCE);
     }
