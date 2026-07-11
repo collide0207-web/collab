@@ -9300,5 +9300,3315 @@
       "java",
       "cpp"
     ]
+  },
+  {
+    "id": "p-implement-trie-prefix-tree",
+    "slug": "implement-trie-prefix-tree",
+    "title": "Implement Trie (Prefix Tree)",
+    "difficulty": "medium",
+    "category": "Trie",
+    "tags": [
+      "trie",
+      "design",
+      "string"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/implement-trie-prefix-tree/",
+    "description": "Design a trie that supports insert(word) (adds a lowercase word), search(word) (returns whether the exact word was inserted), and startsWith(prefix) (returns whether any inserted word begins with prefix). Given a sequence of operations, the first being the constructor call, return the sequence of results (insert returns null).",
+    "examples": [
+      {
+        "input": "[\"Trie\"] [\"insert\",\"apple\"] [\"search\",\"apple\"] [\"search\",\"app\"] [\"startsWith\",\"app\"] [\"insert\",\"app\"] [\"search\",\"app\"]",
+        "output": "[null, null, true, false, true, null, true]"
+      }
+    ],
+    "constraints": "1 <= word.length, prefix.length <= 2000; word and prefix consist of lowercase English letters only; at most 3e4 total calls to insert, search, and startsWith.",
+    "starterCode": {
+      "javascript": "function trieOps(operations) {\n  // your code here\n  return [];\n}\n",
+      "python": "class Solution:\n    def trieOps(self, operations):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public Object[] trieOps(Object[][] operations) {\n        return new Object[0];\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<string> trieOps(vector<vector<string>>& operations) {\n        return {};\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "trieOps",
+      "params": [
+        {
+          "name": "operations",
+          "type": "operations"
+        }
+      ],
+      "returns": "operations",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              [
+                "Trie"
+              ],
+              [
+                "insert",
+                "apple"
+              ],
+              [
+                "search",
+                "apple"
+              ],
+              [
+                "search",
+                "app"
+              ],
+              [
+                "startsWith",
+                "app"
+              ],
+              [
+                "insert",
+                "app"
+              ],
+              [
+                "search",
+                "app"
+              ]
+            ]
+          ],
+          "expected": [
+            null,
+            null,
+            true,
+            false,
+            true,
+            null,
+            true
+          ]
+        },
+        {
+          "input": [
+            [
+              [
+                "Trie"
+              ],
+              [
+                "insert",
+                "cat"
+              ],
+              [
+                "insert",
+                "car"
+              ],
+              [
+                "startsWith",
+                "ca"
+              ],
+              [
+                "startsWith",
+                "cab"
+              ],
+              [
+                "search",
+                "car"
+              ]
+            ]
+          ],
+          "expected": [
+            null,
+            null,
+            null,
+            true,
+            false,
+            true
+          ]
+        },
+        {
+          "input": [
+            [
+              [
+                "Trie"
+              ],
+              [
+                "search",
+                "a"
+              ],
+              [
+                "startsWith",
+                "a"
+              ],
+              [
+                "insert",
+                "a"
+              ],
+              [
+                "search",
+                "a"
+              ]
+            ]
+          ],
+          "expected": [
+            null,
+            false,
+            false,
+            null,
+            true
+          ]
+        }
+      ]
+    },
+    "order": 93,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-design-add-and-search-words-data-structure",
+    "slug": "design-add-and-search-words-data-structure",
+    "title": "Design Add and Search Words Data Structure",
+    "difficulty": "medium",
+    "category": "Trie",
+    "tags": [
+      "trie",
+      "design",
+      "backtracking",
+      "string"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/design-add-and-search-words-data-structure/",
+    "description": "Design a dictionary supporting addWord(word) (adds a lowercase word) and search(word) (returns whether some added word matches, where '.' in the query matches any single letter). Given a sequence of operations, the first being the constructor call, return the sequence of results (addWord returns null).",
+    "examples": [
+      {
+        "input": "[\"WordDictionary\"] [\"addWord\",\"bad\"] [\"addWord\",\"dad\"] [\"addWord\",\"mad\"] [\"search\",\"pad\"] [\"search\",\"bad\"] [\"search\",\".ad\"] [\"search\",\"b..\"]",
+        "output": "[null, null, null, null, false, true, true, true]"
+      }
+    ],
+    "constraints": "1 <= word.length <= 25; word in addWord consists of lowercase English letters; word in search consists of '.' or lowercase English letters; at most 2 dots in a search word; at most 1e4 total calls to addWord and search.",
+    "starterCode": {
+      "javascript": "function wordDictionaryOps(operations) {\n  // your code here\n  return [];\n}\n",
+      "python": "class Solution:\n    def wordDictionaryOps(self, operations):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public Object[] wordDictionaryOps(Object[][] operations) {\n        return new Object[0];\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<string> wordDictionaryOps(vector<vector<string>>& operations) {\n        return {};\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "wordDictionaryOps",
+      "params": [
+        {
+          "name": "operations",
+          "type": "operations"
+        }
+      ],
+      "returns": "operations",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              [
+                "WordDictionary"
+              ],
+              [
+                "addWord",
+                "bad"
+              ],
+              [
+                "addWord",
+                "dad"
+              ],
+              [
+                "addWord",
+                "mad"
+              ],
+              [
+                "search",
+                "pad"
+              ],
+              [
+                "search",
+                "bad"
+              ],
+              [
+                "search",
+                ".ad"
+              ],
+              [
+                "search",
+                "b.."
+              ]
+            ]
+          ],
+          "expected": [
+            null,
+            null,
+            null,
+            null,
+            false,
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "input": [
+            [
+              [
+                "WordDictionary"
+              ],
+              [
+                "addWord",
+                "a"
+              ],
+              [
+                "search",
+                "."
+              ],
+              [
+                "search",
+                "a"
+              ],
+              [
+                "search",
+                "aa"
+              ]
+            ]
+          ],
+          "expected": [
+            null,
+            null,
+            true,
+            true,
+            false
+          ]
+        },
+        {
+          "input": [
+            [
+              [
+                "WordDictionary"
+              ],
+              [
+                "addWord",
+                "at"
+              ],
+              [
+                "addWord",
+                "and"
+              ],
+              [
+                "search",
+                "a."
+              ],
+              [
+                "search",
+                ".."
+              ]
+            ]
+          ],
+          "expected": [
+            null,
+            null,
+            null,
+            true,
+            true
+          ]
+        }
+      ]
+    },
+    "order": 94,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-word-search-ii",
+    "slug": "word-search-ii",
+    "title": "Word Search II",
+    "difficulty": "hard",
+    "category": "Trie",
+    "tags": [
+      "trie",
+      "backtracking",
+      "matrix",
+      "dfs"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/word-search-ii/",
+    "description": "Given an m x n board of lowercase letters (each row given as a string) and a list of words, return every word from the list that can be formed by a path of horizontally/vertically adjacent cells without reusing a cell within the same word. Order of the returned words does not matter.",
+    "examples": [
+      {
+        "input": "board = [\"oaan\",\"etae\",\"ihkr\",\"iflv\"], words = [\"oath\",\"pea\",\"eat\",\"rain\"]",
+        "output": "[\"oath\",\"eat\"]"
+      }
+    ],
+    "constraints": "1 <= board rows/cols <= 12; board[i][j] is a lowercase English letter; 1 <= words.length <= 3e4; 1 <= words[i].length <= 10; all words consist of lowercase English letters; all words are distinct.",
+    "starterCode": {
+      "javascript": "function findWords(board, words) {\n  // your code here\n  return [];\n}\n",
+      "python": "class Solution:\n    def findWords(self, board, words):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public List<String> findWords(char[][] board, String[] words) {\n        return new ArrayList<>();\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<string> findWords(vector<vector<char>>& board, vector<string>& words) {\n        return {};\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "findWords",
+      "params": [
+        {
+          "name": "board",
+          "type": "string[]"
+        },
+        {
+          "name": "words",
+          "type": "string[]"
+        }
+      ],
+      "returns": "string[]",
+      "judge": "unordered",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              "oaan",
+              "etae",
+              "ihkr",
+              "iflv"
+            ],
+            [
+              "oath",
+              "pea",
+              "eat",
+              "rain"
+            ]
+          ],
+          "expected": [
+            "oath",
+            "eat"
+          ]
+        },
+        {
+          "input": [
+            [
+              "ab",
+              "cd"
+            ],
+            [
+              "abcb"
+            ]
+          ],
+          "expected": []
+        },
+        {
+          "input": [
+            [
+              "a"
+            ],
+            [
+              "b"
+            ]
+          ],
+          "expected": []
+        }
+      ]
+    },
+    "order": 95,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-letter-combinations-of-a-phone-number",
+    "slug": "letter-combinations-of-a-phone-number",
+    "title": "Letter Combinations of a Phone Number",
+    "difficulty": "medium",
+    "category": "Backtracking",
+    "tags": [
+      "backtracking",
+      "string",
+      "hash-map"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/",
+    "description": "Given a string of digits 2-9, return every possible letter combination the digits could represent on a standard phone keypad (2=abc, 3=def, 4=ghi, 5=jkl, 6=mno, 7=pqrs, 8=tuv, 9=wxyz), in any order. Return an empty list if the input is empty.",
+    "examples": [
+      {
+        "input": "digits = \"23\"",
+        "output": "[\"ad\",\"ae\",\"af\",\"bd\",\"be\",\"bf\",\"cd\",\"ce\",\"cf\"]"
+      }
+    ],
+    "constraints": "0 <= digits.length <= 4; digits[i] is a digit in 2..9.",
+    "starterCode": {
+      "javascript": "function letterCombinations(digits) {\n  // your code here\n  return [];\n}\n",
+      "python": "class Solution:\n    def letterCombinations(self, digits):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public List<String> letterCombinations(String digits) {\n        return new ArrayList<>();\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<string> letterCombinations(string digits) {\n        return {};\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "letterCombinations",
+      "params": [
+        {
+          "name": "digits",
+          "type": "string"
+        }
+      ],
+      "returns": "string[]",
+      "judge": "unordered",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            "23"
+          ],
+          "expected": [
+            "ad",
+            "ae",
+            "af",
+            "bd",
+            "be",
+            "bf",
+            "cd",
+            "ce",
+            "cf"
+          ]
+        },
+        {
+          "input": [
+            ""
+          ],
+          "expected": []
+        },
+        {
+          "input": [
+            "2"
+          ],
+          "expected": [
+            "a",
+            "b",
+            "c"
+          ]
+        }
+      ]
+    },
+    "order": 96,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-combinations",
+    "slug": "combinations",
+    "title": "Combinations",
+    "difficulty": "medium",
+    "category": "Backtracking",
+    "tags": [
+      "backtracking"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/combinations/",
+    "description": "Given two integers n and k, return all possible combinations of k distinct numbers chosen from the range [1, n], in any order.",
+    "examples": [
+      {
+        "input": "n = 4, k = 2",
+        "output": "[[1,2],[1,3],[1,4],[2,3],[2,4],[3,4]]"
+      }
+    ],
+    "constraints": "1 <= n <= 20; 1 <= k <= n.",
+    "starterCode": {
+      "javascript": "function combine(n, k) {\n  // your code here\n  return [];\n}\n",
+      "python": "class Solution:\n    def combine(self, n, k):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public List<List<Integer>> combine(int n, int k) {\n        return new ArrayList<>();\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<vector<int>> combine(int n, int k) {\n        return {};\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "combine",
+      "params": [
+        {
+          "name": "n",
+          "type": "int"
+        },
+        {
+          "name": "k",
+          "type": "int"
+        }
+      ],
+      "returns": "int[][]",
+      "judge": "unordered",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            4,
+            2
+          ],
+          "expected": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        {
+          "input": [
+            1,
+            1
+          ],
+          "expected": [
+            [
+              1
+            ]
+          ]
+        },
+        {
+          "input": [
+            3,
+            3
+          ],
+          "expected": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ]
+    },
+    "order": 97,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-permutations",
+    "slug": "permutations",
+    "title": "Permutations",
+    "difficulty": "medium",
+    "category": "Backtracking",
+    "tags": [
+      "backtracking",
+      "array"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/permutations/",
+    "description": "Given an array of distinct integers, return all possible permutations, in any order.",
+    "examples": [
+      {
+        "input": "nums = [1,2,3]",
+        "output": "[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]"
+      }
+    ],
+    "constraints": "1 <= nums.length <= 6; -10 <= nums[i] <= 10; all elements of nums are distinct.",
+    "starterCode": {
+      "javascript": "function permute(nums) {\n  // your code here\n  return [];\n}\n",
+      "python": "class Solution:\n    def permute(self, nums):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public List<List<Integer>> permute(int[] nums) {\n        return new ArrayList<>();\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<vector<int>> permute(vector<int>& nums) {\n        return {};\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "permute",
+      "params": [
+        {
+          "name": "nums",
+          "type": "int[]"
+        }
+      ],
+      "returns": "int[][]",
+      "judge": "unordered",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "expected": [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              1,
+              3,
+              2
+            ],
+            [
+              2,
+              1,
+              3
+            ],
+            [
+              2,
+              3,
+              1
+            ],
+            [
+              3,
+              1,
+              2
+            ],
+            [
+              3,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "input": [
+            [
+              0,
+              1
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "input": [
+            [
+              1
+            ]
+          ],
+          "expected": [
+            [
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    "order": 98,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-combination-sum",
+    "slug": "combination-sum",
+    "title": "Combination Sum",
+    "difficulty": "medium",
+    "category": "Backtracking",
+    "tags": [
+      "backtracking",
+      "array"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/combination-sum/",
+    "description": "Given an array of distinct positive integers and a target, return all unique combinations where the chosen numbers (each usable an unlimited number of times) sum to target, in any order (no duplicate combinations).",
+    "examples": [
+      {
+        "input": "candidates = [2,3,6,7], target = 7",
+        "output": "[[2,2,3],[7]]"
+      }
+    ],
+    "constraints": "1 <= candidates.length <= 30; 2 <= candidates[i] <= 40; all elements of candidates are distinct; 1 <= target <= 40.",
+    "starterCode": {
+      "javascript": "function combinationSum(candidates, target) {\n  // your code here\n  return [];\n}\n",
+      "python": "class Solution:\n    def combinationSum(self, candidates, target):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public List<List<Integer>> combinationSum(int[] candidates, int target) {\n        return new ArrayList<>();\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<vector<int>> combinationSum(vector<int>& candidates, int target) {\n        return {};\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "combinationSum",
+      "params": [
+        {
+          "name": "candidates",
+          "type": "int[]"
+        },
+        {
+          "name": "target",
+          "type": "int"
+        }
+      ],
+      "returns": "int[][]",
+      "judge": "unordered",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              2,
+              3,
+              6,
+              7
+            ],
+            7
+          ],
+          "expected": [
+            [
+              2,
+              2,
+              3
+            ],
+            [
+              7
+            ]
+          ]
+        },
+        {
+          "input": [
+            [
+              2,
+              3,
+              5
+            ],
+            8
+          ],
+          "expected": [
+            [
+              2,
+              2,
+              2,
+              2
+            ],
+            [
+              2,
+              3,
+              3
+            ],
+            [
+              3,
+              5
+            ]
+          ]
+        },
+        {
+          "input": [
+            [
+              2
+            ],
+            1
+          ],
+          "expected": []
+        }
+      ]
+    },
+    "order": 99,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-n-queens-ii",
+    "slug": "n-queens-ii",
+    "title": "N-Queens II",
+    "difficulty": "hard",
+    "category": "Backtracking",
+    "tags": [
+      "backtracking"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/n-queens-ii/",
+    "description": "Given an integer n, return the number of distinct ways to place n non-attacking queens on an n x n chessboard (no two queens share a row, column, or diagonal).",
+    "examples": [
+      {
+        "input": "n = 4",
+        "output": "2"
+      }
+    ],
+    "constraints": "1 <= n <= 9.",
+    "starterCode": {
+      "javascript": "function totalNQueens(n) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def totalNQueens(self, n):\n        pass\n",
+      "java": "class Solution {\n    public int totalNQueens(int n) {\n        return 0;\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    int totalNQueens(int n) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "totalNQueens",
+      "params": [
+        {
+          "name": "n",
+          "type": "int"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            4
+          ],
+          "expected": 2
+        },
+        {
+          "input": [
+            1
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            2
+          ],
+          "expected": 0
+        },
+        {
+          "input": [
+            8
+          ],
+          "expected": 92
+        }
+      ]
+    },
+    "order": 100,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-generate-parentheses",
+    "slug": "generate-parentheses",
+    "title": "Generate Parentheses",
+    "difficulty": "medium",
+    "category": "Backtracking",
+    "tags": [
+      "backtracking",
+      "string"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/generate-parentheses/",
+    "description": "Given n pairs of parentheses, return every well-formed combination of n pairs, in any order.",
+    "examples": [
+      {
+        "input": "n = 3",
+        "output": "[\"((()))\",\"(()())\",\"(())()\",\"()(())\",\"()()()\"]"
+      }
+    ],
+    "constraints": "1 <= n <= 8.",
+    "starterCode": {
+      "javascript": "function generateParenthesis(n) {\n  // your code here\n  return [];\n}\n",
+      "python": "class Solution:\n    def generateParenthesis(self, n):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public List<String> generateParenthesis(int n) {\n        return new ArrayList<>();\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<string> generateParenthesis(int n) {\n        return {};\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "generateParenthesis",
+      "params": [
+        {
+          "name": "n",
+          "type": "int"
+        }
+      ],
+      "returns": "string[]",
+      "judge": "unordered",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            3
+          ],
+          "expected": [
+            "((()))",
+            "(()())",
+            "(())()",
+            "()(())",
+            "()()()"
+          ]
+        },
+        {
+          "input": [
+            1
+          ],
+          "expected": [
+            "()"
+          ]
+        },
+        {
+          "input": [
+            2
+          ],
+          "expected": [
+            "(())",
+            "()()"
+          ]
+        }
+      ]
+    },
+    "order": 101,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-word-search",
+    "slug": "word-search",
+    "title": "Word Search",
+    "difficulty": "medium",
+    "category": "Backtracking",
+    "tags": [
+      "backtracking",
+      "matrix",
+      "dfs"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/word-search/",
+    "description": "Given an m x n grid of letters (each row given as a string) and a word, return whether the word can be formed by a path of horizontally/vertically adjacent cells, never reusing the same cell twice within the path.",
+    "examples": [
+      {
+        "input": "board = [\"ABCE\",\"SFCS\",\"ADEE\"], word = \"ABCCED\"",
+        "output": "true"
+      }
+    ],
+    "constraints": "1 <= board rows/cols <= 6; 1 <= word.length <= 15; board and word consist of uppercase and lowercase English letters.",
+    "starterCode": {
+      "javascript": "function exist(board, word) {\n  // your code here\n  return false;\n}\n",
+      "python": "class Solution:\n    def exist(self, board, word):\n        pass\n",
+      "java": "class Solution {\n    public boolean exist(char[][] board, String word) {\n        return false;\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    bool exist(vector<vector<char>>& board, string word) {\n        return false;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "exist",
+      "params": [
+        {
+          "name": "board",
+          "type": "string[]"
+        },
+        {
+          "name": "word",
+          "type": "string"
+        }
+      ],
+      "returns": "bool",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              "ABCE",
+              "SFCS",
+              "ADEE"
+            ],
+            "ABCCED"
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            [
+              "ABCE",
+              "SFCS",
+              "ADEE"
+            ],
+            "SEE"
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            [
+              "ABCE",
+              "SFCS",
+              "ADEE"
+            ],
+            "ABCB"
+          ],
+          "expected": false
+        }
+      ]
+    },
+    "order": 102,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-convert-sorted-array-to-binary-search-tree",
+    "slug": "convert-sorted-array-to-binary-search-tree",
+    "title": "Convert Sorted Array to Binary Search Tree",
+    "difficulty": "easy",
+    "category": "Divide & Conquer",
+    "tags": [
+      "divide-and-conquer",
+      "binary-search-tree",
+      "tree"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/",
+    "description": "Given an array sorted in strictly increasing order, build and return a height-balanced binary search tree containing those values (any height-balanced BST built by repeatedly splitting at the array midpoint, taking the lower-middle index on ties, is accepted).",
+    "examples": [
+      {
+        "input": "nums = [-10,-3,0,5,9]",
+        "output": "[0,-10,5,null,-3,null,9]"
+      }
+    ],
+    "constraints": "1 <= nums.length <= 1e4; nums is sorted in strictly increasing order.",
+    "starterCode": {
+      "javascript": "function sortedArrayToBST(nums) {\n  // your code here\n  return null;\n}\n",
+      "python": "class Solution:\n    def sortedArrayToBST(self, nums):\n        pass\n",
+      "java": "class Solution {\n    public TreeNode sortedArrayToBST(int[] nums) {\n        return null;\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    TreeNode* sortedArrayToBST(vector<int>& nums) {\n        return nullptr;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "sortedArrayToBST",
+      "params": [
+        {
+          "name": "nums",
+          "type": "int[]"
+        }
+      ],
+      "returns": "tree-node<int>",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              -10,
+              -3,
+              0,
+              5,
+              9
+            ]
+          ],
+          "expected": [
+            0,
+            -10,
+            5,
+            null,
+            -3,
+            null,
+            9
+          ]
+        },
+        {
+          "input": [
+            [
+              1,
+              3
+            ]
+          ],
+          "expected": [
+            1,
+            null,
+            3
+          ]
+        },
+        {
+          "input": [
+            [
+              5
+            ]
+          ],
+          "expected": [
+            5
+          ]
+        }
+      ]
+    },
+    "order": 103,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-sort-list",
+    "slug": "sort-list",
+    "title": "Sort List",
+    "difficulty": "medium",
+    "category": "Divide & Conquer",
+    "tags": [
+      "divide-and-conquer",
+      "linked-list",
+      "sort"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/sort-list/",
+    "description": "Given the head of a linked list, sort it in ascending order and return the sorted list.",
+    "examples": [
+      {
+        "input": "head = [4,2,1,3]",
+        "output": "[1,2,3,4]"
+      }
+    ],
+    "constraints": "0 <= number of nodes <= 5e4; -1e5 <= Node.val <= 1e5.",
+    "starterCode": {
+      "javascript": "function sortList(head) {\n  // your code here\n  return null;\n}\n",
+      "python": "class Solution:\n    def sortList(self, head):\n        pass\n",
+      "java": "class Solution {\n    public ListNode sortList(ListNode head) {\n        return null;\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    ListNode* sortList(ListNode* head) {\n        return nullptr;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "sortList",
+      "params": [
+        {
+          "name": "head",
+          "type": "list-node<int>"
+        }
+      ],
+      "returns": "list-node<int>",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              4,
+              2,
+              1,
+              3
+            ]
+          ],
+          "expected": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "input": [
+            [
+              -1,
+              5,
+              3,
+              4,
+              0
+            ]
+          ],
+          "expected": [
+            -1,
+            0,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "input": [
+            []
+          ],
+          "expected": []
+        }
+      ]
+    },
+    "order": 104,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-construct-quad-tree",
+    "slug": "construct-quad-tree",
+    "title": "Construct Quad Tree",
+    "difficulty": "medium",
+    "category": "Divide & Conquer",
+    "tags": [
+      "divide-and-conquer",
+      "tree",
+      "matrix"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/construct-quad-tree/",
+    "description": "Given an n x n binary grid (n a power of 2), recursively build a quad tree: a node is a leaf storing the grid's uniform value when every cell in its region is identical, otherwise it stores isLeaf=false and four children built the same way from the top-left, top-right, bottom-left, and bottom-right quadrants. Represent each node as {val, isLeaf, topLeft, topRight, bottomLeft, bottomRight}, with child fields null on a leaf.",
+    "examples": [
+      {
+        "input": "grid = [[0,1],[1,0]]",
+        "output": "{val:1,isLeaf:false,topLeft:{val:0,isLeaf:true,...},topRight:{val:1,isLeaf:true,...},bottomLeft:{val:1,isLeaf:true,...},bottomRight:{val:0,isLeaf:true,...}}"
+      }
+    ],
+    "constraints": "n == grid.length == grid[i].length; n is a power of two, 1 <= n <= 64; grid[i][j] is 0 or 1.",
+    "starterCode": {
+      "javascript": "function construct(grid) {\n  // your code here\n  return null;\n}\n",
+      "python": "class Solution:\n    def construct(self, grid):\n        pass\n",
+      "java": "class Solution {\n    public Node construct(int[][] grid) {\n        return null;\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    Node* construct(vector<vector<int>>& grid) {\n        return nullptr;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "construct",
+      "params": [
+        {
+          "name": "grid",
+          "type": "int[][]"
+        }
+      ],
+      "returns": "quad-tree<int>",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ]
+            ]
+          ],
+          "expected": {
+            "val": 1,
+            "isLeaf": false,
+            "topLeft": {
+              "val": 0,
+              "isLeaf": true,
+              "topLeft": null,
+              "topRight": null,
+              "bottomLeft": null,
+              "bottomRight": null
+            },
+            "topRight": {
+              "val": 1,
+              "isLeaf": true,
+              "topLeft": null,
+              "topRight": null,
+              "bottomLeft": null,
+              "bottomRight": null
+            },
+            "bottomLeft": {
+              "val": 1,
+              "isLeaf": true,
+              "topLeft": null,
+              "topRight": null,
+              "bottomLeft": null,
+              "bottomRight": null
+            },
+            "bottomRight": {
+              "val": 0,
+              "isLeaf": true,
+              "topLeft": null,
+              "topRight": null,
+              "bottomLeft": null,
+              "bottomRight": null
+            }
+          }
+        },
+        {
+          "input": [
+            [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          ],
+          "expected": {
+            "val": 1,
+            "isLeaf": true,
+            "topLeft": null,
+            "topRight": null,
+            "bottomLeft": null,
+            "bottomRight": null
+          }
+        },
+        {
+          "input": [
+            [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "expected": {
+            "val": 0,
+            "isLeaf": true,
+            "topLeft": null,
+            "topRight": null,
+            "bottomLeft": null,
+            "bottomRight": null
+          }
+        }
+      ]
+    },
+    "order": 105,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-merge-k-sorted-lists",
+    "slug": "merge-k-sorted-lists",
+    "title": "Merge k Sorted Lists",
+    "difficulty": "hard",
+    "category": "Divide & Conquer",
+    "tags": [
+      "divide-and-conquer",
+      "linked-list",
+      "heap"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/merge-k-sorted-lists/",
+    "description": "Given an array of k linked lists, each already sorted in ascending order, merge them into a single sorted linked list and return its head.",
+    "examples": [
+      {
+        "input": "lists = [[1,4,5],[1,3,4],[2,6]]",
+        "output": "[1,1,2,3,4,4,5,6]"
+      }
+    ],
+    "constraints": "0 <= k <= 1e4; 0 <= list length <= 500 each; -1e4 <= Node.val <= 1e4; each list is sorted in ascending order; sum of all list lengths <= 1e4.",
+    "starterCode": {
+      "javascript": "function mergeKLists(lists) {\n  // your code here\n  return null;\n}\n",
+      "python": "class Solution:\n    def mergeKLists(self, lists):\n        pass\n",
+      "java": "class Solution {\n    public ListNode mergeKLists(ListNode[] lists) {\n        return null;\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    ListNode* mergeKLists(vector<ListNode*>& lists) {\n        return nullptr;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "mergeKLists",
+      "params": [
+        {
+          "name": "lists",
+          "type": "array<list-node<int>>"
+        }
+      ],
+      "returns": "list-node<int>",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                1,
+                3,
+                4
+              ],
+              [
+                2,
+                6
+              ]
+            ]
+          ],
+          "expected": [
+            1,
+            1,
+            2,
+            3,
+            4,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "input": [
+            []
+          ],
+          "expected": []
+        },
+        {
+          "input": [
+            [
+              []
+            ]
+          ],
+          "expected": []
+        }
+      ]
+    },
+    "order": 106,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-maximum-subarray",
+    "slug": "maximum-subarray",
+    "title": "Maximum Subarray",
+    "difficulty": "medium",
+    "category": "Kadane's Algorithm",
+    "tags": [
+      "kadane",
+      "array",
+      "dp"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/maximum-subarray/",
+    "description": "Given an integer array, find the contiguous non-empty subarray with the largest sum and return that sum.",
+    "examples": [
+      {
+        "input": "nums = [-2,1,-3,4,-1,2,1,-5,4]",
+        "output": "6"
+      }
+    ],
+    "constraints": "1 <= nums.length <= 1e5; -1e4 <= nums[i] <= 1e4.",
+    "starterCode": {
+      "javascript": "function maxSubArray(nums) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def maxSubArray(self, nums):\n        pass\n",
+      "java": "class Solution {\n    public int maxSubArray(int[] nums) {\n        return 0;\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    int maxSubArray(vector<int>& nums) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "maxSubArray",
+      "params": [
+        {
+          "name": "nums",
+          "type": "int[]"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              -2,
+              1,
+              -3,
+              4,
+              -1,
+              2,
+              1,
+              -5,
+              4
+            ]
+          ],
+          "expected": 6
+        },
+        {
+          "input": [
+            [
+              1
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            [
+              5,
+              4,
+              -1,
+              7,
+              8
+            ]
+          ],
+          "expected": 23
+        },
+        {
+          "input": [
+            [
+              -1
+            ]
+          ],
+          "expected": -1
+        },
+        {
+          "input": [
+            [
+              -2,
+              -1
+            ]
+          ],
+          "expected": -1
+        }
+      ]
+    },
+    "order": 107,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-maximum-sum-circular-subarray",
+    "slug": "maximum-sum-circular-subarray",
+    "title": "Maximum Sum Circular Subarray",
+    "difficulty": "medium",
+    "category": "Kadane's Algorithm",
+    "tags": [
+      "kadane",
+      "array"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/maximum-sum-circular-subarray/",
+    "description": "Given a circular integer array (the end wraps to the beginning), return the maximum possible sum of a non-empty subarray, where a subarray may wrap around the end of the array at most once.",
+    "examples": [
+      {
+        "input": "nums = [1,-2,3,-2]",
+        "output": "3"
+      }
+    ],
+    "constraints": "1 <= nums.length <= 3e4; -3e4 <= nums[i] <= 3e4.",
+    "starterCode": {
+      "javascript": "function maxSubarraySumCircular(nums) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def maxSubarraySumCircular(self, nums):\n        pass\n",
+      "java": "class Solution {\n    public int maxSubarraySumCircular(int[] nums) {\n        return 0;\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    int maxSubarraySumCircular(vector<int>& nums) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "maxSubarraySumCircular",
+      "params": [
+        {
+          "name": "nums",
+          "type": "int[]"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              1,
+              -2,
+              3,
+              -2
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "input": [
+            [
+              5,
+              -3,
+              5
+            ]
+          ],
+          "expected": 10
+        },
+        {
+          "input": [
+            [
+              3,
+              -1,
+              2,
+              -1
+            ]
+          ],
+          "expected": 4
+        },
+        {
+          "input": [
+            [
+              3,
+              -2,
+              2,
+              -3
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "input": [
+            [
+              -2,
+              -3,
+              -1
+            ]
+          ],
+          "expected": -1
+        }
+      ]
+    },
+    "order": 108,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-search-insert-position",
+    "slug": "search-insert-position",
+    "title": "Search Insert Position",
+    "difficulty": "easy",
+    "category": "Binary Search",
+    "tags": [
+      "binary-search",
+      "array"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/search-insert-position/",
+    "description": "Given a sorted array of distinct integers and a target, return the index of target if found, otherwise the index where it would be inserted to keep the array sorted.",
+    "examples": [
+      {
+        "input": "nums = [1,3,5,6], target = 5",
+        "output": "2"
+      }
+    ],
+    "constraints": "1 <= nums.length <= 1e4; -1e4 <= nums[i], target <= 1e4; nums is sorted in strictly increasing order.",
+    "starterCode": {
+      "javascript": "function searchInsert(nums, target) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def searchInsert(self, nums, target):\n        pass\n",
+      "java": "class Solution {\n    public int searchInsert(int[] nums, int target) {\n        return 0;\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    int searchInsert(vector<int>& nums, int target) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "searchInsert",
+      "params": [
+        {
+          "name": "nums",
+          "type": "int[]"
+        },
+        {
+          "name": "target",
+          "type": "int"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            5
+          ],
+          "expected": 2
+        },
+        {
+          "input": [
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            2
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            7
+          ],
+          "expected": 4
+        },
+        {
+          "input": [
+            [
+              1,
+              3,
+              5,
+              6
+            ],
+            0
+          ],
+          "expected": 0
+        }
+      ]
+    },
+    "order": 109,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-search-a-2d-matrix",
+    "slug": "search-a-2d-matrix",
+    "title": "Search a 2D Matrix",
+    "difficulty": "medium",
+    "category": "Binary Search",
+    "tags": [
+      "binary-search",
+      "matrix"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/search-a-2d-matrix/",
+    "description": "Given an m x n matrix where each row is sorted in ascending order and the first integer of each row is greater than the last integer of the previous row, return whether target exists in the matrix.",
+    "examples": [
+      {
+        "input": "matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3",
+        "output": "true"
+      }
+    ],
+    "constraints": "m == matrix.length; n == matrix[i].length; 1 <= m, n <= 100; -1e4 <= matrix[i][j], target <= 1e4.",
+    "starterCode": {
+      "javascript": "function searchMatrix(matrix, target) {\n  // your code here\n  return false;\n}\n",
+      "python": "class Solution:\n    def searchMatrix(self, matrix, target):\n        pass\n",
+      "java": "class Solution {\n    public boolean searchMatrix(int[][] matrix, int target) {\n        return false;\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    bool searchMatrix(vector<vector<int>>& matrix, int target) {\n        return false;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "searchMatrix",
+      "params": [
+        {
+          "name": "matrix",
+          "type": "int[][]"
+        },
+        {
+          "name": "target",
+          "type": "int"
+        }
+      ],
+      "returns": "bool",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              [
+                1,
+                3,
+                5,
+                7
+              ],
+              [
+                10,
+                11,
+                16,
+                20
+              ],
+              [
+                23,
+                30,
+                34,
+                60
+              ]
+            ],
+            3
+          ],
+          "expected": true
+        },
+        {
+          "input": [
+            [
+              [
+                1,
+                3,
+                5,
+                7
+              ],
+              [
+                10,
+                11,
+                16,
+                20
+              ],
+              [
+                23,
+                30,
+                34,
+                60
+              ]
+            ],
+            13
+          ],
+          "expected": false
+        },
+        {
+          "input": [
+            [
+              [
+                1
+              ]
+            ],
+            1
+          ],
+          "expected": true
+        }
+      ]
+    },
+    "order": 110,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-find-peak-element",
+    "slug": "find-peak-element",
+    "title": "Find Peak Element",
+    "difficulty": "medium",
+    "category": "Binary Search",
+    "tags": [
+      "binary-search",
+      "array"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/find-peak-element/",
+    "description": "Given an integer array where adjacent elements are never equal, a peak is an element strictly greater than its neighbors (out-of-bounds neighbors count as negative infinity). Return the index of any one peak in O(log n) time.",
+    "examples": [
+      {
+        "input": "nums = [1,2,3,1]",
+        "output": "2"
+      }
+    ],
+    "constraints": "1 <= nums.length <= 1000; -2^31 <= nums[i] <= 2^31-1; nums[i] != nums[i+1] for all valid i.",
+    "starterCode": {
+      "javascript": "function findPeakElement(nums) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def findPeakElement(self, nums):\n        pass\n",
+      "java": "class Solution {\n    public int findPeakElement(int[] nums) {\n        return 0;\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    int findPeakElement(vector<int>& nums) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "findPeakElement",
+      "params": [
+        {
+          "name": "nums",
+          "type": "int[]"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              1,
+              2,
+              3,
+              1
+            ]
+          ],
+          "expected": 2
+        },
+        {
+          "input": [
+            [
+              1,
+              2,
+              1,
+              3,
+              5,
+              6,
+              4
+            ]
+          ],
+          "expected": 5
+        },
+        {
+          "input": [
+            [
+              1
+            ]
+          ],
+          "expected": 0
+        }
+      ]
+    },
+    "order": 111,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-search-in-rotated-sorted-array",
+    "slug": "search-in-rotated-sorted-array",
+    "title": "Search in Rotated Sorted Array",
+    "difficulty": "medium",
+    "category": "Binary Search",
+    "tags": [
+      "binary-search",
+      "array"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+    "description": "An ascending array of distinct integers was rotated at an unknown pivot. Given the rotated array and a target, return its index, or -1 if not present, in O(log n) time.",
+    "examples": [
+      {
+        "input": "nums = [4,5,6,7,0,1,2], target = 0",
+        "output": "4"
+      }
+    ],
+    "constraints": "1 <= nums.length <= 5000; -1e4 <= nums[i] <= 1e4; all values in nums are distinct; nums is a rotated ascending array; -1e4 <= target <= 1e4.",
+    "starterCode": {
+      "javascript": "function search(nums, target) {\n  // your code here\n  return -1;\n}\n",
+      "python": "class Solution:\n    def search(self, nums, target):\n        pass\n",
+      "java": "class Solution {\n    public int search(int[] nums, int target) {\n        return -1;\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    int search(vector<int>& nums, int target) {\n        return -1;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "search",
+      "params": [
+        {
+          "name": "nums",
+          "type": "int[]"
+        },
+        {
+          "name": "target",
+          "type": "int"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              4,
+              5,
+              6,
+              7,
+              0,
+              1,
+              2
+            ],
+            0
+          ],
+          "expected": 4
+        },
+        {
+          "input": [
+            [
+              4,
+              5,
+              6,
+              7,
+              0,
+              1,
+              2
+            ],
+            3
+          ],
+          "expected": -1
+        },
+        {
+          "input": [
+            [
+              1
+            ],
+            0
+          ],
+          "expected": -1
+        },
+        {
+          "input": [
+            [
+              5,
+              1,
+              3
+            ],
+            3
+          ],
+          "expected": 2
+        }
+      ]
+    },
+    "order": 112,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-find-first-and-last-position-of-element-in-sorted-array",
+    "slug": "find-first-and-last-position-of-element-in-sorted-array",
+    "title": "Find First and Last Position of Element in Sorted Array",
+    "difficulty": "medium",
+    "category": "Binary Search",
+    "tags": [
+      "binary-search",
+      "array"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/",
+    "description": "Given an array sorted in non-decreasing order and a target, return the first and last index of target as a two-element array [start, end], or [-1, -1] if target does not occur, in O(log n) time.",
+    "examples": [
+      {
+        "input": "nums = [5,7,7,8,8,10], target = 8",
+        "output": "[3,4]"
+      }
+    ],
+    "constraints": "0 <= nums.length <= 1e5; -1e9 <= nums[i], target <= 1e9; nums is sorted in non-decreasing order.",
+    "starterCode": {
+      "javascript": "function searchRange(nums, target) {\n  // your code here\n  return [-1, -1];\n}\n",
+      "python": "class Solution:\n    def searchRange(self, nums, target):\n        pass\n",
+      "java": "class Solution {\n    public int[] searchRange(int[] nums, int target) {\n        return new int[]{-1, -1};\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    vector<int> searchRange(vector<int>& nums, int target) {\n        return {-1, -1};\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "searchRange",
+      "params": [
+        {
+          "name": "nums",
+          "type": "int[]"
+        },
+        {
+          "name": "target",
+          "type": "int"
+        }
+      ],
+      "returns": "int[]",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              5,
+              7,
+              7,
+              8,
+              8,
+              10
+            ],
+            8
+          ],
+          "expected": [
+            3,
+            4
+          ]
+        },
+        {
+          "input": [
+            [
+              5,
+              7,
+              7,
+              8,
+              8,
+              10
+            ],
+            6
+          ],
+          "expected": [
+            -1,
+            -1
+          ]
+        },
+        {
+          "input": [
+            [],
+            0
+          ],
+          "expected": [
+            -1,
+            -1
+          ]
+        },
+        {
+          "input": [
+            [
+              1
+            ],
+            1
+          ],
+          "expected": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "order": 113,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-find-minimum-in-rotated-sorted-array",
+    "slug": "find-minimum-in-rotated-sorted-array",
+    "title": "Find Minimum in Rotated Sorted Array",
+    "difficulty": "medium",
+    "category": "Binary Search",
+    "tags": [
+      "binary-search",
+      "array"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
+    "description": "An ascending array of distinct integers was rotated at an unknown pivot between 1 and n times. Given the rotated array, return its minimum element in O(log n) time.",
+    "examples": [
+      {
+        "input": "nums = [3,4,5,1,2]",
+        "output": "1"
+      }
+    ],
+    "constraints": "1 <= nums.length <= 5000; -5000 <= nums[i] <= 5000; all values of nums are unique; nums was originally sorted ascending then rotated.",
+    "starterCode": {
+      "javascript": "function findMin(nums) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def findMin(self, nums):\n        pass\n",
+      "java": "class Solution {\n    public int findMin(int[] nums) {\n        return 0;\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    int findMin(vector<int>& nums) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "findMin",
+      "params": [
+        {
+          "name": "nums",
+          "type": "int[]"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              3,
+              4,
+              5,
+              1,
+              2
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            [
+              4,
+              5,
+              6,
+              7,
+              0,
+              1,
+              2
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "input": [
+            [
+              11,
+              13,
+              15,
+              17
+            ]
+          ],
+          "expected": 11
+        },
+        {
+          "input": [
+            [
+              2,
+              1
+            ]
+          ],
+          "expected": 1
+        }
+      ]
+    },
+    "order": 114,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-median-of-two-sorted-arrays",
+    "slug": "median-of-two-sorted-arrays",
+    "title": "Median of Two Sorted Arrays",
+    "difficulty": "hard",
+    "category": "Binary Search",
+    "tags": [
+      "binary-search",
+      "array",
+      "divide-and-conquer"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
+    "description": "Given two sorted arrays, return the median of the combined set of all their elements, in O(log(m+n)) time.",
+    "examples": [
+      {
+        "input": "nums1 = [1,3], nums2 = [2]",
+        "output": "2.0"
+      }
+    ],
+    "constraints": "0 <= nums1.length, nums2.length <= 1000; 1 <= nums1.length + nums2.length <= 2000; -1e6 <= nums1[i], nums2[i] <= 1e6; both arrays sorted ascending.",
+    "starterCode": {
+      "javascript": "function findMedianSortedArrays(nums1, nums2) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def findMedianSortedArrays(self, nums1, nums2):\n        pass\n",
+      "java": "class Solution {\n    public double findMedianSortedArrays(int[] nums1, int[] nums2) {\n        return 0.0;\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {\n        return 0.0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "findMedianSortedArrays",
+      "params": [
+        {
+          "name": "nums1",
+          "type": "int[]"
+        },
+        {
+          "name": "nums2",
+          "type": "int[]"
+        }
+      ],
+      "returns": "double",
+      "judge": "float:1e-5",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              1,
+              3
+            ],
+            [
+              2
+            ]
+          ],
+          "expected": 2
+        },
+        {
+          "input": [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "expected": 2.5
+        },
+        {
+          "input": [
+            [],
+            [
+              1
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "input": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "expected": 0
+        }
+      ]
+    },
+    "order": 115,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-kth-largest-element-in-an-array",
+    "slug": "kth-largest-element-in-an-array",
+    "title": "Kth Largest Element in an Array",
+    "difficulty": "medium",
+    "category": "Heap",
+    "tags": [
+      "heap",
+      "sort",
+      "array"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+    "description": "Given an unsorted integer array and an integer k, return the kth largest element (the kth largest in sorted order, not the kth distinct element).",
+    "examples": [
+      {
+        "input": "nums = [3,2,1,5,6,4], k = 2",
+        "output": "5"
+      }
+    ],
+    "constraints": "1 <= k <= nums.length <= 1e5; -1e4 <= nums[i] <= 1e4.",
+    "starterCode": {
+      "javascript": "function findKthLargest(nums, k) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def findKthLargest(self, nums, k):\n        pass\n",
+      "java": "class Solution {\n    public int findKthLargest(int[] nums, int k) {\n        return 0;\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    int findKthLargest(vector<int>& nums, int k) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "findKthLargest",
+      "params": [
+        {
+          "name": "nums",
+          "type": "int[]"
+        },
+        {
+          "name": "k",
+          "type": "int"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              3,
+              2,
+              1,
+              5,
+              6,
+              4
+            ],
+            2
+          ],
+          "expected": 5
+        },
+        {
+          "input": [
+            [
+              3,
+              2,
+              3,
+              1,
+              2,
+              4,
+              5,
+              5,
+              6
+            ],
+            4
+          ],
+          "expected": 4
+        },
+        {
+          "input": [
+            [
+              1
+            ],
+            1
+          ],
+          "expected": 1
+        }
+      ]
+    },
+    "order": 116,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-ipo",
+    "slug": "ipo",
+    "title": "IPO",
+    "difficulty": "hard",
+    "category": "Heap",
+    "tags": [
+      "heap",
+      "greedy"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/ipo/",
+    "description": "You start with capital w and may complete at most k projects. Project i requires capital[i] to start and yields profits[i] on completion (added to your capital). Choosing greedily among currently affordable projects, return the maximum capital achievable after at most k projects.",
+    "examples": [
+      {
+        "input": "k = 2, w = 0, profits = [1,2,3], capital = [0,1,1]",
+        "output": "4"
+      }
+    ],
+    "constraints": "1 <= k <= 1e5; 0 <= w <= 1e9; n == profits.length == capital.length; 1 <= n <= 1e5; 0 <= profits[i] <= 1e4; 0 <= capital[i] <= 1e9.",
+    "starterCode": {
+      "javascript": "function findMaximizedCapital(k, w, profits, capital) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def findMaximizedCapital(self, k, w, profits, capital):\n        pass\n",
+      "java": "class Solution {\n    public int findMaximizedCapital(int k, int w, int[] profits, int[] capital) {\n        return 0;\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    int findMaximizedCapital(int k, int w, vector<int>& profits, vector<int>& capital) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "findMaximizedCapital",
+      "params": [
+        {
+          "name": "k",
+          "type": "int"
+        },
+        {
+          "name": "w",
+          "type": "int"
+        },
+        {
+          "name": "profits",
+          "type": "int[]"
+        },
+        {
+          "name": "capital",
+          "type": "int[]"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            2,
+            0,
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ],
+          "expected": 4
+        },
+        {
+          "input": [
+            3,
+            0,
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              0,
+              1,
+              2
+            ]
+          ],
+          "expected": 6
+        },
+        {
+          "input": [
+            1,
+            0,
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ],
+          "expected": 0
+        }
+      ]
+    },
+    "order": 117,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-find-k-pairs-with-smallest-sums",
+    "slug": "find-k-pairs-with-smallest-sums",
+    "title": "Find K Pairs with Smallest Sums",
+    "difficulty": "medium",
+    "category": "Heap",
+    "tags": [
+      "heap",
+      "array"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/find-k-pairs-with-smallest-sums/",
+    "description": "Given two arrays sorted in ascending order and an integer k, return the k pairs (u, v) with u from nums1 and v from nums2 that have the smallest sums u+v (order of the returned pairs does not matter; return fewer than k pairs if fewer exist).",
+    "examples": [
+      {
+        "input": "nums1 = [1,7,11], nums2 = [2,4,6], k = 3",
+        "output": "[[1,2],[1,4],[1,6]]"
+      }
+    ],
+    "constraints": "1 <= nums1.length, nums2.length <= 1e5; -1e9 <= nums1[i], nums2[i] <= 1e9; both arrays sorted ascending; 1 <= k <= 1e4.",
+    "starterCode": {
+      "javascript": "function kSmallestPairs(nums1, nums2, k) {\n  // your code here\n  return [];\n}\n",
+      "python": "class Solution:\n    def kSmallestPairs(self, nums1, nums2, k):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public List<List<Integer>> kSmallestPairs(int[] nums1, int[] nums2, int k) {\n        return new ArrayList<>();\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<vector<int>> kSmallestPairs(vector<int>& nums1, vector<int>& nums2, int k) {\n        return {};\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "kSmallestPairs",
+      "params": [
+        {
+          "name": "nums1",
+          "type": "int[]"
+        },
+        {
+          "name": "nums2",
+          "type": "int[]"
+        },
+        {
+          "name": "k",
+          "type": "int"
+        }
+      ],
+      "returns": "int[][]",
+      "judge": "unordered",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              1,
+              7,
+              11
+            ],
+            [
+              2,
+              4,
+              6
+            ],
+            3
+          ],
+          "expected": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              6
+            ]
+          ]
+        },
+        {
+          "input": [
+            [
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              3
+            ],
+            2
+          ],
+          "expected": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "input": [
+            [
+              1,
+              2
+            ],
+            [
+              3
+            ],
+            3
+          ],
+          "expected": [
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        }
+      ]
+    },
+    "order": 118,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-task-scheduler",
+    "slug": "task-scheduler",
+    "title": "Task Scheduler",
+    "difficulty": "medium",
+    "category": "Heap",
+    "tags": [
+      "heap",
+      "greedy",
+      "array"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/task-scheduler/",
+    "description": "Given a list of task labels and a cooldown n (the minimum number of full units that must pass between two executions of the same task label, filled with idle slots if no other task is ready), return the minimum number of units needed to finish every task.",
+    "examples": [
+      {
+        "input": "tasks = [\"A\",\"A\",\"A\",\"B\",\"B\",\"B\"], n = 2",
+        "output": "8"
+      }
+    ],
+    "constraints": "1 <= tasks.length <= 1e4; tasks[i] is an uppercase English letter; 0 <= n <= 100.",
+    "starterCode": {
+      "javascript": "function leastInterval(tasks, n) {\n  // your code here\n  return 0;\n}\n",
+      "python": "class Solution:\n    def leastInterval(self, tasks, n):\n        pass\n",
+      "java": "class Solution {\n    public int leastInterval(char[] tasks, int n) {\n        return 0;\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    int leastInterval(vector<char>& tasks, int n) {\n        return 0;\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "leastInterval",
+      "params": [
+        {
+          "name": "tasks",
+          "type": "string[]"
+        },
+        {
+          "name": "n",
+          "type": "int"
+        }
+      ],
+      "returns": "int",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              "A",
+              "A",
+              "A",
+              "B",
+              "B",
+              "B"
+            ],
+            2
+          ],
+          "expected": 8
+        },
+        {
+          "input": [
+            [
+              "A",
+              "A",
+              "A",
+              "B",
+              "B",
+              "B"
+            ],
+            0
+          ],
+          "expected": 6
+        },
+        {
+          "input": [
+            [
+              "A",
+              "A",
+              "A",
+              "A",
+              "A",
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "F",
+              "G"
+            ],
+            2
+          ],
+          "expected": 16
+        }
+      ]
+    },
+    "order": 119,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-single-threaded-cpu",
+    "slug": "single-threaded-cpu",
+    "title": "Single-Threaded CPU",
+    "difficulty": "medium",
+    "category": "Heap",
+    "tags": [
+      "heap",
+      "sort",
+      "simulation"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/single-threaded-cpu/",
+    "description": "Given tasks as [enqueueTime, processingTime] pairs (tasks[i] becomes available at enqueueTime[i]), a single-threaded CPU picks, whenever idle, the available task with the smallest processing time (ties broken by the smaller original index), running it to completion before picking the next. Return the order the original task indices are processed in.",
+    "examples": [
+      {
+        "input": "tasks = [[1,2],[2,4],[3,2],[4,1]]",
+        "output": "[0,2,3,1]"
+      }
+    ],
+    "constraints": "1 <= tasks.length <= 1e5; 1 <= enqueueTime[i], processingTime[i] <= 1e9.",
+    "starterCode": {
+      "javascript": "function getOrder(tasks) {\n  // your code here\n  return [];\n}\n",
+      "python": "class Solution:\n    def getOrder(self, tasks):\n        pass\n",
+      "java": "class Solution {\n    public int[] getOrder(int[][] tasks) {\n        return new int[0];\n    }\n}\n",
+      "cpp": "class Solution {\npublic:\n    vector<int> getOrder(vector<vector<int>>& tasks) {\n        return {};\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "getOrder",
+      "params": [
+        {
+          "name": "tasks",
+          "type": "int[][]"
+        }
+      ],
+      "returns": "int[]",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                4,
+                1
+              ]
+            ]
+          ],
+          "expected": [
+            0,
+            2,
+            3,
+            1
+          ]
+        },
+        {
+          "input": [
+            [
+              [
+                7,
+                10
+              ],
+              [
+                7,
+                12
+              ],
+              [
+                7,
+                5
+              ],
+              [
+                7,
+                4
+              ],
+              [
+                7,
+                2
+              ]
+            ]
+          ],
+          "expected": [
+            4,
+            3,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "input": [
+            [
+              [
+                1,
+                1
+              ]
+            ]
+          ],
+          "expected": [
+            0
+          ]
+        }
+      ]
+    },
+    "order": 120,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-design-twitter",
+    "slug": "design-twitter",
+    "title": "Design Twitter",
+    "difficulty": "medium",
+    "category": "Heap",
+    "tags": [
+      "heap",
+      "design",
+      "hash-map"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/design-twitter/",
+    "description": "Design a simplified Twitter supporting postTweet(userId, tweetId), getNewsFeed(userId) (the 10 most recent tweet ids from the user and everyone they follow, most recent first), follow(followerId, followeeId), and unfollow(followerId, followeeId). Given a sequence of operations, the first being the constructor call, return the sequence of results (postTweet/follow/unfollow return null).",
+    "examples": [
+      {
+        "input": "[\"Twitter\"] [\"postTweet\",1,5] [\"getNewsFeed\",1] [\"follow\",1,2] [\"postTweet\",2,6] [\"getNewsFeed\",1] [\"unfollow\",1,2] [\"getNewsFeed\",1]",
+        "output": "[null, null, [5], null, null, [6,5], null, [5]]"
+      }
+    ],
+    "constraints": "1 <= userId, followerId, followeeId <= 500; 0 <= tweetId <= 1e4; all tweetIds are unique; at most 3e4 total calls to postTweet, getNewsFeed, follow, and unfollow.",
+    "starterCode": {
+      "javascript": "function twitterOps(operations) {\n  // your code here\n  return [];\n}\n",
+      "python": "class Solution:\n    def twitterOps(self, operations):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public Object[] twitterOps(Object[][] operations) {\n        return new Object[0];\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<string> twitterOps(vector<vector<string>>& operations) {\n        return {};\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "twitterOps",
+      "params": [
+        {
+          "name": "operations",
+          "type": "operations"
+        }
+      ],
+      "returns": "operations",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              [
+                "Twitter"
+              ],
+              [
+                "postTweet",
+                1,
+                5
+              ],
+              [
+                "getNewsFeed",
+                1
+              ],
+              [
+                "follow",
+                1,
+                2
+              ],
+              [
+                "postTweet",
+                2,
+                6
+              ],
+              [
+                "getNewsFeed",
+                1
+              ],
+              [
+                "unfollow",
+                1,
+                2
+              ],
+              [
+                "getNewsFeed",
+                1
+              ]
+            ]
+          ],
+          "expected": [
+            null,
+            null,
+            [
+              5
+            ],
+            null,
+            null,
+            [
+              6,
+              5
+            ],
+            null,
+            [
+              5
+            ]
+          ]
+        },
+        {
+          "input": [
+            [
+              [
+                "Twitter"
+              ],
+              [
+                "getNewsFeed",
+                1
+              ],
+              [
+                "postTweet",
+                1,
+                1
+              ],
+              [
+                "getNewsFeed",
+                1
+              ]
+            ]
+          ],
+          "expected": [
+            null,
+            [],
+            null,
+            [
+              1
+            ]
+          ]
+        },
+        {
+          "input": [
+            [
+              [
+                "Twitter"
+              ],
+              [
+                "follow",
+                1,
+                2
+              ],
+              [
+                "postTweet",
+                2,
+                10
+              ],
+              [
+                "postTweet",
+                2,
+                11
+              ],
+              [
+                "getNewsFeed",
+                1
+              ]
+            ]
+          ],
+          "expected": [
+            null,
+            null,
+            null,
+            null,
+            [
+              11,
+              10
+            ]
+          ]
+        }
+      ]
+    },
+    "order": 121,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
+  },
+  {
+    "id": "p-find-median-from-data-stream",
+    "slug": "find-median-from-data-stream",
+    "title": "Find Median from Data Stream",
+    "difficulty": "hard",
+    "category": "Heap",
+    "tags": [
+      "heap",
+      "design"
+    ],
+    "sourceUrl": "https://leetcode.com/problems/find-median-from-data-stream/",
+    "description": "Design a structure supporting addNum(num) (adds an integer from a data stream) and findMedian() (returns the median of all numbers added so far). Given a sequence of operations, the first being the constructor call, return the sequence of results (addNum returns null).",
+    "examples": [
+      {
+        "input": "[\"MedianFinder\"] [\"addNum\",1] [\"addNum\",2] [\"findMedian\"] [\"addNum\",3] [\"findMedian\"]",
+        "output": "[null, null, null, 1.5, null, 2]"
+      }
+    ],
+    "constraints": "-1e5 <= num <= 1e5; findMedian is called only after at least one addNum call; at most 5e4 total calls to addNum and findMedian.",
+    "starterCode": {
+      "javascript": "function medianFinderOps(operations) {\n  // your code here\n  return [];\n}\n",
+      "python": "class Solution:\n    def medianFinderOps(self, operations):\n        pass\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    public Object[] medianFinderOps(Object[][] operations) {\n        return new Object[0];\n    }\n}\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<string> medianFinderOps(vector<vector<string>>& operations) {\n        return {};\n    }\n};\n"
+    },
+    "harness": {
+      "entry": "medianFinderOps",
+      "params": [
+        {
+          "name": "operations",
+          "type": "operations"
+        }
+      ],
+      "returns": "operations",
+      "judge": "exact",
+      "timeLimitMs": 1000,
+      "memoryLimitKb": 262144,
+      "tests": [
+        {
+          "input": [
+            [
+              [
+                "MedianFinder"
+              ],
+              [
+                "addNum",
+                1
+              ],
+              [
+                "addNum",
+                2
+              ],
+              [
+                "findMedian"
+              ],
+              [
+                "addNum",
+                3
+              ],
+              [
+                "findMedian"
+              ]
+            ]
+          ],
+          "expected": [
+            null,
+            null,
+            null,
+            1.5,
+            null,
+            2
+          ]
+        },
+        {
+          "input": [
+            [
+              [
+                "MedianFinder"
+              ],
+              [
+                "addNum",
+                6
+              ],
+              [
+                "findMedian"
+              ],
+              [
+                "addNum",
+                10
+              ],
+              [
+                "findMedian"
+              ],
+              [
+                "addNum",
+                2
+              ],
+              [
+                "findMedian"
+              ]
+            ]
+          ],
+          "expected": [
+            null,
+            null,
+            6,
+            null,
+            8,
+            null,
+            6
+          ]
+        },
+        {
+          "input": [
+            [
+              [
+                "MedianFinder"
+              ],
+              [
+                "addNum",
+                -1
+              ],
+              [
+                "addNum",
+                -2
+              ],
+              [
+                "findMedian"
+              ],
+              [
+                "addNum",
+                -3
+              ],
+              [
+                "findMedian"
+              ]
+            ]
+          ],
+          "expected": [
+            null,
+            null,
+            null,
+            -1.5,
+            null,
+            -2
+          ]
+        }
+      ]
+    },
+    "order": 122,
+    "sheet": "leetcode150",
+    "supportedLanguages": [
+      "javascript",
+      "python",
+      "java",
+      "cpp"
+    ]
   }
 ]
