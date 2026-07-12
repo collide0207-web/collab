@@ -59,6 +59,29 @@ npm run typecheck
 - **Hardening** — rate limits, backpressure high-water marks, snapshot compaction,
   metrics/telemetry, and the integration/fault-injection/soak/load test suites.
 
+## Document conversion service (`convert/`)
+
+A small, **stateless** sibling service that converts **PPTX/PPT → PDF** with
+LibreOffice headless, so the frontend's Document Workspace can render high-fidelity
+slides through its existing PDF viewer instead of an unreliable in-browser renderer.
+
+```bash
+cd convert
+cp .env.example .env       # SOFFICE_BIN, PORT, CORS_ALLOWED_ORIGINS
+npm install && npm run dev  # POST raw bytes → http://localhost:4500/convert/pptx
+```
+
+- `POST /convert/pptx` — raw PPT/PPTX body (`X-Filename` header optional) → `application/pdf`.
+- `GET /health` — liveness.
+- Each conversion runs in its own temp dir **and** LibreOffice user profile, so
+  concurrent requests are safe. Requires the `libreoffice-impress` binary (bundled
+  in the Docker image; set `SOFFICE_BIN` for local macOS dev).
+- Frontend opts in by setting `VITE_CONVERT_URL`; unset ⇒ in-browser fallback. The
+  conversion strategy is swappable with **no viewer changes** (see the frontend's
+  `workspace/core/pptxStrategy.ts`).
+
+Runs as the `convert` service in `docker-compose.yml` (port 4500).
+
 ## Layout
 
 ```
@@ -73,4 +96,9 @@ src/sync/docManager.ts   doc lifecycle + eviction + pub/sub routing
 src/sync/wsConn.ts       WebSocket connection adapter
 src/server.ts            HTTP health + WS upgrade + auth/RBAC wiring
 test/convergence.test.ts CRDT convergence guarantees
+
+convert/                 PPTX/PPT → PDF conversion service (LibreOffice headless)
+convert/src/server.ts    HTTP: POST /convert/pptx, GET /health
+convert/src/convert.ts   soffice spawn (per-request temp dir + LO profile)
+convert/Dockerfile       node:20-slim + libreoffice-impress + core fonts
 ```
