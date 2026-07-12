@@ -1,0 +1,24 @@
+{
+  "name": "collide-convert",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Collide document conversion service (PPTX/PPT -> PDF via LibreOffice headless)",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}
